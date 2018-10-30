@@ -1,0 +1,93 @@
+﻿<Page
+    x:Class="DJIWindowsSDKSample.WaypointHandling.WaypointMissionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DJIWindowsSDKSample.WaypointHandling"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock FontSize="36" Style="{StaticResource TitleTextBlockStyle}"> Waypoint Mission </TextBlock>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Before learning about the APIs of initializing a waypoint mission with complex waypoints and waypoint actions, upload a ready-made mission and start it in simulator mode. Be sure you have started the DJI simulator in SimulatorPage.</TextBlock>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Width="335" Margin="0,10,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Margin="0,0,0,10">
+                    <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Aircraft State:</TextBlock>
+                    <StackPanel Margin="0,6,0,0" Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Simulator State: </TextBlock>
+                        <TextBlock Margin="6,0,0,0" Style="{StaticResource BodyTextBlockStyle}" Text="{Binding SimulatorState}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="0,6,0,0" Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Waypoint State:</TextBlock>
+                        <TextBlock Margin="6,0,0,0" Style="{StaticResource BodyTextBlockStyle}" Text="{Binding WaypointMissionState}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="0,6,0,0" Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Altitude:</TextBlock>
+                        <TextBlock Margin="6,0,0,0" Style="{StaticResource BodyTextBlockStyle}" Text="{Binding AircraftAltitude}">0</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+
+
+                <ScrollViewer Grid.Row="1">
+                    <StackPanel>
+
+                        <TextBlock Margin="0,10,0,0" FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Set GroundStationMode Enabled</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Ensure GroundStationMode Enabled .</TextBlock>
+                        <Button Margin="0,6,0,0" Command="{Binding SetGroundStationModeEnabled}" IsEnabled="{Binding IsSimulatorStart}">Set GroundStationMode Enabled</Button>
+
+                        <TextBlock Margin="0,10,0,0" FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Init a ready-made mission</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Init a ready-made waypoint mission with 4 waypoints. </TextBlock>
+                        <Button Margin="0,6,0,0" Command="{Binding InitWaypointMission}" IsEnabled="{Binding IsSimulatorStart}">Init mission</Button>
+
+                        <TextBlock Margin="0,10,0,0" FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Add add 'STAY' action to a waypoint</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> We could add some actions to the waypoint like staying. Press the button to add 'STAY' action to the second waypoint. </TextBlock>
+                        <Button Margin="0,6,0,0" Command="{Binding AddAction}" IsEnabled="{Binding IsSimulatorStart}"> Add Action </Button>
+
+                        <TextBlock Margin="0,10,0,0" FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> SDK Load Mission</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> DJI Windows SDK would storage a cache copy of mission. Before we upload the mission to the aircraft, we need to get the misson loaded by DJI Windows SDK.</TextBlock>
+                        <Button Margin="0,6,0,0" Command="{Binding LoadMission}" IsEnabled="{Binding IsSimulatorStart}">SDK Load Mission</Button>
+
+                        <TextBlock Margin="0,10,0,0" FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Upload Mission To Aircraft</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Upload your mission to aircraft by which the aircraft is able to fly as you plan after starting mission.</TextBlock>
+                        <Button Margin="0,6,0,0" Command="{Binding UploadMission}" IsEnabled="{Binding IsSimulatorStart}">Upload To Aircraft</Button>
+
+                        <TextBlock Margin="0,10,0,0" FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Start Mission</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Start your waypoint mission and see what would happen on the map.</TextBlock>
+                        <Button Margin="0,6,0,0" Command="{Binding StartMission}" IsEnabled="{Binding IsSimulatorStart}">Start Mission</Button>
+
+                        <TextBlock Margin="0,10,0,0" FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Others Features </TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> There are some others feature like pausing mission or downloading mission to SDK from the aircraft. See the document of DJI Windows SDK</TextBlock>
+
+
+                    </StackPanel>
+                </ScrollViewer>
+
+            </Grid>
+            <maps:MapControl 
+                ZoomInteractionMode="GestureAndControl"
+                TiltInteractionMode="GestureAndControl"
+                x:Name="WaypointMap"
+                ZoomLevel="18"
+                Grid.Column="1"
+                Margin="8,0,0,0">
+            </maps:MapControl>
+        </Grid>
+    </Grid>
+</Page>

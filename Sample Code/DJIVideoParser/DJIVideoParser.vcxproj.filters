@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>5cac30ea-cadc-45df-aa8c-00cbe9261d9c</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Parser.cpp" />
+    <ClCompile Include="h264_Decoder.cpp" />
+    <ClCompile Include="modulemediator.cpp" />
+    <ClCompile Include="Queue.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="videoparser.cpp" />
+    <ClCompile Include="videoparsermgr.cpp" />
+    <ClCompile Include="VideoWrapper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Parser.h" />
+    <ClInclude Include="h264_Decoder.h" />
+    <ClInclude Include="modulemediator.h" />
+    <ClInclude Include="Queue.h" />
+    <ClInclude Include="threadsafequeue.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="videoparser.h" />
+    <ClInclude Include="videoparsermgr.h" />
+    <ClInclude Include="VideoWrapper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="..\djiuwpsample\package.appxmanifest" />
+  </ItemGroup>
+</Project>
