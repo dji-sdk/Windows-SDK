@@ -99,7 +99,7 @@
       </div>
       <div class="site-main">
         <div class="article"><div class="article"><h1><font color="#AAA">class </font>FlyZoneInformation</h1></div>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">FlyZoneInformation</span> &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">FlyZoneInformation</span></span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.FlySafe</font></td></tr></table></html>
 <h5 id="description">Description:</h5>
 <p><font color="#666">This class contains information about a fly zone. <code><a href="../FlyZoneManager/FlyZoneInformation.html#flyzoneinformation_type">Type</a></code>  should be used to understand the type of fly zone to know which information in this class is valid.</font></p>
@@ -199,7 +199,7 @@
 <div class="api-row" id="flyzoneinformation_unlockstarttime"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#flyzoneinformation_unlockstarttime_inline">UnlockStartTime</a></div></div><div class="inline-doc" id="flyzoneinformation_unlockstarttime_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">property </font>UnlockStartTime</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">string</span> UnlockStartTime &#123; <span class="keyword">get</span>;  &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">string</span> UnlockStartTime &#123; <span class="keyword">get</span>; <span class="keyword">internal</span> <span class="keyword">set</span>; &#125;</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.FlySafe</font></td></tr></table></html>
 <h5 id="description-v12">Description:</h5>
 <p><font color="#666">The timestamp when the fly zone is unlocked, formatted in UTC (YYYY-MM-DD hh:mm:ss). When the time is  not available from the server, <code><a href="../FlyZoneManager/FlyZoneInformation.html#flyzoneinformation_flyzoneinformationinvalidtimestamp">FlyZoneInformationInvalidTimestamp</a></code> will be returned.</font></p>
@@ -209,7 +209,7 @@
 <div class="api-row" id="flyzoneinformation_unlockendtime"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#flyzoneinformation_unlockendtime_inline">UnlockEndTime</a></div></div><div class="inline-doc" id="flyzoneinformation_unlockendtime_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">property </font>UnlockEndTime</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">string</span> UnlockEndTime &#123; <span class="keyword">get</span>;  &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">string</span> UnlockEndTime &#123; <span class="keyword">get</span>; <span class="keyword">internal</span> <span class="keyword">set</span>; &#125;</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.FlySafe</font></td></tr></table></html>
 <h5 id="description-v13">Description:</h5>
 <p><font color="#666">The timestamp the unlocked zone expires, formatted in UTC (YYYY-MM-DD hh:mm:ss). When the time is  not available from the server, <code><a href="../FlyZoneManager/FlyZoneInformation.html#flyzoneinformation_flyzoneinformationinvalidtimestamp">FlyZoneInformationInvalidTimestamp</a></code> will be returned.</font></p>

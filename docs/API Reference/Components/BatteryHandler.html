@@ -99,7 +99,7 @@
       </div>
       <div class="site-main">
         <div class="article"><div class="article"><h1><font color="#AAA">class </font>BatteryHandler</h1></div>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">BatteryHandler</span> &#123; <span class="keyword">get</span>; &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">BatteryHandler</span></span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description">Description:</h5>
 <p><font color="#666">This class manages information and real-time status of the connected product's batteries.</font></p>
@@ -128,64 +128,64 @@
 <h5 id="description-v4">Description:</h5>
 <p><font color="#666">The destructor. It should not be called explicitly.</font></p>
 </div>
-<div class="api-row" id="batteryhandler_fullchargecapacitychangedpushevent"><div class="api-col left">Event</div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_fullchargecapacitychangedpushevent_inline">IntMsgChangedEventHandler</a></div></div><div class="inline-doc" id="batteryhandler_fullchargecapacitychangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>IntMsgChangedEventHandler</h6></div>
+<div class="api-row" id="batteryhandler_fullchargecapacitychangedpushevent"><div class="api-col left">Event</div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_fullchargecapacitychangedpushevent_inline">FullChargeCapacityChanged</a></div></div><div class="inline-doc" id="batteryhandler_fullchargecapacitychangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>FullChargeCapacityChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler FullChargeCapacityChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v5">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the total amount of energy, in mAh (milliamp hours), stored in the battery  when the battery is fully charged. The energy of the battery at full charge changes over time as the battery continues  to get used. Over time, as the battery continues to be recharged, the value of fullChargeCapacity will decrease.</font></p>
 </div>
-<div class="api-row" id="batteryhandler_chargeremainingchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_chargeremainingchangedpushevent_inline">IntMsgChangedEventHandler</a></div></div><div class="inline-doc" id="batteryhandler_chargeremainingchangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>IntMsgChangedEventHandler</h6></div>
+<div class="api-row" id="batteryhandler_chargeremainingchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_chargeremainingchangedpushevent_inline">ChargeRemainingChanged</a></div></div><div class="inline-doc" id="batteryhandler_chargeremainingchangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>ChargeRemainingChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler ChargeRemainingChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v6">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the remaining energy stored in the battery in mAh (milliamp hours).</font></p>
 </div>
-<div class="api-row" id="batteryhandler_chargeremaininginpercentchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_chargeremaininginpercentchangedpushevent_inline">IntMsgChangedEventHandler</a></div></div><div class="inline-doc" id="batteryhandler_chargeremaininginpercentchangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>IntMsgChangedEventHandler</h6></div>
+<div class="api-row" id="batteryhandler_chargeremaininginpercentchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_chargeremaininginpercentchangedpushevent_inline">ChargeRemainingInPercentChanged</a></div></div><div class="inline-doc" id="batteryhandler_chargeremaininginpercentchangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>ChargeRemainingInPercentChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler ChargeRemainingInPercentChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v7">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the percentage of battery energy left with range [0, 100].</font></p>
 </div>
-<div class="api-row" id="batteryhandler_voltagechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_voltagechangedpushevent_inline">IntMsgChangedEventHandler</a></div></div><div class="inline-doc" id="batteryhandler_voltagechangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>IntMsgChangedEventHandler</h6></div>
+<div class="api-row" id="batteryhandler_voltagechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_voltagechangedpushevent_inline">VoltageChanged</a></div></div><div class="inline-doc" id="batteryhandler_voltagechangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>VoltageChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler VoltageChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v8">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the current battery voltage (mV).</font></p>
 </div>
-<div class="api-row" id="batteryhandler_currentchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_currentchangedpushevent_inline">IntMsgChangedEventHandler</a></div></div><div class="inline-doc" id="batteryhandler_currentchangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>IntMsgChangedEventHandler</h6></div>
+<div class="api-row" id="batteryhandler_currentchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_currentchangedpushevent_inline">CurrentChanged</a></div></div><div class="inline-doc" id="batteryhandler_currentchangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>CurrentChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler CurrentChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v9">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the real time current draw of the battery (mA). A negative value means  the battery is being discharged, and a positive value means it is being charged.</font></p>
 </div>
-<div class="api-row" id="batteryhandler_batterytemperaturechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_batterytemperaturechangedpushevent_inline">DoubleMsgChangedEventHandler</a></div></div><div class="inline-doc" id="batteryhandler_batterytemperaturechangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>DoubleMsgChangedEventHandler</h6></div>
+<div class="api-row" id="batteryhandler_batterytemperaturechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_batterytemperaturechangedpushevent_inline">BatteryTemperatureChanged</a></div></div><div class="inline-doc" id="batteryhandler_batterytemperaturechangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>BatteryTemperatureChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> DoubleMsgChangedEventHandler BatteryTemperatureChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v10">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the battery's temperature, in Celsius, with range [-128, 127] degrees.</font></p>
 </div>
-<div class="api-row" id="batteryhandler_connectionchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_connectionchangedpushevent_inline">BoolMsgChangedEventHandler</a></div></div><div class="inline-doc" id="batteryhandler_connectionchangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>BoolMsgChangedEventHandler</h6></div>
+<div class="api-row" id="batteryhandler_connectionchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_connectionchangedpushevent_inline">ConnectionChanged</a></div></div><div class="inline-doc" id="batteryhandler_connectionchangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>ConnectionChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ConnectionChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v11">Description:</h5>
 <p><font color="#666">Subscribe the event to receive a component's connection change.</font></p>
 </div>
-<div class="api-row" id="batteryhandler_serialnumberchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_serialnumberchangedpushevent_inline">StringMsgChangedEventHandler</a></div></div><div class="inline-doc" id="batteryhandler_serialnumberchangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>StringMsgChangedEventHandler</h6></div>
+<div class="api-row" id="batteryhandler_serialnumberchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_serialnumberchangedpushevent_inline">SerialNumberChanged</a></div></div><div class="inline-doc" id="batteryhandler_serialnumberchangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>SerialNumberChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> StringMsgChangedEventHandler SerialNumberChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
