@@ -29,14 +29,21 @@ namespace DJIWindowsSDKSample.FPV
         public FPVPage()
         {
             this.InitializeComponent();
-            InitializeVideoFeedModule();
         }
 
-        ~FPVPage()
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            DJISDKManager.Instance.VideoFeeder.GetPrimaryVideoFeed(0).VideoDataUpdated -= OnVideoPush;
+            base.OnNavigatedFrom(e);
+            InitializeVideoFeedModule();
 
         }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            UninitializeVideoFeedModule();
+        }
+
 
         private void InitializeVideoFeedModule()
         {
@@ -46,6 +53,15 @@ namespace DJIWindowsSDKSample.FPV
             if (DJISDKManager.Instance.SDKRegistrationResultCode == SDKError.NO_ERROR)
             {
                 DJISDKManager.Instance.VideoFeeder.GetPrimaryVideoFeed(0).VideoDataUpdated += OnVideoPush;
+            }
+        }
+
+        private void UninitializeVideoFeedModule()
+        {
+            if (DJISDKManager.Instance.SDKRegistrationResultCode == SDKError.NO_ERROR)
+            {
+                this.videoParser.SetVideoDataCallack(0, 0, null);
+                DJISDKManager.Instance.VideoFeeder.GetPrimaryVideoFeed(0).VideoDataUpdated -= OnVideoPush;
             }
         }
 
@@ -82,5 +98,6 @@ namespace DJIWindowsSDKSample.FPV
                 VideoSource.Invalidate();
             });
         }
+
     }
 }

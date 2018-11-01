@@ -16,9 +16,9 @@
                     <TextBlock Margin="0,8,0,0">Latitude</TextBlock>
                     <TextBox Margin="0,3,0,0" Width="210" Text="{Binding SimulatorLatitude,Mode=TwoWay}" HorizontalAlignment="Left" PlaceholderText="Input the latitude in degree"></TextBox>
                     <TextBlock Margin="0,8,0,0">Longitude</TextBlock>
-                    <TextBox Margin="0,3,0,0" Width="210" Text="{Binding SimulatorLongitude,Mode=TwoWay}" HorizontalAlignment="Left" PlaceholderText="Input the latitude in degree"></TextBox>
+                    <TextBox Margin="0,3,0,0" Width="210" Text="{Binding SimulatorLongitude,Mode=TwoWay}" HorizontalAlignment="Left" PlaceholderText="Input the longitue in degree"></TextBox>
                     <TextBlock Margin="0,8,0,0">Satellite Count</TextBlock>
-                    <TextBox Margin="0,3,0,0" Width="210" Text="{Binding SimulatorSatelliteCount,Mode=TwoWay}" HorizontalAlignment="Left" PlaceholderText="Input the latitude in degree"></TextBox>
+                    <TextBox Margin="0,3,0,0" Width="210" Text="{Binding SimulatorSatelliteCount,Mode=TwoWay}" HorizontalAlignment="Left" PlaceholderText="Input the number of satellites"></TextBox>
                     <Button Margin="0, 8, 0, 0"  Command="{Binding StartSimulator}">Start Simulator </Button>
 
                     <TextBlock Margin="0,15,0,0" FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Stop Simulator</TextBlock>
