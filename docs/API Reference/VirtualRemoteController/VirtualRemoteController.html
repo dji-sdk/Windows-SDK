@@ -1,16 +1,16 @@
 <script>window.pathPrefix="../";</script><!DOCTYPE html>
 <html lang="en" style="padding-bottom:0px" class="local"></html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link href="../images/favicon.png" rel="shortcut icon" type="image/png">
-  <title>DJI Mobile SDK Documentation
+  <title>DJI Windows SDK Documentation
   </title><link rel="stylesheet" href="../stylesheets/doc-vendor.css"><link rel="stylesheet" href="../stylesheets/doc-app.css">
 </head>
 <body>
   <nav id="site-header" class="site-header navbar">
     <div class="container">
-      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">WINDOWS SDK API REFERENCE</a></div>
+      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">Windows SDK API Reference</a></div>
     </div>
   </nav>
   <div id="documentation-page" class="documentation-page">
@@ -86,13 +86,13 @@
                   </dd>
                   <dd><a href="../UserAccount/UserAccountManager.html">UserAccountManager</a>
                   </dd>
+                  <dd><a href="" class="active">VirtualRemoteController</a>
+                  </dd>
                   <dd><a data-href="../VideoFeeder/VideoFeeder.html" class="sub-toggle">VideoFeeder<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
                     <ul class="sub-menu">
                             <dd><a href="../VideoFeeder/VideoFeed.html">VideoFeed</a>
                             </dd>
                     </ul>
-                  </dd>
-                  <dd><a href="" class="active">VirtualRemoteController</a>
                   </dd>
           </dl>
         </div>
@@ -121,12 +121,12 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header"><a href="javascript:;" @click="closeSearch" class="btn-close">×</a>
-            <h2 class="title"> Search Mobile SDK Document
+            <h2 class="title"> Search Windows SDK Document
             </h2>
             <input type="text" v-model="searchInput" @keydown.enter="search">
           </div>
           <div class="modal-body">
-            <p v-show="!!searchCount" class="search-count"><span v-cloak>{{searchCount}}</span>&nbsp;Results
+            <p v-show="!!searchCount" class="search-count"><span v-cloak="">{{searchCount}}</span>&nbsp;Results
             </p>
             <ul v-show="!!searchCount" class="search-result">
               <li v-for="item in searchResult"><a v-bind:href="item.url | docUrl">
@@ -145,7 +145,7 @@
   </div>
   <script type="text/javascript">
     window.Config = window.config = {
-      sdk: "mobile-sdk",
+      sdk: "windows-sdk",
       locale: "en",
       environment: "development",
       api_host: ""
