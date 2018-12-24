@@ -80,6 +80,10 @@ namespace DJIWindowsSDKSample.FPV
                 }
                 else
                 {
+                    if (data.Length != decodedDataBuf.Length)
+                    {
+                        Array.Resize(ref decodedDataBuf, data.Length);
+                    }
                     data.CopyTo(decodedDataBuf.AsBuffer());
                 }
             }
