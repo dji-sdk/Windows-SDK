@@ -5,6 +5,15 @@
       <UniqueIdentifier>5cac30ea-cadc-45df-aa8c-00cbe9261d9c</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="RenderSurface">
+      <UniqueIdentifier>{fdd8e132-8cf5-489b-b5b1-f2a068fe4416}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderSurface\Renderer">
+      <UniqueIdentifier>{0343dc8d-db07-4b5a-a630-5886d3a598c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderSurface\Renderer\CalibrationVideoFeedRenderer">
+      <UniqueIdentifier>{fadcb302-8603-41ff-9e9f-5ce7bdd56c9a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -16,6 +25,21 @@
     <ClCompile Include="videoparser.cpp" />
     <ClCompile Include="videoparsermgr.cpp" />
     <ClCompile Include="VideoWrapper.cpp" />
+    <ClCompile Include="RenderSurface\OpenGLES.cpp">
+      <Filter>RenderSurface</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSurface\RenderSurface.cpp">
+      <Filter>RenderSurface</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSurface\Renderer\VideoFeedRenderer.cpp">
+      <Filter>RenderSurface\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSurface\Renderer\CalibrationVideoFeedRenderer\CalibrationVideoFeedRenderer.cpp">
+      <Filter>RenderSurface\Renderer\CalibrationVideoFeedRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSurface\Renderer\CalibrationVideoFeedRenderer\CalibrationDataSource.cpp">
+      <Filter>RenderSurface\Renderer\CalibrationVideoFeedRenderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -28,8 +52,27 @@
     <ClInclude Include="videoparser.h" />
     <ClInclude Include="videoparsermgr.h" />
     <ClInclude Include="VideoWrapper.h" />
+    <ClInclude Include="StructDefinations.h" />
+    <ClInclude Include="RenderSurface\OpenGLES.h">
+      <Filter>RenderSurface</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSurface\RenderSurface.h">
+      <Filter>RenderSurface</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSurface\Renderer\VideoFeedRenderer.h">
+      <Filter>RenderSurface\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSurface\Renderer\CalibrationVideoFeedRenderer\CalibrationDataSource.h">
+      <Filter>RenderSurface\Renderer\CalibrationVideoFeedRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSurface\Renderer\CalibrationVideoFeedRenderer\CalibrationVideoFeedRenderer.h">
+      <Filter>RenderSurface\Renderer\CalibrationVideoFeedRenderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="..\djiuwpsample\package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

@@ -5,7 +5,7 @@
 The DJI Windows SDK enables you to automate your DJI Product on a PC. You can control flight, and many subsystems of the product including the camera and gimbal. Using the DJI Windows SDK, create a customized UWP (Universal Windows Platform) app to unlock the full potential of your DJI aerial platform.
 
 ## The Latest Version
-The latest SDK version is Public Beta 0.1. 
+The latest SDK version is Public Beta 0.2.0. 
 
 ## Get Started Immediately
 
@@ -20,7 +20,7 @@ To use DJI Windows SDK, the following environments are required:
 
 ### Supported Products
 
-The supported DJI products include Mavic Air and Phantom 4 Pro V2. 
+The supported DJI products include Mavic 2 Pro/Zoom, Phantom 4 Pro V2.0+ (remote controller with screen), Mavic Air and Phantom 4 Pro V2. 
 
 For Mavic Air, only WiFi connection is supported. Therefore, the PC or the laptop should have a WiFi adapter. 
 

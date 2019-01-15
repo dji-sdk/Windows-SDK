@@ -11,6 +11,7 @@
 
 #include <set>
 #include "videoparsermgr.h"
+#include "Windows.UI.Core.h"
 
 namespace dji
 {
@@ -22,14 +23,12 @@ namespace dji
             ModuleMediator();
             ~ModuleMediator();
             
-            bool Initialize();
+			bool Initialize(const std::string & source_path, std::function < DJIDecodingAssistInfo (uint8_t* data, int length) > decoding_assist_info_parser);
             void Uninitialize();
             
             inline std::weak_ptr<VideoParserMgr> GetVideoParserMgr() { return m_video_parser_mgr; }
-            
         private:
             std::shared_ptr<VideoParserMgr> m_video_parser_mgr;
-            
         };
         
         extern ModuleMediator* g_pModuleMediator;

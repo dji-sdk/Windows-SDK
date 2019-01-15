@@ -17,16 +17,16 @@ namespace dji {
 
 			~VideoWrapper(void);
 
-			bool Initialize(VideoParser *owner);
+			bool Initialize(VideoParser *owner, std::function< DJIDecodingAssistInfo (uint8_t* data, int length)> decoding_assist_info_parser);
 
 			void Uninitialize();
 
 			int PauseParserThread(bool is_pause);
 
 
-			int FramePacket(uint8_t *buff, int size, FrameType type, int width, int height);
+			int FramePacket(uint8_t *buff, int size, FrameType type, int width, int height, const DJIDecodingAssistInfo & assistant_info);
 
-			void SetVideoFrameCallBack(std::function<void(uint8_t *data, int width, int height)> func);
+			void SetVideoFrameCallBack(std::function<void(uint8_t *data, int width, int height, const DJIDecodingAssistInfo & assistant_info)> func);
 
 			void ClearFrame();
 
@@ -42,7 +42,7 @@ namespace dji {
 			CFrameQueue m_video_queue;
 
 			bool m_is_pause = false;
-			std::function<void(uint8_t *data, int width, int height)> m_dataObserver;
+			std::function<void(uint8_t *data, int width, int height, const DJIDecodingAssistInfo & assistant_info)> m_dataObserver;
 
 		};
 	}

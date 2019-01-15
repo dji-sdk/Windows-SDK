@@ -23,6 +23,8 @@ using namespace dji::videoparser;
 static bool s_stop_flag = false;
 static bool s_is_init_ffmpeg = false;
 
+#define PIX_FMT_FORMAT PIX_FMT_RGBA
+
 #define  HEAD_SIZE 12
 
 bool Pack_Compositer::CompositePack(const uint8_t *data, const uint32_t size)
@@ -92,9 +94,11 @@ h264_Decoder::h264_Decoder()
 
 }
 
-void h264_Decoder::Initialize(dji::videoparser::VideoWrapper* video_wrapper)
+
+void h264_Decoder::Initialize(dji::videoparser::VideoWrapper* video_wrapper, std::function < DJIDecodingAssistInfo (uint8_t* data, int length) > decoding_assist_info_parser)
 {
 	m_videoWrapperPtr = video_wrapper;
+	m_assistInfoParser = decoding_assist_info_parser;
 
 	InitFFMPEG();
 
@@ -107,6 +111,7 @@ void h264_Decoder::Initialize(dji::videoparser::VideoWrapper* video_wrapper)
 
 void h264_Decoder::Uninitialize()
 {
+	s_stop_flag = false;
 	m_bDecoderRun = false;
 	m_thread_decoder->join();
 	delete m_thread_decoder;
@@ -197,11 +202,9 @@ bool h264_Decoder::InitFrameBuffer()
 	if (m_dst_frame)
 	{
 #ifdef _PC_
-		prev_width_ = m_codec_context->width;
-		prev_height_ = m_codec_context->height;
-		m_outBuffer = new uint8_t[avpicture_get_size(PIX_FMT_BGRA, m_codec_context->width, m_codec_context->height)];
+		m_outBuffer = new uint8_t[avpicture_get_size(PIX_FMT_FORMAT, m_codec_context->width, m_codec_context->height)];
 
-		avpicture_fill((AVPicture *)m_dst_frame, m_outBuffer, PIX_FMT_BGRA, m_codec_context->width, m_codec_context->height);
+		avpicture_fill((AVPicture *)m_dst_frame, m_outBuffer, PIX_FMT_FORMAT, m_codec_context->width, m_codec_context->height);
 
 		m_sws_ctx = sws_getContext
 		(
@@ -210,7 +213,7 @@ bool h264_Decoder::InitFrameBuffer()
 			m_codec_context->pix_fmt,
 			m_codec_context->width,
 			m_codec_context->height,
-			PIX_FMT_BGRA,
+			PIX_FMT_FORMAT,
 			SWS_BILINEAR,
 			nullptr,
 			nullptr,
@@ -288,6 +291,13 @@ void h264_Decoder::DecoderThread()
 				pFrameBuff += parser_len;
 
 				if (packet.size > 0) {
+					DJIDecodingAssistInfo assist_info = {0};
+					if (m_assistInfoParser)
+					{
+						auto res_data = m_assistInfoParser(packet.data, packet.size);
+						assist_info = std::move(res_data);
+					}
+
 					if (!is_sps_pps_found)
 					{
 						is_sps_pps_found = m_codec_paser->frame_has_sps ? true : false;
@@ -307,19 +317,24 @@ void h264_Decoder::DecoderThread()
 						continue;
 					}
 
-					if (!m_bInitBuffer)
-					{
-						m_bInitBuffer = InitFrameBuffer();
-					}
-
-					if (prev_height_ != m_codec_context->height ||
-						prev_width_ != m_codec_context->width)
+					if (m_bInitBuffer && (m_preWidth != m_codec_context->width || m_preHeight != m_codec_context->height))
 					{
 						delete m_outBuffer;
-						m_outBuffer = new uint8_t[avpicture_get_size(PIX_FMT_BGRA, m_codec_context->width, m_codec_context->height)];
-						avpicture_fill((AVPicture *)m_dst_frame, m_outBuffer, PIX_FMT_BGRA, m_codec_context->width, m_codec_context->height);
-						prev_height_ = m_codec_context->height;
-						prev_width_ = m_codec_context->width;
+						m_outBuffer = nullptr;
+						m_bInitBuffer = false;
+						if (m_sws_ctx) 
+						{
+							sws_freeContext(m_sws_ctx);
+							m_sws_ctx = nullptr;
+						}
+
+					}
+
+					if (!m_bInitBuffer)
+					{
+						m_preWidth = m_codec_context->width;
+						m_preHeight = m_preHeight != m_codec_context->height;
+						m_bInitBuffer = InitFrameBuffer();
 					}
 
 					sws_scale
@@ -334,12 +349,10 @@ void h264_Decoder::DecoderThread()
 					);
 
 					auto buffSize = int(m_codec_context->width * m_codec_context->height * 4);
-
 					if (m_videoWrapperPtr)
 					{
-						m_videoWrapperPtr->FramePacket(m_dst_frame->data[0], buffSize, FrameType_Video, m_codec_context->width, m_codec_context->height);
+						m_videoWrapperPtr->FramePacket(m_dst_frame->data[0], buffSize, FrameType_Video, m_codec_context->width, m_codec_context->height == 1088 ? 1080 : m_codec_context->height, assist_info);
 					}
-
 				}
 				av_free_packet(&packet);
 			}

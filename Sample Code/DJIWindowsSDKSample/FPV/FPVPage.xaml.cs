@@ -14,17 +14,13 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
-
+using DJIVideoParser;
 
 namespace DJIWindowsSDKSample.FPV
 {
     public sealed partial class FPVPage : Page
     {
-
         private DJIVideoParser.Parser videoParser;
-        public WriteableBitmap VideoSource;
-        private byte[] decodedDataBuf;
-        private object bufLock = new object();
 
         public FPVPage()
         {
@@ -45,63 +41,71 @@ namespace DJIWindowsSDKSample.FPV
         }
 
 
-        private void InitializeVideoFeedModule()
+        private async void InitializeVideoFeedModule()
         {
-            this.videoParser = new DJIVideoParser.Parser();
-            this.videoParser.Initialize();
-            this.videoParser.SetVideoDataCallack(0, 0, ReceiveDecodedData);
-            if (DJISDKManager.Instance.SDKRegistrationResultCode == SDKError.NO_ERROR)
+            //Must in UI thread
+            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
             {
-                DJISDKManager.Instance.VideoFeeder.GetPrimaryVideoFeed(0).VideoDataUpdated += OnVideoPush;
-            }
+                //Raw data and decoded data listener
+                if (videoParser == null)
+                {
+                    videoParser = new DJIVideoParser.Parser();
+                    videoParser.Initialize(delegate (byte[] data)
+                    {
+                        //Note: This function must be called because we need DJI Windows SDK to help us to parse frame data.
+                        return DJISDKManager.Instance.VideoFeeder.ParseAssitantDecodingInfo(0, data);
+                    });
+                    //Set the swapChainPanel to display and set the decoded data callback.
+                    videoParser.SetSurfaceAndVideoCallback(0, 0, swapChainPanel, ReceiveDecodedData);
+                    DJISDKManager.Instance.VideoFeeder.GetPrimaryVideoFeed(0).VideoDataUpdated += OnVideoPush;
+                }
+                //get the camera type and observe the CameraTypeChanged event.
+                DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).CameraTypeChanged += OnCameraTypeChanged;
+                var type = await DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).GetCameraTypeAsync();
+                OnCameraTypeChanged(this, type.value);
+            });
         }
+    
 
         private void UninitializeVideoFeedModule()
         {
             if (DJISDKManager.Instance.SDKRegistrationResultCode == SDKError.NO_ERROR)
             {
-                this.videoParser.SetVideoDataCallack(0, 0, null);
+                videoParser.SetSurfaceAndVideoCallback(0, 0, null, null);
                 DJISDKManager.Instance.VideoFeeder.GetPrimaryVideoFeed(0).VideoDataUpdated -= OnVideoPush;
             }
         }
 
-        void OnVideoPush(VideoFeed sender, [ReadOnlyArray] ref byte[] bytes)
+        void OnVideoPush(VideoFeed sender, byte[] bytes)
         {
             this.videoParser.PushVideoData(0, 0, bytes, bytes.Length);
         }
 
         async void ReceiveDecodedData(byte[] data, int width, int height)
         {
-            lock (bufLock)
+        }
+
+        //We need to set the camera type of the aircraft to the DJIVideoParser. After setting camera type, DJIVideoParser would correct the distortion of the video automatically.
+        private void OnCameraTypeChanged(object sender, CameraTypeMsg? value)
+        {
+            if (value != null)
             {
-                if (decodedDataBuf == null)
+                switch (value.Value.value)
                 {
-                    decodedDataBuf = data;
-                }
-                else
-                {
-                    if (data.Length != decodedDataBuf.Length)
-                    {
-                        Array.Resize(ref decodedDataBuf, data.Length);
-                    }
-                    data.CopyTo(decodedDataBuf.AsBuffer());
-                }
-            }
-            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
-            {
-                if (VideoSource == null || VideoSource.PixelWidth != width || VideoSource.PixelHeight != height)
-                {
-                    VideoSource = new WriteableBitmap((int)width, (int)height);
-                    fpvImage.Source = VideoSource;
+                    case CameraType.MAVIC_2_ZOOM:
+                        this.videoParser.SetCameraSensor(AircraftCameraType.Mavic2Zoom);
+                        break;
+                    case CameraType.MAVIC_2_PRO:
+                        this.videoParser.SetCameraSensor(AircraftCameraType.Mavic2Pro);
+                        break;
+                    default:
+                        this.videoParser.SetCameraSensor(AircraftCameraType.Others);
+                        break;
                 }
 
-                lock (bufLock)
-                {
-                    decodedDataBuf.AsBuffer().CopyTo(VideoSource.PixelBuffer);
-                }
-                VideoSource.Invalidate();
-            });
+            }
         }
 
     }
 }
+

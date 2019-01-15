@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|ARM">
@@ -125,12 +125,12 @@
       <AdditionalUsingDirectories>$(WindowsSDK_WindowsMetadata);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>ThirdParties\ffmpeg\include;ThirdParties\plog\include;ThirdParties\pthread-win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>ThirdParties\x86\ffmpeg\include;ThirdParties\x86\plog\include;ThirdParties\x86\pthread-win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-      <AdditionalLibraryDirectories>ThirdParties\pthread-win32\bin\Win32_MSVC2015.Release;ThirdParties\ffmpeg\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>ThirdParties\x86\pthread-win32\bin\Win32_MSVC2015.Release;ThirdParties\x86\ffmpeg\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>pthread_dll.lib;avcodec.lib;avformat.lib;swscale.lib;avutil.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -218,6 +218,12 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Parser.h" />
     <ClInclude Include="Queue.h" />
+    <ClInclude Include="RenderSurface\OpenGLES.h" />
+    <ClInclude Include="RenderSurface\Renderer\CalibrationVideoFeedRenderer\CalibrationDataSource.h" />
+    <ClInclude Include="RenderSurface\Renderer\CalibrationVideoFeedRenderer\CalibrationVideoFeedRenderer.h" />
+    <ClInclude Include="RenderSurface\Renderer\VideoFeedRenderer.h" />
+    <ClInclude Include="RenderSurface\RenderSurface.h" />
+    <ClInclude Include="StructDefinations.h" />
     <ClInclude Include="threadsafequeue.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="videoparser.h" />
@@ -237,6 +243,11 @@
     </ClCompile>
     <ClCompile Include="Parser.cpp" />
     <ClCompile Include="Queue.cpp" />
+    <ClCompile Include="RenderSurface\OpenGLES.cpp" />
+    <ClCompile Include="RenderSurface\Renderer\CalibrationVideoFeedRenderer\CalibrationDataSource.cpp" />
+    <ClCompile Include="RenderSurface\Renderer\CalibrationVideoFeedRenderer\CalibrationVideoFeedRenderer.cpp" />
+    <ClCompile Include="RenderSurface\Renderer\VideoFeedRenderer.cpp" />
+    <ClCompile Include="RenderSurface\RenderSurface.cpp" />
     <ClCompile Include="Utils.cpp" />
     <ClCompile Include="videoparser.cpp" />
     <ClCompile Include="videoparsermgr.cpp" />
@@ -245,7 +256,17 @@
   <ItemGroup>
     <AppxManifest Include="..\djiuwpsample\package.appxmanifest" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\ANGLE.WindowsStore.2.1.13\build\native\ANGLE.WindowsStore.targets" Condition="Exists('..\packages\ANGLE.WindowsStore.2.1.13\build\native\ANGLE.WindowsStore.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ANGLE.WindowsStore.2.1.13\build\native\ANGLE.WindowsStore.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ANGLE.WindowsStore.2.1.13\build\native\ANGLE.WindowsStore.targets'))" />
+  </Target>
 </Project>

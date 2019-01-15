@@ -1,6 +1,7 @@
 ﻿#include "pch.h"
 #include "videoparsermgr.h"
 #include <plog/Log.h>
+#include "modulemediator.h"
 
 namespace dji
 {
@@ -16,8 +17,10 @@ namespace dji
 
 		}
 
-		bool VideoParserMgr::Initialize()
+		bool VideoParserMgr::Initialize(const std::string & source_path, std::function<DJIDecodingAssistInfo(uint8_t* data, int length)> decoding_assist_info_parser)
 		{
+			m_source_path = source_path;
+			m_decoding_assist_info_parser = decoding_assist_info_parser;
 			return true;
 		}
 
@@ -45,7 +48,6 @@ namespace dji
 				std::lock_guard<std::recursive_mutex> lock(m_mutex_map_parser);
 				if (m_map_parser.find(product_id) == m_map_parser.end())
 				{
-					//                	LOGE << "cannot find product  map count " << m_map_parser.size();
 					return;
 				}
 
@@ -53,7 +55,6 @@ namespace dji
 				auto parser_iterator = index_map.find(component_index);
 				if (parser_iterator == index_map.end())
 				{
-					//					LOGE << "cannot find parser_iterator " << component_index;
 					return;
 				}
 
@@ -97,72 +98,25 @@ namespace dji
 			}
 			m_map_parser.clear();
 		}
-#ifdef _ANDROID_
-		bool VideoParserMgr::SetWindow(int product_id, int product_type, int component_index, void *window)
+
+		void VideoParserMgr::SetSensor(DeviceCameraSensor sensor)
 		{
-			std::lock_guard<std::recursive_mutex> lock(m_mutex_map_parser);
-			auto map_iter = m_map_parser.find(product_id);
-			if (map_iter == m_map_parser.end())
-			{
-				AddDevice(product_id);
-			}
-
-			auto& parser_map = m_map_parser[product_id];
-
-			auto parser_map_iter = parser_map.find(component_index);
-			if (parser_map_iter == parser_map.end())
-			{
-				if (window == nullptr)
-				{
-					LOGE << "window == nullptr";
-					return true;
-				}
-
-				auto parser = std::make_shared<VideoParser>();
-
-				if (!parser->Initialize(product_type))
-				{
-					LOGE << "parser->Initialize failed";
-					parser = nullptr;
-					return false;
-				}
-
-				if (!parser->GetCodec()->SetNativeWindow((ANativeWindow*)window))
-				{
-					LOGE << "parser->GetCodec()->SetNativeWindow failed";
-					parser->Uninitialize();
-					parser = nullptr;
-					return false;
-				}
-
-				parser_map.insert(std::make_pair(component_index, parser));
-			}
-			else
-			{
-				std::shared_ptr<VideoParser>& video_parser = parser_map[component_index];
-				if (window == nullptr)
-				{
-					video_parser->Uninitialize();
-					video_parser = nullptr;
-					parser_map.erase(component_index);
-					return true;
-				}
-
-				auto codec = video_parser->GetCodec();
-				if (codec == nullptr)
-				{
-					return false;
-				}
-
-				return codec->SetNativeWindow((ANativeWindow*)window);
-			}
-
-			LOGE << "m_map_parser[device_id] count : " << m_map_parser[component_index].size() << " component_index " << component_index;
-			return true;
+			m_render_surface->UpdateDeviceCameraSensor(sensor);
 		}
-#else
-		bool VideoParserMgr::SetWindow(int product_id, int component_index, std::function<void(uint8_t *data, int width, int height)> func)
+
+		bool VideoParserMgr::SetWindow(int product_id, int component_index, std::function<void(uint8_t *data, int width, int height)> func, Windows::UI::Xaml::Controls::SwapChainPanel^ swap_chain_panel)
 		{
+
+			if (m_swap_chain_panel != swap_chain_panel)
+			{
+				if (m_swap_chain_panel)
+					m_render_surface->Uninitialize();
+				 m_swap_chain_panel = swap_chain_panel;
+				 if (swap_chain_panel)
+					m_render_surface->Initialize(m_source_path, swap_chain_panel);
+			}
+
+
 			std::lock_guard<std::recursive_mutex> lock(m_mutex_map_parser);
 			auto map_iter = m_map_parser.find(product_id);
 			if (map_iter == m_map_parser.end())
@@ -172,22 +126,21 @@ namespace dji
 
 			auto& parser_map = m_map_parser[product_id];
 
-
+			dji::videoparser::VideoWrapper* wrapper = nullptr;
 			auto parser_map_iter = parser_map.find(component_index);
 			if (parser_map_iter == parser_map.end())
 			{
 
 				auto parser = std::make_shared<VideoParser>();
 
-				if (!parser->Initialize(product_id))
+				if (!parser->Initialize(product_id, m_decoding_assist_info_parser))
 				{
 					LOGE << "parser->Initialize failed";
 					parser = nullptr;
 					return false;
 				}
 
-				auto video_wrapper = parser->GetVideoWrapper();
-				video_wrapper->SetVideoFrameCallBack(func);
+				wrapper = parser->GetVideoWrapper();
 
 				parser_map.insert(std::make_pair(component_index, parser));
 			}
@@ -203,13 +156,35 @@ namespace dji
 					return true;
 				}
 
-				auto video_wrapper = video_parser->GetVideoWrapper();
-				video_wrapper->SetVideoFrameCallBack(func);
+				wrapper = video_parser->GetVideoWrapper();
 
 			}
+			wrapper->SetVideoFrameCallBack([this, func](uint8_t *data, int width, int height, const DJIDecodingAssistInfo& assistant_info)
+			{
+					if(func)
+						func(data, width, height);
+					int actual_size = width * height * 4;
+					std::shared_ptr<uint8_t> shared_data = std::shared_ptr<uint8_t>(new uint8_t[actual_size], [](uint8_t *data) {delete[] data;});
+					memcpy(shared_data.get(), data, actual_size);
+					if (m_render_surface->Ready())
+					{
+						this->m_swap_chain_panel->Dispatcher->RunAsync(Windows::UI::Core::CoreDispatcherPriority::Normal,
+							ref new Windows::UI::Core::DispatchedHandler([assistant_info, this, shared_data, width, height]
+						{
+							//TODO: maybe lock
+							if (!m_render_surface->Ready())
+								return;
+
+							m_render_surface->SetVideoInfo(assistant_info.fov_state, assistant_info.lut_idx);
+							m_render_surface->RenderRGBImageData(shared_data.get(), width, height);
+						}));
+					}
+
+
+			});
+
 
 			return true;
 		}
-#endif
 	}
 }

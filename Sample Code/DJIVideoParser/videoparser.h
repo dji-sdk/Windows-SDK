@@ -24,7 +24,7 @@ namespace dji
 			VideoParser();
 			~VideoParser();
 
-			bool Initialize(int product_type);
+			bool Initialize(int product_type, std::function< DJIDecodingAssistInfo (uint8_t* data, int length)> decoding_assist_info_parser);
 			void Uninitialize();
 
 			void PauseParserThread(bool is_pause);

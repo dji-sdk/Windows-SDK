@@ -10,7 +10,8 @@
 #include <memory>
 #include "videoparser.h"
 #include <mutex>
-
+#include <Windows.UI.Xaml.Controls.h>
+#include "RenderSurface/RenderSurface.h"
 
 namespace dji
 {
@@ -26,30 +27,30 @@ namespace dji
 			VideoParserMgr();
 			~VideoParserMgr();
 
-			bool Initialize();
+			bool Initialize(const std::string & source_path, std::function< DJIDecodingAssistInfo (uint8_t* data, int length)> decoding_assist_info_parser);
 			void Uninitialize();
 
 			bool AddDevice(int product_id);
 			void RemoveDevice(int product_id);
 
-#ifdef _ANDROID_
-			bool SetWindow(int product_id, int product_type, int component_index, void *window);
-#else
-			bool SetWindow(int product_id, int component_index, std::function<void(uint8_t *data, int width, int height)> func);
-#endif
+			bool SetWindow(int product_id, int component_index, std::function<void(uint8_t *data, int width, int height)> func, Windows::UI::Xaml::Controls::SwapChainPanel^ swap_chain_panel);
+
+			void SetSensor(DeviceCameraSensor sensor);
 
 			bool StartRecord(int product_id, int component_index) { return  true; }
 			bool StopRecord(int product_id, int component_index) { return true; }
-
-			int GetRenderTexture(int product_id, int component_index) { return -1; }
-
 
 			void ParserData(int product_id, int component_index, const unsigned char* data, unsigned int len);
 		protected:
 			void FreeMap();
 		private:
+			std::string m_source_path;
 			ParserMap m_map_parser;
 			std::recursive_mutex m_mutex_map_parser;
+			Windows::UI::Xaml::Controls::SwapChainPanel^ m_swap_chain_panel = nullptr;
+
+			std::unique_ptr<RenderSurface> m_render_surface = std::make_unique<RenderSurface>();
+			std::function< DJIDecodingAssistInfo (uint8_t* data, int length)> m_decoding_assist_info_parser;
 		};
 
 	}

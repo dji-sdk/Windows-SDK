@@ -24,7 +24,7 @@ namespace dji
 
 		}
 
-		bool VideoParser::Initialize(int product_type)
+		bool VideoParser::Initialize(int product_type, std::function< DJIDecodingAssistInfo (uint8_t* data, int length)> decoding_assist_info_parser)
 		{
 			m_is_initialized = true;
 
@@ -45,7 +45,7 @@ namespace dji
 			}
 #elif defined _PC_
 			m_videoWrapper = new VideoWrapper();
-			if (!m_videoWrapper->Initialize(this))
+			if (!m_videoWrapper->Initialize(this, decoding_assist_info_parser))
 			{
 				delete m_videoWrapper;
 				return false;

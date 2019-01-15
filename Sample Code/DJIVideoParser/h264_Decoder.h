@@ -7,6 +7,9 @@
 #include <vector>
 #include <array>
 #include <queue>
+#include <functional>
+
+#include "Windows.UI.Core.h"
 
 extern "C" {
 
@@ -14,6 +17,7 @@ extern "C" {
 #include "libswscale/swscale.h"
 #include "libavcodec/avcodec.h"
 }
+
 
 namespace dji {
 	namespace videoparser {
@@ -85,7 +89,7 @@ public:
 
 	void Stop();
 
-	void Initialize(dji::videoparser::VideoWrapper* video_wrapper = nullptr);
+	void Initialize(dji::videoparser::VideoWrapper* video_wrapper = nullptr, std::function<DJIDecodingAssistInfo(uint8_t* data, int length)> decoding_assist_info_parser = nullptr);
 	void Uninitialize();
 
 protected:
@@ -95,6 +99,8 @@ protected:
 
 	void DecoderThread();
 
+	int m_preWidth = 0;
+	int m_preHeight = 0;
 
 	std::thread *m_thread_decoder = nullptr;
 
@@ -104,8 +110,9 @@ protected:
 	dji::videoparser::VideoWrapper * m_videoWrapperPtr = nullptr;
 
 	dji::videoparser::threadsafe_queue<std::vector<uint8_t>> m_vectorSafeQueue;
-	uint32_t prev_width_ = 0;
-	uint32_t prev_height_ = 0;
+
+	std::function< DJIDecodingAssistInfo (uint8_t* data, int length)> m_assistInfoParser;
+
 };
 
 #endif //_H264DECODER_

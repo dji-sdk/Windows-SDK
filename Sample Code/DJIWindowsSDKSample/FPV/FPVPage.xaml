@@ -19,7 +19,7 @@
                 <TextBlock> Connect your P4P V2.0 with USB and the FPV video would be shown. </TextBlock>
             </StackPanel>
 
-            <Image x:Name="fpvImage" Stretch="UniformToFill" Visibility="Visible" Grid.Row="1" Margin="0, 10, 0, 0" />
+            <SwapChainPanel x:Name="swapChainPanel" Visibility="Visible" Grid.Row="1" Margin="0, 10, 0, 0" />
 
 
         </Grid>

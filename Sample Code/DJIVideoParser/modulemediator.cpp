@@ -14,6 +14,8 @@ namespace dji
 {
     namespace videoparser
     {
+		ModuleMediator* g_pModuleMediator = new ModuleMediator();
+
         ModuleMediator::ModuleMediator()
         {
             
@@ -24,10 +26,10 @@ namespace dji
             
         }
         
-        bool ModuleMediator::Initialize()
+        bool ModuleMediator::Initialize(const std::string & source_path, std::function<DJIDecodingAssistInfo(uint8_t* data, int length)> decoding_assist_info_parser)
         {
             m_video_parser_mgr = std::make_shared<VideoParserMgr>();
-            if (!m_video_parser_mgr->Initialize())
+            if (!m_video_parser_mgr->Initialize(source_path, decoding_assist_info_parser))
             {
                 return false;
             }

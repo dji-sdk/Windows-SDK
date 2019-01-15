@@ -26,7 +26,7 @@ namespace dji
 		{
 		}
 
-		bool VideoWrapper::Initialize(VideoParser* owner)
+		bool VideoWrapper::Initialize(VideoParser* owner, std::function< DJIDecodingAssistInfo (uint8_t* data, int length)> decoding_assist_info_parser)
 		{
 			if (owner == nullptr)
 				return false;
@@ -34,7 +34,7 @@ namespace dji
 
 			m_current_pts = 0;
 
-			m_video_parser.Initialize(this);
+			m_video_parser.Initialize(this, decoding_assist_info_parser);
 			return true;
 		}
 
@@ -46,7 +46,7 @@ namespace dji
 			m_owner = nullptr;
 		}
 
-		void VideoWrapper::SetVideoFrameCallBack(std::function<void(uint8_t *data, int width, int height)> func)
+		void VideoWrapper::SetVideoFrameCallBack(std::function<void(uint8_t *data, int width, int height, const DJIDecodingAssistInfo & assistant_info)> func)
 		{
 			if (nullptr != func)
 			{
@@ -76,11 +76,11 @@ namespace dji
 			return 0;
 		}
 
-		int VideoWrapper::FramePacket(uint8_t* buff, int size, FrameType type, int width, int height)
+		int VideoWrapper::FramePacket(uint8_t* buff, int size, FrameType type, int width, int height, const DJIDecodingAssistInfo & assistant_info)
 		{
 			if (nullptr != m_dataObserver)
 			{
-				m_dataObserver(buff, width, height);
+				m_dataObserver(buff, width, height, assistant_info);
 			}
 			return 0;
 		}
