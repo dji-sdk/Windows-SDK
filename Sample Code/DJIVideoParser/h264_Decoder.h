@@ -25,50 +25,6 @@ namespace dji {
 	}
 }
 
-#pragma pack(1)
-typedef struct tagHPI_CHL_DATA
-{
-	uint32_t    magic;
-	uint32_t    len;
-	uint8_t     ver_hsize;
-	uint8_t     chnl_id;
-	uint8_t     checksum;
-	uint8_t     padding;
-	uint8_t     data_byte[1];
-
-	uint32_t total_size() const
-	{
-		return payload_size() + 12;
-	}
-	uint32_t payload_size() const
-	{
-		uint32_t temp = ((len & 0xFF000000) >> 8) | (len & 0x0000FFFF);
-		return temp;
-	}
-}HPI_CHL_DATA;
-#pragma pack()
-
-class Pack_Compositer
-{
-public:
-	Pack_Compositer() : m_hasPackHeader(false), m_channelId(0x11) {}
-	~Pack_Compositer() {}
-
-	bool CompositePack(const uint8_t *data, const uint32_t size);
-	void SetChannelIdx(const uint8_t chID) { m_channelId = chID; }
-	HPI_CHL_DATA* m_pCurDataItem;
-
-	std::vector<uint8_t> m_outBuffer;
-private:
-	bool HeaderXor(const uint8_t* pData);
-
-private:
-	std::vector<uint8_t> m_packBuffer;
-	bool       m_hasPackHeader;
-	uint8_t    m_channelId;
-	int        m_counter = 0;
-};
-
 class h264_Decoder {
 public:
 	h264_Decoder();
@@ -83,7 +39,6 @@ public:
 	AVCodecParserContext* m_codec_paser = nullptr;
 
 	SwsContext* m_sws_ctx = nullptr;
-	Pack_Compositer m_pack_compositer;
 
 	int videoFrameParse(const uint8_t* buff, int video_size, FrameType type, uint64_t pts);
 

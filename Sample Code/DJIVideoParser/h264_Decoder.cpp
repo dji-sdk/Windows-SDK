@@ -27,68 +27,6 @@ static bool s_is_init_ffmpeg = false;
 
 #define  HEAD_SIZE 12
 
-bool Pack_Compositer::CompositePack(const uint8_t *data, const uint32_t size)
-{
-	m_packBuffer.insert(m_packBuffer.end(), data, data + size);
-
-	while (!m_hasPackHeader && m_packBuffer.size() >= HEAD_SIZE)
-	{
-		const uint8_t* pData = (const uint8_t*)m_packBuffer.data();
-
-		if (pData[0] == 0x00 && pData[1] == 0x00 && pData[2] == 0x01 && pData[3] == 0xff)
-		{
-			if (HeaderXor(pData))
-			{
-				m_hasPackHeader = true;
-				break;
-			}
-		}
-
-		m_packBuffer.erase(m_packBuffer.begin());
-
-	}
-
-	if (m_hasPackHeader)
-	{
-		m_pCurDataItem = (HPI_CHL_DATA*)(m_packBuffer.data());
-		uint32_t totalSize = m_pCurDataItem->total_size();
-
-		if (m_packBuffer.size() < totalSize) return false;
-
-		m_hasPackHeader = false;
-
-		if (m_pCurDataItem->chnl_id == m_channelId)
-		{
-
-			m_outBuffer.resize(m_pCurDataItem->payload_size());
-
-			std::copy(m_pCurDataItem->data_byte, m_pCurDataItem->data_byte + m_pCurDataItem->payload_size(), &m_outBuffer.front());
-
-			m_packBuffer.erase(m_packBuffer.begin(), m_packBuffer.begin() + totalSize);
-
-			return true;
-		}
-		else {
-
-			m_packBuffer.erase(m_packBuffer.begin(), m_packBuffer.begin() + totalSize);
-
-		}
-	}
-
-	return false;
-}
-
-bool Pack_Compositer::HeaderXor(const uint8_t* pData)
-{
-	int result = 0;
-	for (int i = 0; i < HEAD_SIZE - 1; i++)
-	{
-		result ^= pData[i];
-	}
-
-	return (result == 0);
-}
-
 h264_Decoder::h264_Decoder()
 {
 
@@ -201,7 +139,6 @@ bool h264_Decoder::InitFrameBuffer()
 {
 	if (m_dst_frame)
 	{
-#ifdef _PC_
 		m_outBuffer = new uint8_t[avpicture_get_size(PIX_FMT_FORMAT, m_codec_context->width, m_codec_context->height)];
 
 		avpicture_fill((AVPicture *)m_dst_frame, m_outBuffer, PIX_FMT_FORMAT, m_codec_context->width, m_codec_context->height);
@@ -219,26 +156,6 @@ bool h264_Decoder::InitFrameBuffer()
 			nullptr,
 			nullptr
 		);
-#else
-		m_outBuffer = new uint8_t[avpicture_get_size(AV_PIX_FMT_BGR24, m_codec_context->width, m_codec_context->height)];
-
-		avpicture_fill((AVPicture *)m_dst_frame, m_outBuffer, AV_PIX_FMT_BGR24, m_codec_context->width, m_codec_context->height);
-
-		m_sws_ctx = sws_getContext
-		(
-			m_codec_context->width,
-			m_codec_context->height,
-			m_codec_context->pix_fmt,
-			m_codec_context->width,
-			m_codec_context->height,
-			AV_PIX_FMT_BGR24,
-			SWS_BILINEAR,
-			nullptr,
-			nullptr,
-			nullptr
-		);
-
-#endif
 
 
 		return true;

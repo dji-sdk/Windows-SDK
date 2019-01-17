@@ -76,11 +76,13 @@ namespace DJIWindowsSDKSample.FPV
             }
         }
 
+        //raw data
         void OnVideoPush(VideoFeed sender, byte[] bytes)
         {
-            this.videoParser.PushVideoData(0, 0, bytes, bytes.Length);
+            videoParser.PushVideoData(0, 0, bytes, bytes.Length);
         }
 
+        //Decode data. Do nothing here. This function would return a bytes array with image data in RGBA format.
         async void ReceiveDecodedData(byte[] data, int width, int height)
         {
         }
