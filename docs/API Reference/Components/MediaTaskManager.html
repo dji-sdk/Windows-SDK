@@ -1,0 +1,462 @@
+<script>window.pathPrefix="../";</script><!DOCTYPE html>
+<html lang="en" style="padding-bottom:0px" class="local"></html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/png">
+  <title>DJI Windows SDK Documentation
+  </title><link rel="stylesheet" href="../stylesheets/doc-vendor.css"><link rel="stylesheet" href="../stylesheets/doc-app.css">
+</head>
+<body>
+  <nav id="site-header" class="site-header navbar">
+    <div class="container">
+      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">Windows SDK API REFERENCE</a></div>
+    </div>
+  </nav>
+  <div id="documentation-page" class="documentation-page">
+    <div class="container">
+      <div class="site-sidebar">
+        <div class="searcher">
+          <div id="panel" class="panel panel_tree">
+            <div class="header">
+              <div class="search-con">
+                <label id="search-label" for="search">
+                </label>
+                <input id="search" type="text" placeholder="Search" autosave="searchdoc" results="10" autocomplete="off">
+                <div class="search-icon"></div><a class="clean-search glyphicon glyphicon-remove-circle"></a>
+              </div>
+            </div>
+            <div class="tree">
+              <ul></ul>
+            </div>
+            <div class="result">
+              <ul></ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav scrollable js-tree-menu">
+          <dl>
+            <dt>Manager Classes
+            </dt>
+                  <dd><a href="../SDKManager/DJISDKManager.html">DJISDKManager</a>
+                  </dd>
+                  <dd><a data-href="../FlyZoneManager/FlyZoneManager.html" class="sub-toggle">FlyZoneManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a data-href="../FlyZoneManager/FlyZoneHandler.html" class="sub-toggle">FlyZoneHandler<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                              <ul class="sub-menu">
+                                      <dd><a href="../FlyZoneManager/UnlockZoneGroup.html">UnlockZoneGroup</a>
+                                      </dd>
+                                      <dd><a data-href="../FlyZoneManager/FlyZoneInformation.html" class="sub-toggle">FlyZoneInformation<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                                        <ul class="sub-menu">
+                                                <dd><a href="../FlyZoneManager/SubFlyZoneInformation.html">SubFlyZoneInformation</a>
+                                                </dd>
+                                        </ul>
+                                      </dd>
+                                      <dd><a href="../FlyZoneManager/CustomUnlockZone.html">CustomUnlockZone</a>
+                                      </dd>
+                              </ul>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="../WaypointMission/WaypointMissionManager.html" class="sub-toggle">WaypointMissionManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../WaypointMission/WaypointMissionHandler.html">WaypointMissionHandler</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="ComponentManager.html" class="sub-toggle">ComponentManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="CameraHandler.html">CameraHandler</a>
+                            </dd>
+                            <dd><a href="GimbalHandler.html">GimbalHandler</a>
+                            </dd>
+                            <dd><a href="RemoteControllerHandler.html">RemoteControllerHandler</a>
+                            </dd>
+                            <dd><a href="FlightAssistantHandler.html">FlightAssistantHandler</a>
+                            </dd>
+                            <dd><a href="BatteryHandler.html">BatteryHandler</a>
+                            </dd>
+                            <dd><a href="FlightControllerHandler.html">FlightControllerHandler</a>
+                            </dd>
+                            <dd><a href="WiFiHandler.html">WiFiHandler</a>
+                            </dd>
+                            <dd><a href="AccessoryHandler.html">AccessoryHandler</a>
+                            </dd>
+                            <dd><a href="SpeakerHandler.html">SpeakerHandler</a>
+                            </dd>
+                            <dd><a href="ProductHandler.html">ProductHandler</a>
+                            </dd>
+                            <dd><a href="BeaconHandler.html">BeaconHandler</a>
+                            </dd>
+                            <dd><a href="SpotLightHandler.html">SpotLightHandler</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="" class="sub-toggle">MediaTaskManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../MediaTaskManager/MediaTask.html">MediaTask</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a href="../UserAccount/UserAccountManager.html">UserAccountManager</a>
+                  </dd>
+                  <dd><a data-href="../VideoFeeder/VideoFeeder.html" class="sub-toggle">VideoFeeder<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../VideoFeeder/VideoFeed.html">VideoFeed</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
+                  </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="site-main">
+        <div class="article"><div class="article"><h1><font color="#AAA">class </font>MediaTaskManager</h1></div>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">MediaTaskManager</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description">Description:</h5>
+<p><font color="#666">MediaTaskManager provides methods for <code><a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a></code>.</font></p>
+<h5 id="class-members">Class Members:</h5>
+<div class="api-row" id="value_mediaphototype"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_mediaphototype_inline">MediaPhotoType</a></div></div><div class="inline-doc" id="value_mediaphototype_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">enum </font>MediaPhotoType</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> MediaPhotoType</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v2">Description:</h5>
+<p><font color="#666">This flag indicate which photo type of this media file. Only valid when file type is <code><a href="../Components/CameraHandler.html#value_mediafiletype_jpeg">JPEG</a></code>, <code><a href="../Components/CameraHandler.html#value_mediafiletype_dng">DNG</a></code> See <code><a href="../Components/MediaTaskManager.html#value_mediafile">MediaFile</a></code> .</font></p>
+<h5 id="enum-members">Enum Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediaphototype_normal_inline"></a>NORMAL</font></td><td><font color="#666">Sample photo file with default type.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediaphototype_hdr_inline"></a>HDR</font></td><td><font color="#666">Photo file taked by camera with High Dynamic Range(HDR) setting.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediaphototype_aeb_inline"></a>AEB</font></td><td><font color="#666">Photo file taked by camera with Automatic Exposure Bracketing(AEB) setting.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediaphototype_interval_inline"></a>INTERVAL</font></td><td><font color="#666">Photo file taked by camera with time interval setting.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediaphototype_burst_inline"></a>BURST</font></td><td><font color="#666">Photo file taked by camera with burst setting.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediaphototype_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">This enumerate use for system error, should not use by developer.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediavideotype"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_mediavideotype_inline">MediaVideoType</a></div></div><div class="inline-doc" id="value_mediavideotype_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">enum </font>MediaVideoType</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> MediaVideoType</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v3">Description:</h5>
+<p><font color="#666">This flag indicate which video type of this media file. Only valid when file type is <code><a href="../Components/CameraHandler.html#value_mediafiletype_mov">MOV</a></code>, <code><a href="../Components/CameraHandler.html#value_mediafiletype_mp4">MP4</a></code> See <code><a href="../Components/MediaTaskManager.html#value_mediafile">MediaFile</a></code> .</font></p>
+<h5 id="enum-members-v2">Enum Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediavideotype_normal_inline"></a>NORMAL</font></td><td><font color="#666">Sample video file with default type.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediavideotype_slow_motion_inline"></a>SLOW_MOTION</font></td><td><font color="#666">Video file taked by camera with slow motion setting.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediavideotype_fast_motion_inline"></a>FAST_MOTION</font></td><td><font color="#666">Video file taked by camera with fast motion setting.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediavideotype_time_lapse_inline"></a>TIME_LAPSE</font></td><td><font color="#666">Video file taked by camera with time lapse setting.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediavideotype_hdr_inline"></a>HDR</font></td><td><font color="#666">Video file taked by camera with High Dynamic Range(HDR) setting.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediavideotype_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">This enumerate use for system error, should not use by developer.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediafilestartag"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_mediafilestartag_inline">MediaFileStarTag</a></div></div><div class="inline-doc" id="value_mediafilestartag_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">enum </font>MediaFileStarTag</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> MediaFileStarTag</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v4">Description:</h5>
+<p><font color="#666">This flag indicate whether this media file is tagged star/favorite/like. See <code><a href="../Components/MediaTaskManager.html#value_mediafile">MediaFile</a></code> .</font></p>
+<h5 id="enum-members-v3">Enum Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilestartag_none_inline"></a>NONE</font></td><td><font color="#666">This flag indicate this media file is not tagged star/favorite/like.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilestartag_tagged_inline"></a>TAGGED</font></td><td><font color="#666">This flag indicate this media file is tagged star/favorite/like.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilestartag_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">This enumerate use for system error, should not use by developer.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediarequesttype"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_mediarequesttype_inline">MediaRequestType</a></div></div><div class="inline-doc" id="value_mediarequesttype_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">enum </font>MediaRequestType</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> MediaRequestType</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v5">Description:</h5>
+<p><font color="#666">This flag indicate type of file transfer request. See <code><a href="../Components/MediaTaskManager.html#value_mediafiledownloadrequest">MediaFileDownloadRequest</a></code>.</font></p>
+<h5 id="enum-members-v4">Enum Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediarequesttype_origin_inline"></a>ORIGIN</font></td><td><font color="#666">This flag indicate this request want to get origin file data.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediarequesttype_thumbnail_inline"></a>THUMBNAIL</font></td><td><font color="#666">This flag indicate this request want to get thumbnail file data. Thumbnail is the smallest size picture of photo or video first frame.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediarequesttype_screen_inline"></a>SCREEN</font></td><td><font color="#666">This flag indicate this request want to get screen(preview) file data. Screen is the smaller size picture of photo or video first frame.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediarequesttype_clip_inline"></a>CLIP</font></td><td><font color="#666">This flag indicate this request want to get partial file data. Only valid when file is video.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediarequesttype_stream_inline"></a>STREAM</font></td><td><font color="#666">This flag indicate this request want to transfer with stream.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediarequesttype_pano_inline"></a>PANO</font></td><td><font color="#666">This flag indicate this request want to get origin panorama file data. Only valid when file is panorama.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediarequesttype_panoscreennail_inline"></a>PANOSCREENNAIL</font></td><td><font color="#666">This flag indicate this request want to get screen panorama file data. Only valid when file is panorama.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediarequesttype_panothumbnail_inline"></a>PANOTHUMBNAIL</font></td><td><font color="#666">This flag indicate this request want to get thumbnail panorama file data. Only valid when file is panorama.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediarequesttype_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">This enumerate use for system error, should not use by developer.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediafilelistlocation"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_mediafilelistlocation_inline">MediaFileListLocation</a></div></div><div class="inline-doc" id="value_mediafilelistlocation_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">enum </font>MediaFileListLocation</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> MediaFileListLocation</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v6">Description:</h5>
+<p><font color="#666">Where the media file locate, some device has multiple storage location.</font></p>
+<h5 id="enum-members-v5">Enum Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilelistlocation_sd_card_inline"></a>SD_CARD</font></td><td><font color="#666">The media file location at default SD Card.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilelistlocation_internal_storage_inline"></a>INTERNAL_STORAGE</font></td><td><font color="#666">The media file location at Embedded Multi Media Card(EMMC).</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilelistlocation_extended_sd_card_inline"></a>EXTENDED_SD_CARD</font></td><td><font color="#666">The media file location at external SD Card.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilelistlocation_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">This enumerate use for system error, should not use by developer.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediafilelistlocationmsg"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_mediafilelistlocationmsg_inline">MediaFileListLocationMsg</a></div></div><div class="inline-doc" id="value_mediafilelistlocationmsg_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>MediaFileListLocationMsg</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> MediaFileListLocationMsg</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v7">Description:</h5>
+<p><font color="#666">Object for query stroage location.</font></p>
+<h5 id="struct-members">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilelistlocationmsg_location_inline"></a> <font color="#000">MediaFileListLocation location</font></font></td><td><font color="#666">Enumerate for query stroage location. See <code><a href="../Components/MediaTaskManager.html#value_mediafilelistlocation">MediaFileListLocation</a></code></font></td></tr></table></html></div>
+<div class="api-row" id="value_mediatasktype"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_mediatasktype_inline">MediaTaskType</a></div></div><div class="inline-doc" id="value_mediatasktype_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">enum </font>MediaTaskType</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> MediaTaskType</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v8">Description:</h5>
+<p><font color="#666">The media task type. using in <code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code> and <code><a href="../Components/MediaTaskManager.html#value_mediataskresponse">MediaTaskResponse</a></code></font></p>
+<h5 id="enum-members-v6">Enum Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediatasktype_file_data_inline"></a>FILE_DATA</font></td><td><font color="#666">In <code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code> indicate transfer <code><a href="../Components/MediaTaskManager.html#value_mediafiledownloadrequest">MediaFileDownloadRequest</a></code> first.  In <code><a href="../Components/MediaTaskManager.html#value_mediataskresponse">MediaTaskResponse</a></code> indicate this response from <code><a href="../Components/MediaTaskManager.html#value_mediafiledownloadrequest">MediaFileDownloadRequest</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediatasktype_file_list_inline"></a>FILE_LIST</font></td><td><font color="#666">In <code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code> indicate transfer <code><a href="../Components/MediaTaskManager.html#value_mediafilelistrequest">MediaFileListRequest</a></code> first.  In <code><a href="../Components/MediaTaskManager.html#value_mediataskresponse">MediaTaskResponse</a></code> indicate this response from <code><a href="../Components/MediaTaskManager.html#value_mediafilelistrequest">MediaFileListRequest</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediatasktype_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">This enumerate use for system error, should not use by developer.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediataskduplicate"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_mediataskduplicate_inline">MediaTaskDuplicate</a></div></div><div class="inline-doc" id="value_mediataskduplicate_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">enum </font>MediaTaskDuplicate</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> MediaTaskDuplicate</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v9">Description:</h5>
+<p><font color="#666">The flag for control the effect to duplicate request waiting tasks when PushFront/PushBack and task finished</font></p>
+<h5 id="enum-members-v7">Enum Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskduplicate_none_inline"></a>NONE</font></td><td><font color="#666">When this task push in or successed, do nothing with other tasks.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskduplicate_enqueue_with_cancel_inline"></a>ENQUEUE_WITH_CANCEL</font></td><td><font color="#666">When this task push in, cancel other tasks both executing and waiting.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskduplicate_dequeue_with_complete_inline"></a>DEQUEUE_WITH_COMPLETE</font></td><td><font color="#666">When this task successful complete, complete other tasks in waiting queue. It will make some task complete even not actually begin executing.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskduplicate_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">This enumerate use for system error, should not use by developer.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediataskdefer"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_mediataskdefer_inline">MediaTaskDefer</a></div></div><div class="inline-doc" id="value_mediataskdefer_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">enum </font>MediaTaskDefer</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> MediaTaskDefer</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v10">Description:</h5>
+<p><font color="#666">The flag for control how to deal with this task, when DeferExecuteTask apply on it.</font></p>
+<h5 id="enum-members-v8">Enum Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskdefer_back_to_queue_inline"></a>BACK_TO_QUEUE</font></td><td><font color="#666">When DeferExecuteTask perform on this task, it will be save context and back to the front of waiting queue. The event you register on it will pause until it execute again, but not invoke any err code, so you will not receive the teardown event.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskdefer_abort_inline"></a>ABORT</font></td><td><font color="#666">When DeferExecuteTask perform on this task, it will be abort directly and  invoke err code "kErrorMediaTaskAbort" and imediately receive the teardown event.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskdefer_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">This enumerate use for system error, should not use by developer.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediataskpriority"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_mediataskpriority_inline">MediaTaskPriority</a></div></div><div class="inline-doc" id="value_mediataskpriority_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">enum </font>MediaTaskPriority</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> MediaTaskPriority</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v11">Description:</h5>
+<p><font color="#666">The flag for control execute sequence.  Final execute task will be decided by postion in waiting queue and priority. Manager will loop tasks from front to back to pick up the first highest priority tasks. If you want guarantee a task execute next, task should be pushfront with high priority.</font></p>
+<h5 id="enum-members-v9">Enum Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskpriority_default_inline"></a>DEFAULT</font></td><td><font color="#666">Execute task with default priority, same mean as low.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskpriority_middle_inline"></a>MIDDLE</font></td><td><font color="#666">Execute task with middle priority.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskpriority_high_inline"></a>HIGH</font></td><td><font color="#666">Execute task with high priority.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskpriority_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">This enumerate use for system error, should not use by developer.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediafile"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_mediafile_inline">MediaFile</a></div></div><div class="inline-doc" id="value_mediafile_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>MediaFile</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> MediaFile</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v12">Description:</h5>
+<p><font color="#666">MediaFile represent a file storage in SD-Card or EMMC.</font></p>
+<h5 id="struct-members-v2">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_valid_inline"></a> <font color="#000">bool valid</font></font></td><td><font color="#666">This flag indicate whether the file is valid.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_ismanualgroupfile_inline"></a> <font color="#000">bool isManualGroupFile</font></font></td><td><font color="#666">This flag indicate whether the file is grouped by SDK. If flag is ture, you can read sub files in <code><a href="../Components/MediaTaskManager.html#value_mediafile_submediafile">subMediaFile</a></code></font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_fileindex_inline"></a> <font color="#000">int fileIndex</font></font></td><td><font color="#666">This indicates index of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_filetype_inline"></a> <font color="#000">MediaFileType fileType</font></font></td><td><font color="#666">This indicates type of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_filename_inline"></a> <font color="#000">String fileName</font></font></td><td><font color="#666">This indicates name of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_filesize_inline"></a> <font color="#000">Int64 fileSize</font></font></td><td><font color="#666">This indicates size of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_date_inline"></a> <font color="#000">DateTime date</font></font></td><td><font color="#666">This indicates stroage date of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_startag_inline"></a> <font color="#000">MediaFileStarTag starTag</font></font></td><td><font color="#666">This indicates whether this file tagged star/favorite/like.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_duration_inline"></a> <font color="#000">double duration</font></font></td><td><font color="#666">This indicates video duration of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_orientation_inline"></a> <font color="#000">CameraOrientation orientation</font></font></td><td><font color="#666">This indicates video orientation of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_framerate_inline"></a> <font color="#000">VideoFrameRate frameRate</font></font></td><td><font color="#666">This indicates video frame rate of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_resolution_inline"></a> <font color="#000">VideoResolution resolution</font></font></td><td><font color="#666">This indicates video resolution of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_videotype_inline"></a> <font color="#000">MediaVideoType videoType</font></font></td><td><font color="#666">This indicates video type of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_phototype_inline"></a> <font color="#000">MediaPhotoType photoType</font></font></td><td><font color="#666">This indicates photo type of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_panotype_inline"></a> <font color="#000">CameraPanoType panoType</font></font></td><td><font color="#666">This indicates panorama type of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_videospeedratio_inline"></a> <font color="#000">int videoSpeedRatio</font></font></td><td><font color="#666">This indicates video speed ratio of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_panocount_inline"></a> <font color="#000">int panoCount</font></font></td><td><font color="#666">This indicates panorama include photo count of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_guid_inline"></a> <font color="#000">int guid</font></font></td><td><font color="#666">This indicates video global id of this file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_filegroupindex_inline"></a> <font color="#000">int fileGroupIndex</font></font></td><td><font color="#666">This indicates file group index of this file. File can be grouped by both camera and SDK. See <code><a href="../Components/MediaTaskManager.html#value_mediafile_ismanualgroupfile">bool isManualGroupFile</a></code></font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_subindex_inline"></a> <font color="#000">int subIndex</font></font></td><td><font color="#666">This indicates sub index of this file. Sub index will use in panorama file.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_segsubindex_inline"></a> <font color="#000">int segSubIndex</font></font></td><td><font color="#666">This indicates sub segment index of this file. Sub segment index will use for video cliped by storage system. Cause FAT32 system can only storage file less than 4GB, most 4K video will be separated by it.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_timelapseinterval_inline"></a> <font color="#000">int timeLapseInterval</font></font></td><td><font color="#666">This indicates time lapse shoot interval unit of this file. Each unit represent 100ms.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_exifinfo_inline"></a> <font color="#000">FileExifInfo EXIFInfo</font></font></td><td><font color="#666">This indicates Exchangeable image file format(EXIF) information of this file. See <code><a href="../Components/MediaTaskManager.html#value_fileexifinfo">FileExifInfo</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafile_photoratio_inline"></a> <font color="#000">PhotoRatio photoRatio</font></font></td><td><font color="#666">This indicates photo ratio of this file.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediafiledownloadrequest"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_mediafiledownloadrequest_inline">MediaFileDownloadRequest</a></div></div><div class="inline-doc" id="value_mediafiledownloadrequest_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>MediaFileDownloadRequest</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> MediaFileDownloadRequest</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v13">Description:</h5>
+<p><font color="#666">Request for download file data. It can be used in <code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code></font></p>
+<h5 id="struct-members-v3">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafiledownloadrequest_index_inline"></a> <font color="#000">int index</font></font></td><td><font color="#666">Download index of file, it can be obtained from media file. See <code><a href="../Components/MediaTaskManager.html#value_mediafile">MediaFile</a></code></font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafiledownloadrequest_count_inline"></a> <font color="#000">int count</font></font></td><td><font color="#666">Download count represent how many files should be download from index. Mostly it should be 1 indicate only download index file itself. See <code><a href="../Components/MediaTaskManager.html#value_mediafile">MediaFile</a></code></font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafiledownloadrequest_offset_inline"></a> <font color="#000">Int64 offSet</font></font></td><td><font color="#666">Download offset represent download index file begin with which byte. Mostly it should be 0 indicate download from file begin. See <code><a href="../Components/MediaTaskManager.html#value_mediafile">MediaFile</a></code></font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafiledownloadrequest_datasize_inline"></a> <font color="#000">int dataSize</font></font></td><td><font color="#666">Download data size represent how many bytes the index file should be download from offset. Mostly it should be -1 indicate download to file end. See <code><a href="../Components/MediaTaskManager.html#value_mediafile">MediaFile</a></code></font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafiledownloadrequest_type_inline"></a> <font color="#000">MediaRequestType type</font></font></td><td><font color="#666">Download type of file. See <code><a href="../Components/MediaTaskManager.html#value_mediarequesttype">MediaRequestType</a></code></font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafiledownloadrequest_subindex_inline"></a> <font color="#000">int subIndex</font></font></td><td><font color="#666">Download sub index of file, it can be obtained from media file. Mostly it should be 0 indicate this file not contains sub file. See <code><a href="../Components/MediaTaskManager.html#value_mediafile">MediaFile</a></code></font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafiledownloadrequest_segsubindex_inline"></a> <font color="#000">int segSubIndex</font></font></td><td><font color="#666">Download sub segment index of file, it can be obtained from media file. Mostly it should be 0 indicate this video not contains segment file. See <code><a href="../Components/MediaTaskManager.html#value_mediafile">MediaFile</a></code></font></td></tr></table></html></div>
+<div class="api-row" id="value_mediafilelistrequest"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_mediafilelistrequest_inline">MediaFileListRequest</a></div></div><div class="inline-doc" id="value_mediafilelistrequest_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>MediaFileListRequest</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> MediaFileListRequest</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v14">Description:</h5>
+<p><font color="#666">Request for download file list. It can be used in <code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code></font></p>
+<h5 id="struct-members-v4">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilelistrequest_index_inline"></a> <font color="#000">int index</font></font></td><td><font color="#666">This indicates request files from which index. Only valid when <code><a href="../Components/MediaTaskManager.html#value_mediafilelistrequest_isalllist">bool isAllList</a></code> set false.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilelistrequest_count_inline"></a> <font color="#000">int count</font></font></td><td><font color="#666">This indicates request files count. Only valid when <code><a href="../Components/MediaTaskManager.html#value_mediafilelistrequest_isalllist">bool isAllList</a></code> set false.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilelistrequest_location_inline"></a> <font color="#000">MediaFileListLocation location</font></font></td><td><font color="#666">This indicates request files from which stroage. See <code><a href="../Components/MediaTaskManager.html#value_mediafilelistlocation">MediaFileListLocation</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilelistrequest_subtype_inline"></a> <font color="#000">MediaRequestType subType</font></font></td><td><font color="#666">This indicates request files from which stroage. See <code><a href="../Components/MediaTaskManager.html#value_mediafilelistlocation">MediaFileListLocation</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilelistrequest_isalllist_inline"></a> <font color="#000">bool isAllList</font></font></td><td><font color="#666">This indicates request all files. Set ture will ignore <code><a href="../Components/MediaTaskManager.html#value_mediafilelistrequest_index">int index</a></code> and <code><a href="../Components/MediaTaskManager.html#value_mediafilelistrequest_count">int count</a></code>.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediafilelist"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_mediafilelist_inline">MediaFileList</a></div></div><div class="inline-doc" id="value_mediafilelist_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>MediaFileList</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> MediaFileList</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v15">Description:</h5>
+<p><font color="#666">Response for download file list. See <code><a href="../Components/MediaTaskManager.html#value_mediafilelistrequest">MediaFileListRequest</a></code>.</font></p>
+<h5 id="struct-members-v5">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilelist_location_inline"></a> <font color="#000">MediaFileListLocation location</font></font></td><td><font color="#666">This indicates where the files storage in.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediafilelist_hasinvalidfile_inline"></a> <font color="#000">bool hasInvalidFile</font></font></td><td><font color="#666">This indicates whether the files missed when transfer from hardware to SDK.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediastartagrequest"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_mediastartagrequest_inline">MediaStarTagRequest</a></div></div><div class="inline-doc" id="value_mediastartagrequest_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>MediaStarTagRequest</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> MediaStarTagRequest</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v16">Description:</h5>
+<p><font color="#666">Request for taging file star/favorite/like in camera.</font></p>
+<h5 id="struct-members-v6">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediastartagrequest_location_inline"></a> <font color="#000">MediaFileListLocation location</font></font></td><td><font color="#666">This indcates where the files locate.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediastartagrequest_startag_inline"></a> <font color="#000">MediaFileStarTag starTag</font></font></td><td><font color="#666">This indcates whether the files tag on or off.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediadeletionrequest"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_mediadeletionrequest_inline">MediaDeletionRequest</a></div></div><div class="inline-doc" id="value_mediadeletionrequest_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>MediaDeletionRequest</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> MediaDeletionRequest</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v17">Description:</h5>
+<p><font color="#666">Request for taging file star/favorite/like in camera.</font></p>
+<h5 id="struct-members-v7">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediadeletionrequest_location_inline"></a> <font color="#000">MediaFileListLocation location</font></font></td><td><font color="#666">This indcates where the files locate.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediadeletionrequest_isdeleteall_inline"></a> <font color="#000">bool isDeleteAll</font></font></td><td><font color="#666">This indcates delete all files on storage.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediabatchfilerequestresult"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_mediabatchfilerequestresult_inline">MediaBatchFileRequestResult</a></div></div><div class="inline-doc" id="value_mediabatchfilerequestresult_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>MediaBatchFileRequestResult</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> MediaBatchFileRequestResult</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v18">Description:</h5>
+<p><font color="#666">Response for taging file star/favorite/like or delete. See <code><a href="../Components/MediaTaskManager.html#value_mediastartagrequest">MediaStarTagRequest</a></code> or <code><a href="../Components/MediaTaskManager.html#value_mediadeletionrequest">MediaDeletionRequest</a></code></font></p>
+<h5 id="struct-members-v8">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediabatchfilerequestresult_allsucceeded_inline"></a> <font color="#000">bool allSucceeded</font></font></td><td><font color="#666">This indcates whether this action successed on every file.</font></td></tr></table></html></div>
+<div class="api-row" id="value_mediataskrequest"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_mediataskrequest_inline">MediaTaskRequest</a></div></div><div class="inline-doc" id="value_mediataskrequest_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>MediaTaskRequest</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> MediaTaskRequest</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v19">Description:</h5>
+<p><font color="#666">Request object of task. Use it to construct <code><a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a></code></font></p>
+<h5 id="struct-members-v9">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskrequest_type_inline"></a> <font color="#000">MediaTaskType type</font></font></td><td><font color="#666">The flag control how to transfer request. See <code><a href="../Components/MediaTaskManager.html#value_mediatasktype">MediaTaskType</a></code></font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskrequest_duplicatetype_inline"></a> <font color="#000">MediaTaskDuplicate duplicateType</font></font></td><td><font color="#666">The flag control how to deal with requests with duplicate information. See <code><a href="../Components/MediaTaskManager.html#value_mediataskduplicate">MediaTaskDuplicate</a></code></font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskrequest_defertype_inline"></a> <font color="#000">MediaTaskDefer deferType</font></font></td><td><font color="#666">The flag control how to apply defer action on this task. See <code><a href="../Components/MediaTaskManager.html#value_mediataskdefer">MediaTaskDefer</a></code></font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskrequest_priority_inline"></a> <font color="#000">MediaTaskPriority priority</font></font></td><td><font color="#666">The flag control execute sequence when add task in manager waiting queue. See <code><a href="../Components/MediaTaskManager.html#value_mediataskpriority">MediaTaskPriority</a></code></font></td></tr></table></html></div>
+<div class="api-row" id="value_mediataskresponse"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_mediataskresponse_inline">MediaTaskResponse</a></div></div><div class="inline-doc" id="value_mediataskresponse_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>MediaTaskResponse</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> MediaTaskResponse</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v20">Description:</h5>
+<p><font color="#666">Response object of task execute event. All event decomposed from task response.</font></p>
+<h5 id="struct-members-v10">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskresponse_type_inline"></a> <font color="#000">MediaTaskType type</font></font></td><td><font color="#666">The flag indicate which type of request invoke this response. See <code><a href="../Components/MediaTaskManager.html#value_mediatasktype">MediaTaskType</a></code></font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskresponse_listreq_inline"></a> <font color="#000">MediaFileListRequest listReq</font></font></td><td><font color="#666">Response is invoked by this request.  Only valid when type is <code><a href="../Components/MediaTaskManager.html#value_mediatasktype_file_list">FILE_LIST</a></code> See <code><a href="../Components/MediaTaskManager.html#value_mediafilelistrequest">MediaFileListRequest</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskresponse_datareq_inline"></a> <font color="#000">MediaFileDownloadRequest dataReq</font></font></td><td><font color="#666">Response is invoked by this request.  Only valid when type is <code><a href="../Components/MediaTaskManager.html#value_mediatasktype_file_data">FILE_DATA</a></code> See <code><a href="../Components/MediaTaskManager.html#value_mediafiledownloadrequest">MediaFileDownloadRequest</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskresponse_requestclear_inline"></a> <font color="#000">bool requestClear</font></font></td><td><font color="#666">Have all requests in this task already transfered.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskresponse_listleft_inline"></a> <font color="#000">int listLeft</font></font></td><td><font color="#666">How many <code><a href="../Components/MediaTaskManager.html#value_mediafilelistrequest">MediaFileListRequest</a></code> left in this task.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskresponse_dataleft_inline"></a> <font color="#000">int dataLeft</font></font></td><td><font color="#666">How many <code><a href="../Components/MediaTaskManager.html#value_mediafiledownloadrequest">MediaFileDownloadRequest</a></code> left in this task.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskresponse_filelist_inline"></a> <font color="#000">MediaFileList fileList</font></font></td><td><font color="#666">File result from <code><a href="../Components/MediaTaskManager.html#value_mediafilelistrequest">MediaFileListRequest</a></code>.  Only valid when type is <code><a href="../Components/MediaTaskManager.html#value_mediatasktype_file_list">FILE_LIST</a></code> See <code><a href="../Components/MediaTaskManager.html#value_mediafilelist">MediaFileList</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_mediataskresponse_bitspeed_inline"></a> <font color="#000">Int64 bitSpeed</font></font></td><td><font color="#666">Speed result from <code><a href="../Components/MediaTaskManager.html#value_mediafiledownloadrequest">MediaFileDownloadRequest</a></code>.  Only valid when type is <code><a href="../Components/MediaTaskManager.html#value_mediatasktype_file_data">FILE_DATA</a></code></font></td></tr></table></html></div>
+<div class="api-row" id="value_fileexifinfo"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_fileexifinfo_inline">FileExifInfo</a></div></div><div class="inline-doc" id="value_fileexifinfo_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>FileExifInfo</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> FileExifInfo</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v21">Description:</h5>
+<p><font color="#666">Exchangeable image file format(EXIF) information. Use in <code><a href="../Components/MediaTaskManager.html#value_mediafile">MediaFile</a></code>.</font></p>
+<h5 id="struct-members-v11">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_focallength35mmformatenabled_inline"></a> <font color="#000">bool focalLength35mmFormatEnabled</font></font></td><td><font color="#666">Flag indicates having valid <code><a href="../Components/MediaTaskManager.html#value_fileexifinfo_focallength35mmformat">int focalLength35mmFormat</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_lightsourceenabled_inline"></a> <font color="#000">bool lightSourceEnabled</font></font></td><td><font color="#666">Flag indicates having valid <code><a href="../Components/MediaTaskManager.html#value_fileexifinfo_lightsource">int lightSource</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_meteringmodeenabled_inline"></a> <font color="#000">bool meteringModeEnabled</font></font></td><td><font color="#666">Flag indicates having valid <code><a href="../Components/MediaTaskManager.html#value_fileexifinfo_meteringmode">int meteringMode</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_exposurecompensationenabled_inline"></a> <font color="#000">bool exposureCompensationEnabled</font></font></td><td><font color="#666">Flag indicates having valid <code><a href="../Components/MediaTaskManager.html#value_fileexifinfo_exposurecompensationtext">String exposureCompensationText</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_isoenabled_inline"></a> <font color="#000">bool isoEnabled</font></font></td><td><font color="#666">Flag indicates having valid <code><a href="../Components/MediaTaskManager.html#value_fileexifinfo_iso">int iso</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_exposureprogramenabled_inline"></a> <font color="#000">bool exposureProgramEnabled</font></font></td><td><font color="#666">Flag indicates having valid <code><a href="../Components/MediaTaskManager.html#value_fileexifinfo_exposureprogram">int exposureProgram</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_fnumberenabled_inline"></a> <font color="#000">bool fNumberEnabled</font></font></td><td><font color="#666">Flag indicates having valid <code><a href="../Components/MediaTaskManager.html#value_fileexifinfo_aperturetext">String apertureText</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_exposuretimeenabled_inline"></a> <font color="#000">bool exposureTimeEnabled</font></font></td><td><font color="#666">Flag indicates having valid <code><a href="../Components/MediaTaskManager.html#value_fileexifinfo_shutterspeedtext">String shutterSpeedText</a></code>.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_exposureprogram_inline"></a> <font color="#000">int exposureProgram</font></font></td><td><font color="#666">Int value of exposure program.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_iso_inline"></a> <font color="#000">int iso</font></font></td><td><font color="#666">Int value of iso.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_meteringmode_inline"></a> <font color="#000">int meteringMode</font></font></td><td><font color="#666">Int value of metering mode.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_lightsource_inline"></a> <font color="#000">int lightSource</font></font></td><td><font color="#666">Int value of light source.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_focallength35mmformat_inline"></a> <font color="#000">int focalLength35mmFormat</font></font></td><td><font color="#666">Int value of focal length 35mm format.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_shutterspeedtext_inline"></a> <font color="#000">String shutterSpeedText</font></font></td><td><font color="#666">Exposure time text with format like +3.5.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_aperturetext_inline"></a> <font color="#000">String apertureText</font></font></td><td><font color="#666">F number text with format like +3.5.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_fileexifinfo_exposurecompensationtext_inline"></a> <font color="#000">String exposureCompensationText</font></font></td><td><font color="#666">Exposure Compensation text with format like +3.5.</font></td></tr></table></html></div>
+<div class="api-row" id="mediatask"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">class</div><div class="api-col right"><a href="../MediaTaskManager/MediaTask.html">MediaTask</a></div></div>
+<h4 id="construct">Construct</h4>
+<div class="api-row" id="mediataskmanager_construct"><div class="api-col left">Methods</div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#mediataskmanager_construct_inline">MediaTaskManager</a></div></div><div class="inline-doc" id="mediataskmanager_construct_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>MediaTaskManager</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">MediaTaskManager(<span class="keyword">uint</span> productId, <span class="keyword">uint</span> cameraIndex)</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v22">Description:</h5>
+<p><font color="#666">Construct a task manager with <code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code>.</font></p>
+<h5 id="input-parameters">Input Parameters:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">uint <font color="#000">productId</font></font></td><td><font color="#666"><i>Which product that manager should access. Mostly should be use 0.</i></font></td></tr><tr valign="top"><td><font color="#70BF41">uint <font color="#000">cameraIndex</font></font></td><td><font color="#666"><i>Which camera that manager should access. If hardware only have one camera, here should be use 0.</i></font></td></tr></table></html></div>
+<html><p><br></p></html>
+<h4 id="field">Field</h4>
+<div class="api-row" id="mediataskmanager_suspend"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#mediataskmanager_suspend_inline">Suspend</a></div></div><div class="inline-doc" id="mediataskmanager_suspend_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>Suspend</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">bool</span> Suspend &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v23">Description:</h5>
+<p><font color="#666">Flag to control the waiting task queue. After executing task complete, manager will check this flag to decide should begin next task. Attention set this flag will not effect current executing task. If you want pause task completely(both queue and data transfer), You should set this flag &quot;True&quot; first and call &quot;DeferEexecuteTask&quot;. See <code><a href="../Components/MediaTaskManager.html#mediataskmanager_deferexecutetask">DeferExecuteTask</a></code>.</font></p>
+<h5 id="see-also">See Also:</h5>
+<p><font color="#666"><code><a href="../Components/MediaTaskManager.html#mediataskmanager_suspend">Suspend</a></code></font></p>
+</div>
+<div class="api-row" id="mediataskmanager_productid"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">unknown</div><div class="api-col right"><a class="trigger" href="#mediataskmanager_productid_inline"></a></div></div><div class="inline-doc" id="mediataskmanager_productid_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">unknown </font></h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> ProductId =&gt; productId</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v24">Description:</h5>
+<p><font color="#666">ProductId passed by construct.</font></p>
+</div>
+<div class="api-row" id="mediataskmanager_cameraindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">unknown</div><div class="api-col right"><a class="trigger" href="#mediataskmanager_cameraindex_inline"></a></div></div><div class="inline-doc" id="mediataskmanager_cameraindex_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">unknown </font></h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> CameraIndex =&gt; cameraIndex</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v25">Description:</h5>
+<p><font color="#666">CameraIndex passed by construct.</font></p>
+</div>
+<html><p><br></p></html>
+<h4 id="action">Action</h4>
+<div class="api-row" id="mediataskmanager_pushfront"><div class="api-col left">Methods</div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#mediataskmanager_pushfront_inline">PushFront</a></div></div><div class="inline-doc" id="mediataskmanager_pushfront_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>PushFront</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">PushFront</span>(<span class="params">MediaTask task</span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v26">Description:</h5>
+<p><font color="#666">Push a task to the front of the wait queue. This action will check task request parameter &quot;duplicateType&quot;  to decide how to deal with the same infomation task. See <code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code>.</font></p>
+<h5 id="input-parameters-v2">Input Parameters:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a> <font color="#000">task</font></font></td><td><font color="#666"><i>Task will action on. See <code><a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a></code>.</i></font></td></tr></table></html></div>
+<div class="api-row" id="mediataskmanager_pushback"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#mediataskmanager_pushback_inline">PushBack</a></div></div><div class="inline-doc" id="mediataskmanager_pushback_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>PushBack</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">PushBack</span>(<span class="params">MediaTask task</span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v27">Description:</h5>
+<p><font color="#666">Push a task to the back of the wait queue. This action will check task request parameter &quot;duplicateType&quot;  to decide how to deal with the same infomation task. See <code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code>.</font></p>
+<h5 id="input-parameters-v3">Input Parameters:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a> <font color="#000">task</font></font></td><td><font color="#666"><i>Task will action on. See <code><a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a></code></i></font></td></tr></table></html></div>
+<div class="api-row" id="mediataskmanager_deferexecutetask"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#mediataskmanager_deferexecutetask_inline">DeferExecuteTask</a></div></div><div class="inline-doc" id="mediataskmanager_deferexecutetask_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>DeferExecuteTask</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">DeferExecuteTask</span>(<span class="params"></span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v28">Description:</h5>
+<p><font color="#666">Discard or backward current executing task to wait queue. This action will check executing task request parameter &quot;deferType&quot;  to decide how to deal with it.See <code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code>. If deferType is &quot;BACK_TO_QUEUE&quot; , this action will postpone executing task event invoke. Otherwise deferType is &quot;ABORT&quot;, this action will complete current task with error code &quot;kErrorMediaTaskAbort&quot;.</font></p>
+</div>
+<div class="api-row" id="mediataskmanager_trysync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#mediataskmanager_trysync_inline">TrySync</a></div></div><div class="inline-doc" id="mediataskmanager_trysync_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>TrySync</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">TrySync</span>(<span class="params">MediaTask task</span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v29">Description:</h5>
+<p><font color="#666">Try to synchronize a task with duplicate request infomation. See <code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code>. If neither executing task nor waiting task have the duplicate request infomation, this action will return error code &quot;kErrorMediaTaskSyncFailure&quot;. If this action successful attach to a eixst task,  the parameter task's event will invoke simultaneously with eixst task.</font></p>
+<h5 id="input-parameters-v4">Input Parameters:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a> <font color="#000">task</font></font></td><td><font color="#666"><i>Task will compare to those tasks already pushed. See <code><a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a></code>.</i></font></td></tr></table></html>
+<h5 id="return">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;<a href="../SDKManager/DJISDKManager.html#value_sdkerror">SDKError</a>&gt;</font></td><td><font color="#666"><i>Action error code, 0 define as no error.</i></font></td></tr></table></html></div>
+<div class="api-row" id="mediataskmanager_cancel"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#mediataskmanager_cancel_inline">Task<sdkerror>Cancel</sdkerror></a></div></div><div class="inline-doc" id="mediataskmanager_cancel_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>Task<sdkerror>Cancel</sdkerror></h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;SDKError&gt;Cancel(MediaTask task)</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v30">Description:</h5>
+<p><font color="#666">Cancel task with duplicate request infomation, only effect executing and waiting tasks once in manager.</font></p>
+<h5 id="input-parameters-v5">Input Parameters:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a> <font color="#000">task</font></font></td><td><font color="#666"><i>Task will compare to those tasks already pushed. See <code><a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a></code>.</i></font></td></tr></table></html>
+<h5 id="return-v2">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async</font></td><td><font color="#666"><i>Action error code, 0 define as no error.</i></font></td></tr></table></html></div>
+<div class="api-row" id="mediataskmanager_cancelalltask"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#mediataskmanager_cancelalltask_inline">Task<sdkerror>CancelAllTask</sdkerror></a></div></div><div class="inline-doc" id="mediataskmanager_cancelalltask_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>Task<sdkerror>CancelAllTask</sdkerror></h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;SDKError&gt;CancelAllTask()</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v31">Description:</h5>
+<p><font color="#666">Cancel all task ever pushed in manager.</font></p>
+<h5 id="return-v3">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async</font></td><td><font color="#666"><i>Action error code, 0 define as no error.</i></font></td></tr></table></html></div>
+
+        </div>
+      </div>
+    </div>
+    <div id="search-modal" class="search-modal modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><a href="javascript:;" @click="closeSearch" class="btn-close">×</a>
+            <h2 class="title"> Search Windows SDK Document
+            </h2>
+            <input type="text" v-model="searchInput" @keydown.enter="search">
+          </div>
+          <div class="modal-body">
+            <p v-show="!!searchCount" class="search-count"><span v-cloak>{{searchCount}}</span>&nbsp;Results
+            </p>
+            <ul v-show="!!searchCount" class="search-result">
+              <li v-for="item in searchResult"><a v-bind:href="item.url | docUrl">
+                  <h3 class="title">{{{(item.highlights && item.highlights.title) || item.title}}}</h3>
+                  <p class="content">{{{(item.highlights && item.highlights.content[0]) || item.title}}}</p></a></li>
+            </ul>
+            <div v-show="showLoadMore" class="text-center"><a href="javascript:;" @click="loadMoreSearch" class="btn-learn-more">Load More</a></div>
+            <div v-show="searchLoading" class="text-center">Loading...
+            </div>
+            <div v-show="!searchCount &amp;&amp; !searchLoading" class="text-center">Not Found
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    window.Config = window.config = {
+      sdk: "windows-sdk",
+      locale: "en",
+      environment: "development",
+      api_host: ""
+    };
+    
+  </script>
+  <!-- build:js /javascripts/doc-vendor.js-->
+  <script src="../javascripts/lib/jquery-2.1.4.min.js" type="text/javascript"></script>
+  <script src="../javascripts/lib/bootstrap.js" type="text/javascript"></script>
+  <script src="../javascripts/lib/vue.min.js" type="text/javascript"></script>
+  <!-- endbuild-->
+  <!-- build:js /javascripts/doc-app.js-->
+  <script src="../javascripts/util/cookie.js" type="text/javascript"></script>
+  <script src="../javascripts/util/url-manager.js" type="text/javascript"></script>
+  <script src="../javascripts/util/ajax-manager.js" type="text/javascript"></script>
+  <script src="../javascripts/base/footer.js" type="text/javascript"></script>
+  <script src="../javascripts/base/header.js" type="text/javascript"></script>
+  <script src="../javascripts/util/searcher.js" type="text/javascript"></script>
+  <script src="../javascripts/search_index.js" type="text/javascript"></script>
+  <script src="../javascripts/searchdoc.js" type="text/javascript"></script>
+  <script src="../javascripts/api.js" type="text/javascript"></script>
+  <!-- endbuild-->
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-43055594-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>

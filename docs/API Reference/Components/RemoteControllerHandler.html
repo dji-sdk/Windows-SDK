@@ -1,6 +1,6 @@
 <script>window.pathPrefix="../";</script><!DOCTYPE html>
 <html lang="en" style="padding-bottom:0px" class="local"></html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link href="../images/favicon.png" rel="shortcut icon" type="image/png">
@@ -10,7 +10,7 @@
 <body>
   <nav id="site-header" class="site-header navbar">
     <div class="container">
-      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">WINDOWS SDK API REFERENCE</a></div>
+      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">Windows SDK API REFERENCE</a></div>
     </div>
   </nav>
   <div id="documentation-page" class="documentation-page">
@@ -80,13 +80,25 @@
                             </dd>
                             <dd><a href="WiFiHandler.html">WiFiHandler</a>
                             </dd>
+                            <dd><a href="AccessoryHandler.html">AccessoryHandler</a>
+                            </dd>
+                            <dd><a href="SpeakerHandler.html">SpeakerHandler</a>
+                            </dd>
                             <dd><a href="ProductHandler.html">ProductHandler</a>
+                            </dd>
+                            <dd><a href="BeaconHandler.html">BeaconHandler</a>
+                            </dd>
+                            <dd><a href="SpotLightHandler.html">SpotLightHandler</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="MediaTaskManager.html" class="sub-toggle">MediaTaskManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../MediaTaskManager/MediaTask.html">MediaTask</a>
                             </dd>
                     </ul>
                   </dd>
                   <dd><a href="../UserAccount/UserAccountManager.html">UserAccountManager</a>
-                  </dd>
-                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
                   </dd>
                   <dd><a data-href="../VideoFeeder/VideoFeeder.html" class="sub-toggle">VideoFeeder<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
                     <ul class="sub-menu">
@@ -94,62 +106,64 @@
                             </dd>
                     </ul>
                   </dd>
+                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
+                  </dd>
           </dl>
         </div>
       </div>
       <div class="site-main">
         <div class="article"><div class="article"><h1><font color="#AAA">class </font>RemoteControllerHandler</h1></div>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">RemoteControllerHandler</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">RemoteControllerHandler</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description">Description:</h5>
 <p><font color="#666">This class represents the remote controller of the aircraft. It provides methods to change the settings of the  physical remote controller. A remote controller is a device that can have a battery, radio, buttons, sticks, wheels,  and output ports for video. The mobile device is connected to the remote controller, which is always sending out information  about what everything is doing. The normal remote controller is called the master.</font></p>
 <h5 id="class-members">Class Members:</h5>
+<div class="api-row" id="remotecontrollerhandler_productindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_productindex_inline">ProductIndex</a></div></div><div class="inline-doc" id="remotecontrollerhandler_productindex_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>ProductIndex</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> ProductIndex &#123; <span class="keyword">get</span>; &#125;</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v2">Description:</h5>
+<p><font color="#666">The index of the product to which this component handler belongs. The default product index is 0.</font></p>
+</div>
+<div class="api-row" id="remotecontrollerhandler_componentindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_componentindex_inline">ComponentIndex</a></div></div><div class="inline-doc" id="remotecontrollerhandler_componentindex_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>ComponentIndex</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> ComponentIndex &#123; <span class="keyword">get</span>; &#125;</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v3">Description:</h5>
+<p><font color="#666">The index of the component. It is unique for a type of components inside a product. It is useful when a product has multiple handlers of the same kind. If the product only has one handler of this kind, the index is 0.</font></p>
+</div>
+<div class="api-row" id="remotecontrollerhandler_destructor"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_destructor_inline">~RemoteControllerHandler</a></div></div><div class="inline-doc" id="remotecontrollerhandler_destructor_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>~RemoteControllerHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">~RemoteControllerHandler()</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v4">Description:</h5>
+<p><font color="#666">The destructor. It should not be called explicitly.</font></p>
+</div>
 <div class="api-row" id="value_rcflightmodeswitchmsg"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_rcflightmodeswitchmsg_inline">RCFlightModeSwitchMsg</a></div></div><div class="inline-doc" id="value_rcflightmodeswitchmsg_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">struct </font>RCFlightModeSwitchMsg</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> RCFlightModeSwitchMsg</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> RCFlightModeSwitchMsg</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v2">Description:</h5>
+<h5 id="description-v5">Description:</h5>
 <p><font color="#666">A class that contains a flight mode switch state of remote controllers.</font></p>
 <h5 id="struct-members">Struct Members:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_rcflightmodeswitchmsg_value_inline"></a> <font color="#000">RCFlightModeSwitch value</font></font></td><td><font color="#666">The actual value of the class.</font></td></tr></table></html></div>
 <div class="api-row" id="value_rcflightmodeswitch"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_rcflightmodeswitch_inline">RCFlightModeSwitch</a></div></div><div class="inline-doc" id="value_rcflightmodeswitch_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">enum </font>RCFlightModeSwitch</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">enum</span> RCFlightModeSwitch</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> RCFlightModeSwitch</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v3">Description:</h5>
+<h5 id="description-v6">Description:</h5>
 <p><font color="#666">Remote Controller Flight Mode switch position.</font></p>
 <h5 id="enum-members">Enum Members:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_rcflightmodeswitch_switch_one_inline"></a>SWITCH_ONE</font></td><td><font color="#666">Position One. For all products except Mavic Pro, this is the left most position of the flight mode switch on  a remote controller from the perspective of the pilot. For example, on a Phantom 4 remote controller, Position  One is labeled "A". For Mavic Pro, Spark and Mavic Air, this is the position that is furthest away from the  pilot and labeled "Sport".</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_rcflightmodeswitch_switch_two_inline"></a>SWITCH_TWO</font></td><td><font color="#666">Position Two. For all products except Mavic Pro, this is the middle position of the flight mode switch on a  remote controller from the perspective of the pilot. For example, on a Phantom 4 remote controller, Position  Two is labeled "S". For Mavic Pro, Spark and Mavic Air, this is the position that is closest to the pilot (the P position).</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_rcflightmodeswitch_switch_three_inline"></a>SWITCH_THREE</font></td><td><font color="#666">Position Three. For all products except Mavic Pro, this is the right most position of the flight mode switch on  a remote controller from the perspective of the pilot. For example, on a Phantom 4 remote controller, Position  Two is labeled "P". Mavic Pro, Spark or Mavic Air does not have a third position for the flight mode switch.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_rcflightmodeswitch_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">Unknown.</font></td></tr></table></html></div>
-<div class="api-row" id="remotecontrollerhandler_productindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_productindex_inline">ProductIndex</a></div></div><div class="inline-doc" id="remotecontrollerhandler_productindex_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">property </font>ProductIndex</h6></div>
-
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">uint</span> ProductIndex &#123; <span class="keyword">get</span>; &#125;</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v4">Description:</h5>
-<p><font color="#666">The index of the product to which this component handler belongs. The default product index is 0.</font></p>
-</div>
-<div class="api-row" id="remotecontrollerhandler_componentindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_componentindex_inline">ComponentIndex</a></div></div><div class="inline-doc" id="remotecontrollerhandler_componentindex_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">property </font>ComponentIndex</h6></div>
-
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">uint</span> ComponentIndex &#123; <span class="keyword">get</span>; &#125;</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v5">Description:</h5>
-<p><font color="#666">The index of the component. It is unique for a type of components inside a product. It is useful when a product has multiple handlers of the same kind. If the product only has one handler of this kind, the index is 0.</font></p>
-</div>
-<div class="api-row" id="remotecontrollerhandler_destructor"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_destructor_inline">~RemoteControllerHandler</a></div></div><div class="inline-doc" id="remotecontrollerhandler_destructor_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">method </font>~RemoteControllerHandler</h6></div>
-
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">~RemoteControllerHandler()</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v6">Description:</h5>
-<p><font color="#666">The destructor. It should not be called explicitly.</font></p>
-</div>
 <div class="api-row" id="delegate_rcflightmodeswitchmsgchangedeventhandler"><div class="api-col left">Delegate</div><div class="api-col middle" style="color:#AAA">delegate</div><div class="api-col right"><a class="trigger" href="#delegate_rcflightmodeswitchmsgchangedeventhandler_inline">RCFlightModeSwitchMsgChangedEventHandler</a></div></div><div class="inline-doc" id="delegate_rcflightmodeswitchmsgchangedeventhandler_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">delegate </font>RCFlightModeSwitchMsgChangedEventHandler</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">RCFlightModeSwitchMsgChangedEventHandler</span>(<span class="params"><span class="keyword">object</span> sender, RCFlightModeSwitchMsg? <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">RCFlightModeSwitchMsgChangedEventHandler</span>(<span class="params"><span class="keyword">object</span> sender, RCFlightModeSwitchMsg? <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
 <h5 id="description-v7">Description:</h5>
 <p><font color="#666">A delegate type used to subscribe the updated values in type <code><a href="../Components/RemoteControllerHandler.html#value_rcflightmodeswitchmsg">RCFlightModeSwitchMsg</a></code>.</font></p>
@@ -157,7 +171,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrcsticklefthorizontalasync"><div class="api-col left">Methods</div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrcsticklefthorizontalasync_inline">GetRCStickLeftHorizontalAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrcsticklefthorizontalasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCStickLeftHorizontalAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetRCStickLeftHorizontalAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetRCStickLeftHorizontalAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v8">Description:</h5>
 <p><font color="#666">Gets the horizontal position of the left stick in the range of [-660, 660].</font></p>
@@ -166,7 +180,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrcstickleftverticalasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrcstickleftverticalasync_inline">GetRCStickLeftVerticalAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrcstickleftverticalasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCStickLeftVerticalAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetRCStickLeftVerticalAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetRCStickLeftVerticalAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v9">Description:</h5>
 <p><font color="#666">Gets the vertical position of the left stick in the range of [-660, 660].</font></p>
@@ -175,7 +189,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrcstickrighthorizontalasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrcstickrighthorizontalasync_inline">GetRCStickRightHorizontalAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrcstickrighthorizontalasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCStickRightHorizontalAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetRCStickRightHorizontalAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetRCStickRightHorizontalAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v10">Description:</h5>
 <p><font color="#666">Gets the horizontal position of the right stick in the range of [-660, 660].</font></p>
@@ -184,7 +198,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrcstickrightverticalasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrcstickrightverticalasync_inline">GetRCStickRightVerticalAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrcstickrightverticalasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCStickRightVerticalAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetRCStickRightVerticalAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetRCStickRightVerticalAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v11">Description:</h5>
 <p><font color="#666">Gets the vertical position of the right stick in the range of [-660, 660].</font></p>
@@ -193,7 +207,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrcleftwheelasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrcleftwheelasync_inline">GetRCLeftWheelAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrcleftwheelasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCLeftWheelAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetRCLeftWheelAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetRCLeftWheelAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v12">Description:</h5>
 <p><font color="#666">Gets Gimbal Dial's (upper left wheel) value in the range of [-660,660], where 0 is untouched and positive is turned in the clockwise direction.</font></p>
@@ -202,7 +216,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrcrightwheelasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrcrightwheelasync_inline">GetRCRightWheelAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrcrightwheelasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCRightWheelAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetRCRightWheelAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetRCRightWheelAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v13">Description:</h5>
 <p><font color="#666">Gets the value of the remote controller's right wheel (Camera Settings Dial).</font></p>
@@ -211,7 +225,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrcrightwheelbuttondownasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrcrightwheelbuttondownasync_inline">GetRCRightWheelButtonDownAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrcrightwheelbuttondownasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCRightWheelButtonDownAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCRightWheelButtonDownAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCRightWheelButtonDownAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v14">Description:</h5>
 <p><font color="#666">Determines if the right wheel is push down. Not available now.</font></p>
@@ -220,7 +234,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrcflightmodeswitchstateasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrcflightmodeswitchstateasync_inline">GetRCFlightModeSwitchStateAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrcflightmodeswitchstateasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCFlightModeSwitchStateAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;RCFlightModeSwitchMsg?&gt;&gt; GetRCFlightModeSwitchStateAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;RCFlightModeSwitchMsg?&gt;&gt; GetRCFlightModeSwitchStateAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v15">Description:</h5>
 <p><font color="#666">Gets the state of the remote controller's flight mode switch.</font></p>
@@ -229,7 +243,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrcgohomebuttondownasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrcgohomebuttondownasync_inline">GetRCGohomeButtonDownAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrcgohomebuttondownasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCGohomeButtonDownAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCGohomeButtonDownAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCGohomeButtonDownAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v16">Description:</h5>
 <p><font color="#666">Determines if the go-home button is push down.</font></p>
@@ -238,7 +252,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrcrecordbuttondownasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrcrecordbuttondownasync_inline">GetRCRecordButtonDownAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrcrecordbuttondownasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCRecordButtonDownAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCRecordButtonDownAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCRecordButtonDownAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v17">Description:</h5>
 <p><font color="#666">Determines if the record button is push down.</font></p>
@@ -247,7 +261,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrcshutterbuttondownasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrcshutterbuttondownasync_inline">GetRCShutterButtonDownAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrcshutterbuttondownasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCShutterButtonDownAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCShutterButtonDownAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCShutterButtonDownAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v18">Description:</h5>
 <p><font color="#666">Determines if the shutter button is push down.</font></p>
@@ -256,7 +270,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrccustombutton1downasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrccustombutton1downasync_inline">GetRCCustomButton1DownAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrccustombutton1downasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCCustomButton1DownAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCCustomButton1DownAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCCustomButton1DownAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v19">Description:</h5>
 <p><font color="#666">Determines if the C1 button is push down.</font></p>
@@ -265,7 +279,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrccustombutton2downasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrccustombutton2downasync_inline">GetRCCustomButton2DownAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrccustombutton2downasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCCustomButton2DownAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCCustomButton2DownAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCCustomButton2DownAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v20">Description:</h5>
 <p><font color="#666">Determines if the C2 button is push down.</font></p>
@@ -274,7 +288,7 @@
 <div class="api-row" id="remotecontrollerhandler_getrcpausebuttondownasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getrcpausebuttondownasync_inline">GetRCPauseButtonDownAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getrcpausebuttondownasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRCPauseButtonDownAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCPauseButtonDownAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRCPauseButtonDownAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v21">Description:</h5>
 <p><font color="#666">Determines if the pause button is push down.</font></p>
@@ -283,7 +297,7 @@
 <div class="api-row" id="remotecontrollerhandler_getconnectionasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getconnectionasync_inline">GetConnectionAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getconnectionasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetConnectionAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetConnectionAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetConnectionAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v22">Description:</h5>
 <p><font color="#666">Determines if a component is connected or not.</font></p>
@@ -292,7 +306,7 @@
 <div class="api-row" id="remotecontrollerhandler_getserialnumberasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_getserialnumberasync_inline">GetSerialNumberAsync</a></div></div><div class="inline-doc" id="remotecontrollerhandler_getserialnumberasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetSerialNumberAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetSerialNumberAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetSerialNumberAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v23">Description:</h5>
 <p><font color="#666">Gets the serial number of the component.</font></p>
@@ -301,7 +315,7 @@
 <div class="api-row" id="remotecontrollerhandler_rcsticklefthorizontalchangedpushevent"><div class="api-col left">Event</div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rcsticklefthorizontalchangedpushevent_inline">RCStickLeftHorizontalChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rcsticklefthorizontalchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCStickLeftHorizontalChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler RCStickLeftHorizontalChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> IntMsgChangedEventHandler RCStickLeftHorizontalChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v24">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the horizontal position of the left stick in the range of [-660, 660].</font></p>
@@ -309,7 +323,7 @@
 <div class="api-row" id="remotecontrollerhandler_rcstickleftverticalchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rcstickleftverticalchangedpushevent_inline">RCStickLeftVerticalChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rcstickleftverticalchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCStickLeftVerticalChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler RCStickLeftVerticalChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> IntMsgChangedEventHandler RCStickLeftVerticalChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v25">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the vertical position of the left stick in the range of [-660, 660].</font></p>
@@ -317,7 +331,7 @@
 <div class="api-row" id="remotecontrollerhandler_rcstickrighthorizontalchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rcstickrighthorizontalchangedpushevent_inline">RCStickRightHorizontalChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rcstickrighthorizontalchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCStickRightHorizontalChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler RCStickRightHorizontalChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> IntMsgChangedEventHandler RCStickRightHorizontalChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v26">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the horizontal position of the right stick in the range of [-660, 660].</font></p>
@@ -325,7 +339,7 @@
 <div class="api-row" id="remotecontrollerhandler_rcstickrightverticalchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rcstickrightverticalchangedpushevent_inline">RCStickRightVerticalChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rcstickrightverticalchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCStickRightVerticalChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler RCStickRightVerticalChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> IntMsgChangedEventHandler RCStickRightVerticalChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v27">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the vertical position of the right stick in the range of [-660, 660].</font></p>
@@ -333,7 +347,7 @@
 <div class="api-row" id="remotecontrollerhandler_rcleftwheelchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rcleftwheelchangedpushevent_inline">RCLeftWheelChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rcleftwheelchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCLeftWheelChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler RCLeftWheelChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> IntMsgChangedEventHandler RCLeftWheelChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v28">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the remote controller's Gimbal Dial's (upper left wheel) value in the range  of [-660,660], where 0 is untouched and positive is turned in the clockwise direction..</font></p>
@@ -341,7 +355,7 @@
 <div class="api-row" id="remotecontrollerhandler_rcrightwheelchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rcrightwheelchangedpushevent_inline">RCRightWheelChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rcrightwheelchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCRightWheelChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler RCRightWheelChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> IntMsgChangedEventHandler RCRightWheelChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v29">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the remote controller's right wheel (Camera Settings Dial).</font></p>
@@ -349,7 +363,7 @@
 <div class="api-row" id="remotecontrollerhandler_rcrightwheelbuttondownchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rcrightwheelbuttondownchangedpushevent_inline">RCRightWheelButtonDownChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rcrightwheelbuttondownchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCRightWheelButtonDownChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCRightWheelButtonDownChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCRightWheelButtonDownChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v30">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes about whether the right wheel is push down. Not available now.</font></p>
@@ -357,7 +371,7 @@
 <div class="api-row" id="remotecontrollerhandler_rcflightmodeswitchstatechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rcflightmodeswitchstatechangedpushevent_inline">RCFlightModeSwitchStateChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rcflightmodeswitchstatechangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCFlightModeSwitchStateChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> RCFlightModeSwitchMsgChangedEventHandler RCFlightModeSwitchStateChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> RCFlightModeSwitchMsgChangedEventHandler RCFlightModeSwitchStateChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v31">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the remote controller's flight mode switch.</font></p>
@@ -365,7 +379,7 @@
 <div class="api-row" id="remotecontrollerhandler_rcgohomebuttondownchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rcgohomebuttondownchangedpushevent_inline">RCGohomeButtonDownChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rcgohomebuttondownchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCGohomeButtonDownChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCGohomeButtonDownChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCGohomeButtonDownChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v32">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes about whether the go-home button is push down.</font></p>
@@ -373,7 +387,7 @@
 <div class="api-row" id="remotecontrollerhandler_rcrecordbuttondownchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rcrecordbuttondownchangedpushevent_inline">RCRecordButtonDownChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rcrecordbuttondownchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCRecordButtonDownChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCRecordButtonDownChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCRecordButtonDownChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v33">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes about whether the record button is push down.</font></p>
@@ -381,7 +395,7 @@
 <div class="api-row" id="remotecontrollerhandler_rcshutterbuttondownchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rcshutterbuttondownchangedpushevent_inline">RCShutterButtonDownChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rcshutterbuttondownchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCShutterButtonDownChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCShutterButtonDownChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCShutterButtonDownChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v34">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes about whether the shutter button is push down.</font></p>
@@ -389,7 +403,7 @@
 <div class="api-row" id="remotecontrollerhandler_rccustombutton1downchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rccustombutton1downchangedpushevent_inline">RCCustomButton1DownChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rccustombutton1downchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCCustomButton1DownChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCCustomButton1DownChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCCustomButton1DownChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v35">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes about whether the C1 button is push down.</font></p>
@@ -397,7 +411,7 @@
 <div class="api-row" id="remotecontrollerhandler_rccustombutton2downchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rccustombutton2downchangedpushevent_inline">RCCustomButton2DownChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rccustombutton2downchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCCustomButton2DownChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCCustomButton2DownChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCCustomButton2DownChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v36">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes about whether the C2 button is push down.</font></p>
@@ -405,7 +419,7 @@
 <div class="api-row" id="remotecontrollerhandler_rcpausebuttondownchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_rcpausebuttondownchangedpushevent_inline">RCPauseButtonDownChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_rcpausebuttondownchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RCPauseButtonDownChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCPauseButtonDownChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RCPauseButtonDownChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v37">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes about whether the pause button is push down.</font></p>
@@ -413,7 +427,7 @@
 <div class="api-row" id="remotecontrollerhandler_connectionchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_connectionchangedpushevent_inline">ConnectionChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_connectionchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>ConnectionChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ConnectionChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ConnectionChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v38">Description:</h5>
 <p><font color="#666">Subscribe the event to receive a component's connection change.</font></p>
@@ -421,7 +435,7 @@
 <div class="api-row" id="remotecontrollerhandler_serialnumberchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#remotecontrollerhandler_serialnumberchangedpushevent_inline">SerialNumberChanged</a></div></div><div class="inline-doc" id="remotecontrollerhandler_serialnumberchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>SerialNumberChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> StringMsgChangedEventHandler SerialNumberChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> StringMsgChangedEventHandler SerialNumberChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v39">Description:</h5>
 <p><font color="#666">Subscribe the event to receive the change of the component's serial number.</font></p>
@@ -439,7 +453,7 @@
             <input type="text" v-model="searchInput" @keydown.enter="search">
           </div>
           <div class="modal-body">
-            <p v-show="!!searchCount" class="search-count"><span v-cloak="">{{searchCount}}</span>&nbsp;Results
+            <p v-show="!!searchCount" class="search-count"><span v-cloak>{{searchCount}}</span>&nbsp;Results
             </p>
             <ul v-show="!!searchCount" class="search-result">
               <li v-for="item in searchResult"><a v-bind:href="item.url | docUrl">

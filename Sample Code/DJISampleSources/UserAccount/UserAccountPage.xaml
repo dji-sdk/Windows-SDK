@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="DJIWindowsSDKSample.UserAccount.UserAccountPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DJIWindowsSDKSample.UserAccount"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock FontSize="36" Style="{StaticResource TitleTextBlockStyle}"> User Account Manager</TextBlock>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}">
+                For using complete features of their drones, users need to login their own DJI account.
+            </TextBlock>
+        </StackPanel>
+        <Grid Name="contentGrid" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Width="260" Margin="0,10,0,0">
+                <StackPanel>
+                    <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Account State: </TextBlock>
+                    <StackPanel Margin="0,6,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource BodyTextBlockStyle}">State: </TextBlock>
+                            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Name="accountStateTextBlock"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource BodyTextBlockStyle}">Operation Result:</TextBlock>
+                            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Name="operationResTextBlock"></TextBlock>
+                        </StackPanel>
+
+                        <TextBlock FontSize="30" Margin="0,10,0,0" Style="{StaticResource TitleTextBlockStyle}"> Start Login:</TextBlock>
+                        <TextBlock Margin="0,6,0,0" Style="{StaticResource BodyTextBlockStyle}"> Start login with a new WebView.</TextBlock>
+                        <Button Margin="0,6,0,0" Name="loginButton" Click="loginButton_Click">Login</Button>
+
+                        <TextBlock FontSize="30" Margin="0,10,0,0" Style="{StaticResource TitleTextBlockStyle}"> Logout:</TextBlock>
+                        <TextBlock Margin="0,6,0,0" Style="{StaticResource BodyTextBlockStyle}"> Logout your DJI account.</TextBlock>
+                        <Button Margin="0,6,0,0" Name="logoutButton" Click="logoutButton_Click">Logout</Button>
+
+                    </StackPanel>
+
+
+                </StackPanel>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

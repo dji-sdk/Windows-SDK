@@ -1,6 +1,6 @@
 <script>window.pathPrefix="../";</script><!DOCTYPE html>
 <html lang="en" style="padding-bottom:0px" class="local"></html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link href="../images/favicon.png" rel="shortcut icon" type="image/png">
@@ -10,7 +10,7 @@
 <body>
   <nav id="site-header" class="site-header navbar">
     <div class="container">
-      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">WINDOWS SDK API REFERENCE</a></div>
+      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">Windows SDK API REFERENCE</a></div>
     </div>
   </nav>
   <div id="documentation-page" class="documentation-page">
@@ -80,13 +80,25 @@
                             </dd>
                             <dd><a href="" class="active">WiFiHandler</a>
                             </dd>
+                            <dd><a href="AccessoryHandler.html">AccessoryHandler</a>
+                            </dd>
+                            <dd><a href="SpeakerHandler.html">SpeakerHandler</a>
+                            </dd>
                             <dd><a href="ProductHandler.html">ProductHandler</a>
+                            </dd>
+                            <dd><a href="BeaconHandler.html">BeaconHandler</a>
+                            </dd>
+                            <dd><a href="SpotLightHandler.html">SpotLightHandler</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="MediaTaskManager.html" class="sub-toggle">MediaTaskManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../MediaTaskManager/MediaTask.html">MediaTask</a>
                             </dd>
                     </ul>
                   </dd>
                   <dd><a href="../UserAccount/UserAccountManager.html">UserAccountManager</a>
-                  </dd>
-                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
                   </dd>
                   <dd><a data-href="../VideoFeeder/VideoFeeder.html" class="sub-toggle">VideoFeeder<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
                     <ul class="sub-menu">
@@ -94,62 +106,64 @@
                             </dd>
                     </ul>
                   </dd>
+                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
+                  </dd>
           </dl>
         </div>
       </div>
       <div class="site-main">
         <div class="article"><div class="article"><h1><font color="#AAA">class </font>WiFiHandler</h1></div>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">WiFiHandler</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">WiFiHandler</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description">Description:</h5>
 <p><font color="#666">This class provides methods to change the setting of the product's WiFi. Rebooting WiFi is required in order to make new settings take effect.</font></p>
 <h5 id="class-members">Class Members:</h5>
+<div class="api-row" id="wifihandler_productindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#wifihandler_productindex_inline">ProductIndex</a></div></div><div class="inline-doc" id="wifihandler_productindex_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>ProductIndex</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> ProductIndex &#123; <span class="keyword">get</span>; &#125;</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v2">Description:</h5>
+<p><font color="#666">The index of the product to which this component handler belongs. The default product index is 0.</font></p>
+</div>
+<div class="api-row" id="wifihandler_componentindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#wifihandler_componentindex_inline">ComponentIndex</a></div></div><div class="inline-doc" id="wifihandler_componentindex_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>ComponentIndex</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> ComponentIndex &#123; <span class="keyword">get</span>; &#125;</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v3">Description:</h5>
+<p><font color="#666">The index of the component. It is unique for a type of components inside a product. It is useful when a product has multiple handlers of the same kind. If the product only has one handler of this kind, the index is 0.</font></p>
+</div>
+<div class="api-row" id="wifihandler_destructor"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#wifihandler_destructor_inline">~WiFiHandler</a></div></div><div class="inline-doc" id="wifihandler_destructor_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>~WiFiHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">~WiFiHandler()</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v4">Description:</h5>
+<p><font color="#666">The destructor. It should not be called explicitly.</font></p>
+</div>
 <div class="api-row" id="value_wififrequencybandmsg"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_wififrequencybandmsg_inline">WiFiFrequencyBandMsg</a></div></div><div class="inline-doc" id="value_wififrequencybandmsg_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">struct </font>WiFiFrequencyBandMsg</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> WiFiFrequencyBandMsg</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> WiFiFrequencyBandMsg</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v2">Description:</h5>
+<h5 id="description-v5">Description:</h5>
 <p><font color="#666">A class contains a WiFi frequency band.</font></p>
 <h5 id="struct-members">Struct Members:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_wififrequencybandmsg_value_inline"></a> <font color="#000">WiFiFrequencyBand value</font></font></td><td><font color="#666">The actual value of the class.</font></td></tr></table></html></div>
 <div class="api-row" id="value_wififrequencyband"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_wififrequencyband_inline">WiFiFrequencyBand</a></div></div><div class="inline-doc" id="value_wififrequencyband_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">enum </font>WiFiFrequencyBand</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">enum</span> WiFiFrequencyBand</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> WiFiFrequencyBand</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v3">Description:</h5>
+<h5 id="description-v6">Description:</h5>
 <p><font color="#666">WiFi frequency band.</font></p>
 <h5 id="enum-members">Enum Members:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_wififrequencyband_band_2_dot_4g_inline"></a>BAND_2_DOT_4G</font></td><td><font color="#666">The WiFi Frequency band is 2.4 GHz.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_wififrequencyband_band_5g_inline"></a>BAND_5G</font></td><td><font color="#666">The WiFi Frequency band is 5 GHz.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_wififrequencyband_band_dual_inline"></a>BAND_DUAL</font></td><td><font color="#666">Dual frequency band mode. The WiFi frequency band can be either 2.4 GHz or 5 GHz.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_wififrequencyband_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">Unknown.</font></td></tr></table></html></div>
-<div class="api-row" id="wifihandler_productindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#wifihandler_productindex_inline">ProductIndex</a></div></div><div class="inline-doc" id="wifihandler_productindex_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">property </font>ProductIndex</h6></div>
-
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">uint</span> ProductIndex &#123; <span class="keyword">get</span>; &#125;</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v4">Description:</h5>
-<p><font color="#666">The index of the product to which this component handler belongs. The default product index is 0.</font></p>
-</div>
-<div class="api-row" id="wifihandler_componentindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#wifihandler_componentindex_inline">ComponentIndex</a></div></div><div class="inline-doc" id="wifihandler_componentindex_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">property </font>ComponentIndex</h6></div>
-
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">uint</span> ComponentIndex &#123; <span class="keyword">get</span>; &#125;</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v5">Description:</h5>
-<p><font color="#666">The index of the component. It is unique for a type of components inside a product. It is useful when a product has multiple handlers of the same kind. If the product only has one handler of this kind, the index is 0.</font></p>
-</div>
-<div class="api-row" id="wifihandler_destructor"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#wifihandler_destructor_inline">~WiFiHandler</a></div></div><div class="inline-doc" id="wifihandler_destructor_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">method </font>~WiFiHandler</h6></div>
-
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">~WiFiHandler()</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v6">Description:</h5>
-<p><font color="#666">The destructor. It should not be called explicitly.</font></p>
-</div>
 <div class="api-row" id="wifihandler_setwifissidasync"><div class="api-col left">Methods</div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#wifihandler_setwifissidasync_inline">SetWiFiSSIDAsync</a></div></div><div class="inline-doc" id="wifihandler_setwifissidasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>SetWiFiSSIDAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetWiFiSSIDAsync</span>(<span class="params">StringMsg <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetWiFiSSIDAsync</span>(<span class="params">StringMsg <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v7">Description:</h5>
 <p><font color="#666">Sets the WiFi SSID. The setting will take effect only after the product reboots.</font></p>
@@ -160,7 +174,7 @@
 <div class="api-row" id="wifihandler_getwifissidasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#wifihandler_getwifissidasync_inline">GetWiFiSSIDAsync</a></div></div><div class="inline-doc" id="wifihandler_getwifissidasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetWiFiSSIDAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetWiFiSSIDAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetWiFiSSIDAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v8">Description:</h5>
 <p><font color="#666">Gets the WiFi SSID.</font></p>
@@ -169,7 +183,7 @@
 <div class="api-row" id="wifihandler_setwifipasswordasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#wifihandler_setwifipasswordasync_inline">SetWiFiPasswordAsync</a></div></div><div class="inline-doc" id="wifihandler_setwifipasswordasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>SetWiFiPasswordAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetWiFiPasswordAsync</span>(<span class="params">StringMsg <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetWiFiPasswordAsync</span>(<span class="params">StringMsg <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v9">Description:</h5>
 <p><font color="#666">Sets the WiFi password.</font></p>
@@ -180,7 +194,7 @@
 <div class="api-row" id="wifihandler_getwifipasswordasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#wifihandler_getwifipasswordasync_inline">GetWiFiPasswordAsync</a></div></div><div class="inline-doc" id="wifihandler_getwifipasswordasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetWiFiPasswordAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetWiFiPasswordAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetWiFiPasswordAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v10">Description:</h5>
 <p><font color="#666">Get the WiFi password.</font></p>
@@ -189,7 +203,7 @@
 <div class="api-row" id="wifihandler_setfrequencybandasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#wifihandler_setfrequencybandasync_inline">SetFrequencyBandAsync</a></div></div><div class="inline-doc" id="wifihandler_setfrequencybandasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>SetFrequencyBandAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetFrequencyBandAsync</span>(<span class="params">WiFiFrequencyBandMsg <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetFrequencyBandAsync</span>(<span class="params">WiFiFrequencyBandMsg <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v11">Description:</h5>
 <p><font color="#666">Sets the frequency band of WiFi. It is not supported by Mavic Air. For Mavic Air, set different channel numbers to select the frequency band.</font></p>
@@ -200,7 +214,7 @@
 <div class="api-row" id="wifihandler_getfrequencybandasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#wifihandler_getfrequencybandasync_inline">GetFrequencyBandAsync</a></div></div><div class="inline-doc" id="wifihandler_getfrequencybandasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetFrequencyBandAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;WiFiFrequencyBandMsg?&gt;&gt; GetFrequencyBandAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;WiFiFrequencyBandMsg?&gt;&gt; GetFrequencyBandAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v12">Description:</h5>
 <p><font color="#666">Gets the current WiFi frequency band. It is not supported by Mavic Air.</font></p>
@@ -209,7 +223,7 @@
 <div class="api-row" id="wifihandler_restartwifiasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#wifihandler_restartwifiasync_inline">RestartWiFiAsync</a></div></div><div class="inline-doc" id="wifihandler_restartwifiasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>RestartWiFiAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">RestartWiFiAsync</span>(<span class="params"></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">RestartWiFiAsync</span>(<span class="params"></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v13">Description:</h5>
 <p><font color="#666">Restarts the WiFi component. CAUTION: the connection to the DJI product will get broken.</font></p>
@@ -218,7 +232,7 @@
 <div class="api-row" id="wifihandler_getconnectionasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#wifihandler_getconnectionasync_inline">GetConnectionAsync</a></div></div><div class="inline-doc" id="wifihandler_getconnectionasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetConnectionAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetConnectionAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetConnectionAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v14">Description:</h5>
 <p><font color="#666">Determines if a component is connected or not.</font></p>
@@ -227,7 +241,7 @@
 <div class="api-row" id="wifihandler_getserialnumberasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#wifihandler_getserialnumberasync_inline">GetSerialNumberAsync</a></div></div><div class="inline-doc" id="wifihandler_getserialnumberasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetSerialNumberAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetSerialNumberAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetSerialNumberAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v15">Description:</h5>
 <p><font color="#666">Gets the serial number of the component.</font></p>
@@ -236,7 +250,7 @@
 <div class="api-row" id="wifihandler_wifissidchangedpushevent"><div class="api-col left">Event</div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#wifihandler_wifissidchangedpushevent_inline">WiFiSSIDChanged</a></div></div><div class="inline-doc" id="wifihandler_wifissidchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>WiFiSSIDChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> StringMsgChangedEventHandler WiFiSSIDChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> StringMsgChangedEventHandler WiFiSSIDChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v16">Description:</h5>
 <p><font color="#666">Subscribe the event to receive the change of the WiFi SSID.</font></p>
@@ -244,7 +258,7 @@
 <div class="api-row" id="wifihandler_wifipasswordchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#wifihandler_wifipasswordchangedpushevent_inline">WiFiPasswordChanged</a></div></div><div class="inline-doc" id="wifihandler_wifipasswordchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>WiFiPasswordChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> StringMsgChangedEventHandler WiFiPasswordChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> StringMsgChangedEventHandler WiFiPasswordChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v17">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the WiFi password.</font></p>
@@ -252,7 +266,7 @@
 <div class="api-row" id="wifihandler_connectionchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#wifihandler_connectionchangedpushevent_inline">ConnectionChanged</a></div></div><div class="inline-doc" id="wifihandler_connectionchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>ConnectionChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ConnectionChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ConnectionChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v18">Description:</h5>
 <p><font color="#666">Subscribe the event to receive a component's connection change.</font></p>
@@ -260,7 +274,7 @@
 <div class="api-row" id="wifihandler_serialnumberchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#wifihandler_serialnumberchangedpushevent_inline">SerialNumberChanged</a></div></div><div class="inline-doc" id="wifihandler_serialnumberchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>SerialNumberChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> StringMsgChangedEventHandler SerialNumberChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> StringMsgChangedEventHandler SerialNumberChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v19">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the serial number of the component.</font></p>
@@ -278,7 +292,7 @@
             <input type="text" v-model="searchInput" @keydown.enter="search">
           </div>
           <div class="modal-body">
-            <p v-show="!!searchCount" class="search-count"><span v-cloak="">{{searchCount}}</span>&nbsp;Results
+            <p v-show="!!searchCount" class="search-count"><span v-cloak>{{searchCount}}</span>&nbsp;Results
             </p>
             <ul v-show="!!searchCount" class="search-result">
               <li v-for="item in searchResult"><a v-bind:href="item.url | docUrl">

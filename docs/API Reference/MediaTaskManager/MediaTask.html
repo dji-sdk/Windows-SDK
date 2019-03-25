@@ -1,0 +1,308 @@
+<script>window.pathPrefix="../";</script><!DOCTYPE html>
+<html lang="en" style="padding-bottom:0px" class="local"></html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/png">
+  <title>DJI Windows SDK Documentation
+  </title><link rel="stylesheet" href="../stylesheets/doc-vendor.css"><link rel="stylesheet" href="../stylesheets/doc-app.css">
+</head>
+<body>
+  <nav id="site-header" class="site-header navbar">
+    <div class="container">
+      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">Windows SDK API REFERENCE</a></div>
+    </div>
+  </nav>
+  <div id="documentation-page" class="documentation-page">
+    <div class="container">
+      <div class="site-sidebar">
+        <div class="searcher">
+          <div id="panel" class="panel panel_tree">
+            <div class="header">
+              <div class="search-con">
+                <label id="search-label" for="search">
+                </label>
+                <input id="search" type="text" placeholder="Search" autosave="searchdoc" results="10" autocomplete="off">
+                <div class="search-icon"></div><a class="clean-search glyphicon glyphicon-remove-circle"></a>
+              </div>
+            </div>
+            <div class="tree">
+              <ul></ul>
+            </div>
+            <div class="result">
+              <ul></ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav scrollable js-tree-menu">
+          <dl>
+            <dt>Manager Classes
+            </dt>
+                  <dd><a href="../SDKManager/DJISDKManager.html">DJISDKManager</a>
+                  </dd>
+                  <dd><a data-href="../FlyZoneManager/FlyZoneManager.html" class="sub-toggle">FlyZoneManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a data-href="../FlyZoneManager/FlyZoneHandler.html" class="sub-toggle">FlyZoneHandler<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                              <ul class="sub-menu">
+                                      <dd><a href="../FlyZoneManager/UnlockZoneGroup.html">UnlockZoneGroup</a>
+                                      </dd>
+                                      <dd><a data-href="../FlyZoneManager/FlyZoneInformation.html" class="sub-toggle">FlyZoneInformation<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                                        <ul class="sub-menu">
+                                                <dd><a href="../FlyZoneManager/SubFlyZoneInformation.html">SubFlyZoneInformation</a>
+                                                </dd>
+                                        </ul>
+                                      </dd>
+                                      <dd><a href="../FlyZoneManager/CustomUnlockZone.html">CustomUnlockZone</a>
+                                      </dd>
+                              </ul>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="../WaypointMission/WaypointMissionManager.html" class="sub-toggle">WaypointMissionManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../WaypointMission/WaypointMissionHandler.html">WaypointMissionHandler</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="../Components/ComponentManager.html" class="sub-toggle">ComponentManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../Components/CameraHandler.html">CameraHandler</a>
+                            </dd>
+                            <dd><a href="../Components/GimbalHandler.html">GimbalHandler</a>
+                            </dd>
+                            <dd><a href="../Components/RemoteControllerHandler.html">RemoteControllerHandler</a>
+                            </dd>
+                            <dd><a href="../Components/FlightAssistantHandler.html">FlightAssistantHandler</a>
+                            </dd>
+                            <dd><a href="../Components/BatteryHandler.html">BatteryHandler</a>
+                            </dd>
+                            <dd><a href="../Components/FlightControllerHandler.html">FlightControllerHandler</a>
+                            </dd>
+                            <dd><a href="../Components/WiFiHandler.html">WiFiHandler</a>
+                            </dd>
+                            <dd><a href="../Components/AccessoryHandler.html">AccessoryHandler</a>
+                            </dd>
+                            <dd><a href="../Components/SpeakerHandler.html">SpeakerHandler</a>
+                            </dd>
+                            <dd><a href="../Components/ProductHandler.html">ProductHandler</a>
+                            </dd>
+                            <dd><a href="../Components/BeaconHandler.html">BeaconHandler</a>
+                            </dd>
+                            <dd><a href="../Components/SpotLightHandler.html">SpotLightHandler</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="../Components/MediaTaskManager.html" class="sub-toggle">MediaTaskManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="" class="active">MediaTask</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a href="../UserAccount/UserAccountManager.html">UserAccountManager</a>
+                  </dd>
+                  <dd><a data-href="../VideoFeeder/VideoFeeder.html" class="sub-toggle">VideoFeeder<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../VideoFeeder/VideoFeed.html">VideoFeed</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
+                  </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="site-main">
+        <div class="article"><div class="article"><h1><font color="#AAA">class </font>MediaTask</h1></div>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">class</span> <span class="title">MediaTask</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description">Description:</h5>
+<p><font color="#666">MediaTask consist of task event and request. MediaTask should construct with <code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code>, Pass to MediaTaskManager to invoke the lifecycle event.</font></p>
+<h5 id="class-members">Class Members:</h5>
+<div class="api-row" id="mediatask_ontasklistreqresponsehandler"><div class="api-col left">Delegate</div><div class="api-col middle" style="color:#AAA">delegate</div><div class="api-col right"><a class="trigger" href="#mediatask_ontasklistreqresponsehandler_inline">OnTaskListReqResponseHandler</a></div></div><div class="inline-doc" id="mediatask_ontasklistreqresponsehandler_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">delegate </font>OnTaskListReqResponseHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">OnTaskListReqResponseHandler</span>(<span class="params">MediaTask sender, List&lt;MediaFile&gt; files</span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v2">Description:</h5>
+<p><font color="#666">Delegate of task complete file list request event.</font></p>
+</div>
+<div class="api-row" id="mediatask_ontasklistreqforwardhandler"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">delegate</div><div class="api-col right"><a class="trigger" href="#mediatask_ontasklistreqforwardhandler_inline">OnTaskListReqForwardHandler</a></div></div><div class="inline-doc" id="mediatask_ontasklistreqforwardhandler_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">delegate </font>OnTaskListReqForwardHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">OnTaskListReqForwardHandler</span>(<span class="params">MediaTask sender, MediaFileListRequest? request, <span class="keyword">int</span> offset, <span class="keyword">int</span> count</span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v3">Description:</h5>
+<p><font color="#666">Delegate of forward to next file list request event.</font></p>
+</div>
+<div class="api-row" id="mediatask_ontaskdatareqresponsehandler"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">delegate</div><div class="api-col right"><a class="trigger" href="#mediatask_ontaskdatareqresponsehandler_inline">OnTaskDataReqResponseHandler</a></div></div><div class="inline-doc" id="mediatask_ontaskdatareqresponsehandler_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">delegate </font>OnTaskDataReqResponseHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">OnTaskDataReqResponseHandler</span>(<span class="params">MediaTask sender, MediaFileDownloadRequest? request, <span class="keyword">byte</span>[] data, <span class="keyword">double</span> bitSpeed</span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v4">Description:</h5>
+<p><font color="#666">Delegate of download file data transfer event, you should calculate how many bytes already download here.</font></p>
+</div>
+<div class="api-row" id="mediatask_ontaskdatareqforwardhandler"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">delegate</div><div class="api-col right"><a class="trigger" href="#mediatask_ontaskdatareqforwardhandler_inline">OnTaskDataReqForwardHandler</a></div></div><div class="inline-doc" id="mediatask_ontaskdatareqforwardhandler_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">delegate </font>OnTaskDataReqForwardHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">OnTaskDataReqForwardHandler</span>(<span class="params">MediaTask sender, MediaFileDownloadRequest? request, <span class="keyword">int</span> offset, <span class="keyword">int</span> count</span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v5">Description:</h5>
+<p><font color="#666">Delegate of forward to next download file request event.</font></p>
+</div>
+<div class="api-row" id="mediatask_onrequestteardownhandler"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">delegate</div><div class="api-col right"><a class="trigger" href="#mediatask_onrequestteardownhandler_inline">OnRequestTearDownHandler</a></div></div><div class="inline-doc" id="mediatask_onrequestteardownhandler_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">delegate </font>OnRequestTearDownHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">OnRequestTearDownHandler</span>(<span class="params">MediaTask sender, SDKError retCode, MediaTaskResponse? response</span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v6">Description:</h5>
+<p><font color="#666">Delegate of task execute finished, if requests all successed, task invoke this event at last. If any request get failure, the task fail and invoke this event immediately.</font></p>
+</div>
+<div class="api-row" id="mediatask_onlistreqresponse"><div class="api-col left">Event</div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#mediatask_onlistreqresponse_inline">OnListReqResponse</a></div></div><div class="inline-doc" id="mediatask_onlistreqresponse_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>OnListReqResponse</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> OnTaskListReqResponseHandler OnListReqResponse</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v7">Description:</h5>
+<p><font color="#666">MediaFileListRequest response event .See <code><a href="../MediaTaskManager/MediaTask.html#mediatask_ontasklistreqresponsehandler">OnTaskListReqResponseHandler</a></code></font></p>
+</div>
+<div class="api-row" id="mediatask_onlistreqforward"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#mediatask_onlistreqforward_inline">OnListReqForward</a></div></div><div class="inline-doc" id="mediatask_onlistreqforward_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>OnListReqForward</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> OnTaskListReqForwardHandler OnListReqForward</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v8">Description:</h5>
+<p><font color="#666">MediaFileListRequest forward event .See <code><a href="../MediaTaskManager/MediaTask.html#mediatask_ontasklistreqforwardhandler">OnTaskListReqForwardHandler</a></code></font></p>
+</div>
+<div class="api-row" id="mediatask_ondatareqresponse"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#mediatask_ondatareqresponse_inline">OnDataReqResponse</a></div></div><div class="inline-doc" id="mediatask_ondatareqresponse_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>OnDataReqResponse</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> OnTaskDataReqResponseHandler OnDataReqResponse</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v9">Description:</h5>
+<p><font color="#666">MediaFileDownloadRequest response event .See <code><a href="../MediaTaskManager/MediaTask.html#mediatask_ontaskdatareqresponsehandler">OnTaskDataReqResponseHandler</a></code></font></p>
+</div>
+<div class="api-row" id="mediatask_ondatareqforward"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#mediatask_ondatareqforward_inline">OnDataReqForward</a></div></div><div class="inline-doc" id="mediatask_ondatareqforward_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>OnDataReqForward</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> OnTaskDataReqForwardHandler OnDataReqForward</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v10">Description:</h5>
+<p><font color="#666">MediaFileDownloadRequest forward event .See <code><a href="../MediaTaskManager/MediaTask.html#mediatask_ontaskdatareqforwardhandler">OnTaskDataReqForwardHandler</a></code></font></p>
+</div>
+<div class="api-row" id="mediatask_onrequestteardown"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#mediatask_onrequestteardown_inline">OnRequestTearDown</a></div></div><div class="inline-doc" id="mediatask_onrequestteardown_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>OnRequestTearDown</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> OnRequestTearDownHandler OnRequestTearDown</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v11">Description:</h5>
+<p><font color="#666">MediaTask have finished all requests event or occur request failure.See <code><a href="../MediaTaskManager/MediaTask.html#mediatask_onrequestteardownhandler">OnRequestTearDownHandler</a></code></font></p>
+</div>
+<h4 id="construct">Construct</h4>
+<div class="api-row" id="mediatask_construct"><div class="api-col left">Methods</div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#mediatask_construct_inline">MediaTask</a></div></div><div class="inline-doc" id="mediatask_construct_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>MediaTask</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">MediaTask(MediaTaskRequest request)</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v12">Description:</h5>
+<p><font color="#666">Construct a task with <code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code>.</font></p>
+<h5 id="input-parameters">Input Parameters:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a> <font color="#000">request</font></font></td><td><font color="#666"><i>The request taken by task. See <code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code>.</i></font></td></tr></table></html></div>
+<div class="api-row" id="mediatask_fromfilelistrequest"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#mediatask_fromfilelistrequest_inline">FromRequest</a></div></div><div class="inline-doc" id="mediatask_fromfilelistrequest_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>FromRequest</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">public</span> MediaTask <span class="title">FromRequest</span>(<span class="params">MediaFileListRequest request</span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v13">Description:</h5>
+<p><font color="#666">A convenience construct method of task with <code><a href="../Components/MediaTaskManager.html#value_mediafilelistrequest">MediaFileListRequest</a></code>. MediaTaskRequest will use &quot;FILE_LIST&quot; type, &quot;NONE&quot; duplicateType, &quot;BACK_TO_QUEUE&quot; deferType, &quot;DEFAULT&quot; priority</font></p>
+<h5 id="input-parameters-v2">Input Parameters:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../Components/MediaTaskManager.html#value_mediafilelistrequest">MediaFileListRequest</a> <font color="#000">request</font></font></td><td><font color="#666"><i>Convert to MediaTaskRequest with file list request. See <code><a href="../Components/MediaTaskManager.html#value_mediafilelistrequest">MediaFileListRequest</a></code>.</i></font></td></tr></table></html>
+<h5 id="return">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">public <a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a></font></td><td><font color="#666"><i>An instance of <code><a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a></code></i></font></td></tr></table></html></div>
+<div class="api-row" id="mediatask_fromfiledownloadrequest"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#mediatask_fromfiledownloadrequest_inline">FromRequest</a></div></div><div class="inline-doc" id="mediatask_fromfiledownloadrequest_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>FromRequest</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">public</span> MediaTask <span class="title">FromRequest</span>(<span class="params">MediaFileDownloadRequest request</span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v14">Description:</h5>
+<p><font color="#666">A convenience construct method of task with <code><a href="../Components/MediaTaskManager.html#value_mediafiledownloadrequest">MediaFileDownloadRequest</a></code>. MediaTaskRequest will use &quot;FILE_LIST&quot; type, &quot;NONE&quot; duplicateType, &quot;BACK_TO_QUEUE&quot; deferType, &quot;DEFAULT&quot; priority</font></p>
+<h5 id="input-parameters-v3">Input Parameters:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../Components/MediaTaskManager.html#value_mediafiledownloadrequest">MediaFileDownloadRequest</a> <font color="#000">request</font></font></td><td><font color="#666"><i>Convert to MediaTaskRequest with download file request. See <code><a href="../Components/MediaTaskManager.html#value_mediafiledownloadrequest">MediaFileDownloadRequest</a></code>.</i></font></td></tr></table></html>
+<h5 id="return-v2">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">public <a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a></font></td><td><font color="#666"><i>An instance of <code><a href="../MediaTaskManager/MediaTask.html#mediatask">MediaTask</a></code></i></font></td></tr></table></html></div>
+<html><p><br></p></html>
+<h4 id="field">Field</h4>
+<div class="api-row" id="mediatask_request"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#mediatask_request_inline">get</a></div></div><div class="inline-doc" id="mediatask_request_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>get</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">MediaTaskRequest Request &#123; <span class="keyword">get</span> =&gt; <span class="keyword">this</span>.request; &#125;</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v15">Description:</h5>
+<p><font color="#666">Media task request passed by construct.</font></p>
+<h5 id="see-also">See Also:</h5>
+<p><font color="#666"><code><a href="../Components/MediaTaskManager.html#value_mediataskrequest">MediaTaskRequest</a></code>, <code><a href="../MediaTaskManager/MediaTask.html#mediatask_request">get</a></code></font></p>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div id="search-modal" class="search-modal modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><a href="javascript:;" @click="closeSearch" class="btn-close">×</a>
+            <h2 class="title"> Search Windows SDK Document
+            </h2>
+            <input type="text" v-model="searchInput" @keydown.enter="search">
+          </div>
+          <div class="modal-body">
+            <p v-show="!!searchCount" class="search-count"><span v-cloak>{{searchCount}}</span>&nbsp;Results
+            </p>
+            <ul v-show="!!searchCount" class="search-result">
+              <li v-for="item in searchResult"><a v-bind:href="item.url | docUrl">
+                  <h3 class="title">{{{(item.highlights && item.highlights.title) || item.title}}}</h3>
+                  <p class="content">{{{(item.highlights && item.highlights.content[0]) || item.title}}}</p></a></li>
+            </ul>
+            <div v-show="showLoadMore" class="text-center"><a href="javascript:;" @click="loadMoreSearch" class="btn-learn-more">Load More</a></div>
+            <div v-show="searchLoading" class="text-center">Loading...
+            </div>
+            <div v-show="!searchCount &amp;&amp; !searchLoading" class="text-center">Not Found
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    window.Config = window.config = {
+      sdk: "windows-sdk",
+      locale: "en",
+      environment: "development",
+      api_host: ""
+    };
+    
+  </script>
+  <!-- build:js /javascripts/doc-vendor.js-->
+  <script src="../javascripts/lib/jquery-2.1.4.min.js" type="text/javascript"></script>
+  <script src="../javascripts/lib/bootstrap.js" type="text/javascript"></script>
+  <script src="../javascripts/lib/vue.min.js" type="text/javascript"></script>
+  <!-- endbuild-->
+  <!-- build:js /javascripts/doc-app.js-->
+  <script src="../javascripts/util/cookie.js" type="text/javascript"></script>
+  <script src="../javascripts/util/url-manager.js" type="text/javascript"></script>
+  <script src="../javascripts/util/ajax-manager.js" type="text/javascript"></script>
+  <script src="../javascripts/base/footer.js" type="text/javascript"></script>
+  <script src="../javascripts/base/header.js" type="text/javascript"></script>
+  <script src="../javascripts/util/searcher.js" type="text/javascript"></script>
+  <script src="../javascripts/search_index.js" type="text/javascript"></script>
+  <script src="../javascripts/searchdoc.js" type="text/javascript"></script>
+  <script src="../javascripts/api.js" type="text/javascript"></script>
+  <!-- endbuild-->
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-43055594-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>

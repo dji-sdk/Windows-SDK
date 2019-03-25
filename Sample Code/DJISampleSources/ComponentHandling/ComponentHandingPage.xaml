@@ -1,0 +1,82 @@
+﻿<Page
+    x:Class="DJIWindowsSDKSample.ComponentHandling.ComponentHandingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DJIWindowsSDKSample.ComponentHandling"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="RootGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel>
+                <TextBlock FontSize="36" Style="{StaticResource TitleTextBlockStyle}"> ComponentHandler</TextBlock>
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Component handlers are designed for providing interfaces for the components in the aircraft. Using the handlers, you are able to get the real time data form the aircraft, set some setting and let the aircraft do some actions like takeoff. </TextBlock>
+            </StackPanel>
+            <ScrollViewer Margin="8,10,0,0" Grid.Row="1">
+                <StackPanel>
+                    <StackPanel Name="eventSamplesPanel">
+                        <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Observering Event:</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> 
+                        If you are observering events in DJI Windows SDK, you can get the newest data from the event while the data of the event changes. Press the button below and move your aircraft. Then the value of textbox below would change dynamicly.
+                        </TextBlock>
+
+                        <StackPanel Margin="8, 8, 0, 0">
+                            <Button Command="{Binding RegisterVelocityChangedObserver}">Register aircraft velocity events</Button>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>Aircraft Velocity in X :</TextBlock>
+                                <TextBlock  Text="{Binding AircraftVelocityXString}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>Aircraft Velocity in Y : </TextBlock>
+                                <TextBlock Text="{Binding AircraftVelocityYString}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>Aircraft Velocity in Z : </TextBlock>
+                                <TextBlock Text="{Binding AircraftVelocityZString}" />
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" Name="settingSamplesPanel">
+                        <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Setting:</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> 
+                        Setting interfaces of components are some awaitable interfaces by which you could set some values of your aircraft like camera ISO and the name of the aircraft. Input a new name for your aircraft in the textblock below and click the button to invoke setting.
+                        </TextBlock>
+                        <StackPanel Margin="8, 8, 0, 0">
+                            <TextBox HorizontalAlignment="Left" Width="220" PlaceholderText="Input Your New Aircraft Name" Text="{Binding AircraftSetName ,Mode=TwoWay}"></TextBox>
+                            <Button Margin="0,5,0,0" Command="{Binding SetAircraftName}">SetAircraftName</Button>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Margin="0,10,0,0" Name="gettingSamplePanel">
+                        <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Getting:</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> 
+                        Getting interfaces of components are some awaitable interfaces by which you could get some values of your aircraft. Get your aircraft name which you just set one minute ago.
+                        </TextBlock>
+                        <StackPanel Margin="8, 8, 0, 0">
+                            <TextBox Text="{Binding AircraftGetName}" Width="220" HorizontalAlignment="Left" PlaceholderText="Your Aircraft Name" IsEnabled="False"></TextBox>
+                            <Button Command="{Binding GetAircraftName}" Margin="0,5,0,0">GetAircraftName</Button>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" Name="actionSamplesPanel">
+                        <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Action:</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> 
+                        You can also call some actions like takeoff or landing. Click the button below and the motors of your aircraft would be started.
+                        </TextBlock>
+                        <TextBlock FontWeight="Bold">
+                        *Note* DO NOT click this button when it is dangerous for aircraft to takeoff.
+                        </TextBlock>
+                        <Button Margin="0,8,0,0" Command="{Binding StartTakeoff}">Start Auto Takeoff</Button>
+                    </StackPanel>
+                </StackPanel>
+
+            </ScrollViewer>
+           
+        </Grid>
+    </Grid>
+</Page>

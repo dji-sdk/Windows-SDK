@@ -1,0 +1,292 @@
+<script>window.pathPrefix="../";</script><!DOCTYPE html>
+<html lang="en" style="padding-bottom:0px" class="local"></html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/png">
+  <title>DJI Windows SDK Documentation
+  </title><link rel="stylesheet" href="../stylesheets/doc-vendor.css"><link rel="stylesheet" href="../stylesheets/doc-app.css">
+</head>
+<body>
+  <nav id="site-header" class="site-header navbar">
+    <div class="container">
+      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">Windows SDK API REFERENCE</a></div>
+    </div>
+  </nav>
+  <div id="documentation-page" class="documentation-page">
+    <div class="container">
+      <div class="site-sidebar">
+        <div class="searcher">
+          <div id="panel" class="panel panel_tree">
+            <div class="header">
+              <div class="search-con">
+                <label id="search-label" for="search">
+                </label>
+                <input id="search" type="text" placeholder="Search" autosave="searchdoc" results="10" autocomplete="off">
+                <div class="search-icon"></div><a class="clean-search glyphicon glyphicon-remove-circle"></a>
+              </div>
+            </div>
+            <div class="tree">
+              <ul></ul>
+            </div>
+            <div class="result">
+              <ul></ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav scrollable js-tree-menu">
+          <dl>
+            <dt>Manager Classes
+            </dt>
+                  <dd><a href="../SDKManager/DJISDKManager.html">DJISDKManager</a>
+                  </dd>
+                  <dd><a data-href="../FlyZoneManager/FlyZoneManager.html" class="sub-toggle">FlyZoneManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a data-href="../FlyZoneManager/FlyZoneHandler.html" class="sub-toggle">FlyZoneHandler<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                              <ul class="sub-menu">
+                                      <dd><a href="../FlyZoneManager/UnlockZoneGroup.html">UnlockZoneGroup</a>
+                                      </dd>
+                                      <dd><a data-href="../FlyZoneManager/FlyZoneInformation.html" class="sub-toggle">FlyZoneInformation<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                                        <ul class="sub-menu">
+                                                <dd><a href="../FlyZoneManager/SubFlyZoneInformation.html">SubFlyZoneInformation</a>
+                                                </dd>
+                                        </ul>
+                                      </dd>
+                                      <dd><a href="../FlyZoneManager/CustomUnlockZone.html">CustomUnlockZone</a>
+                                      </dd>
+                              </ul>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="../WaypointMission/WaypointMissionManager.html" class="sub-toggle">WaypointMissionManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../WaypointMission/WaypointMissionHandler.html">WaypointMissionHandler</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="ComponentManager.html" class="sub-toggle">ComponentManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="CameraHandler.html">CameraHandler</a>
+                            </dd>
+                            <dd><a href="GimbalHandler.html">GimbalHandler</a>
+                            </dd>
+                            <dd><a href="RemoteControllerHandler.html">RemoteControllerHandler</a>
+                            </dd>
+                            <dd><a href="FlightAssistantHandler.html">FlightAssistantHandler</a>
+                            </dd>
+                            <dd><a href="BatteryHandler.html">BatteryHandler</a>
+                            </dd>
+                            <dd><a href="FlightControllerHandler.html">FlightControllerHandler</a>
+                            </dd>
+                            <dd><a href="WiFiHandler.html">WiFiHandler</a>
+                            </dd>
+                            <dd><a href="" class="active">AccessoryHandler</a>
+                            </dd>
+                            <dd><a href="SpeakerHandler.html">SpeakerHandler</a>
+                            </dd>
+                            <dd><a href="ProductHandler.html">ProductHandler</a>
+                            </dd>
+                            <dd><a href="BeaconHandler.html">BeaconHandler</a>
+                            </dd>
+                            <dd><a href="SpotLightHandler.html">SpotLightHandler</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="MediaTaskManager.html" class="sub-toggle">MediaTaskManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../MediaTaskManager/MediaTask.html">MediaTask</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a href="../UserAccount/UserAccountManager.html">UserAccountManager</a>
+                  </dd>
+                  <dd><a data-href="../VideoFeeder/VideoFeeder.html" class="sub-toggle">VideoFeeder<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../VideoFeeder/VideoFeed.html">VideoFeed</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
+                  </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="site-main">
+        <div class="article"><div class="article"><h1><font color="#AAA">class </font>AccessoryHandler</h1></div>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">AccessoryHandler</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description">Description:</h5>
+<p><font color="#666">This class contains methods to get instances of its sub-components, which contains the actual methods of specific accessories.</font></p>
+<h5 id="class-members">Class Members:</h5>
+<div class="api-row" id="accessoryhandler_productindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#accessoryhandler_productindex_inline">ProductIndex</a></div></div><div class="inline-doc" id="accessoryhandler_productindex_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>ProductIndex</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> ProductIndex &#123; <span class="keyword">get</span>; &#125;</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v2">Description:</h5>
+<p><font color="#666">The index of the product to which this component handler belongs. The default product index is 0.</font></p>
+</div>
+<div class="api-row" id="accessoryhandler_componentindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#accessoryhandler_componentindex_inline">ComponentIndex</a></div></div><div class="inline-doc" id="accessoryhandler_componentindex_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>ComponentIndex</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> ComponentIndex &#123; <span class="keyword">get</span>; &#125;</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v3">Description:</h5>
+<p><font color="#666">The index of the component. It is unique for a type of components inside a product. It is useful when a product has multiple handlers of the same kind. If the product only has one handler of this kind, the index is 0.  <code><a href="../Components/AccessoryHandler.html#accessoryhandler">AccessoryHandler</a></code> contains some sub-component of accessories.</font></p>
+</div>
+<div class="api-row" id="accessoryhandler_getbeaconhandler"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#accessoryhandler_getbeaconhandler_inline">GetBeaconHandler</a></div></div><div class="inline-doc" id="accessoryhandler_getbeaconhandler_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>GetBeaconHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function">BeaconHandler <span class="title">GetBeaconHandler</span>(<span class="params"><span class="keyword">uint</span> subComponentIndex</span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v4">Description:</h5>
+<p><font color="#666">Gets the instance of <code><a href="../Components/BeaconHandler.html#beaconhandler">BeaconHandler</a></code>.</font></p>
+<h5 id="input-parameters">Input Parameters:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">uint <font color="#000">subComponentIndex</font></font></td><td><font color="#666"><i>The sub-component index of the sub-component handler. It is used when the product supports multiple sub-components of the same kind.</i></font></td></tr></table></html>
+<h5 id="return">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../Components/BeaconHandler.html#beaconhandler">BeaconHandler</a></font></td><td><font color="#666"><i>The handler. It is accessible even the component is not connected.</i></font></td></tr></table></html></div>
+<div class="api-row" id="accessoryhandler_getspeakerhandler"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#accessoryhandler_getspeakerhandler_inline">GetSpeakerHandler</a></div></div><div class="inline-doc" id="accessoryhandler_getspeakerhandler_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>GetSpeakerHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function">SpeakerHandler <span class="title">GetSpeakerHandler</span>(<span class="params"><span class="keyword">uint</span> subComponentIndex</span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v5">Description:</h5>
+<p><font color="#666">Gets the instance of <code><a href="../Components/SpeakerHandler.html#speakerhandler">SpeakerHandler</a></code>.</font></p>
+<h5 id="input-parameters-v2">Input Parameters:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">uint <font color="#000">subComponentIndex</font></font></td><td><font color="#666"><i>The sub-component index of the sub-component handler. It is used when the product supports multiple sub-components of the same kind.</i></font></td></tr></table></html>
+<h5 id="return-v2">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../Components/SpeakerHandler.html#speakerhandler">SpeakerHandler</a></font></td><td><font color="#666"><i>The handler. It is accessible even the component is not connected.</i></font></td></tr></table></html></div>
+<div class="api-row" id="accessoryhandler_getspotlighthandler"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#accessoryhandler_getspotlighthandler_inline">GetSpotLightHandler</a></div></div><div class="inline-doc" id="accessoryhandler_getspotlighthandler_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>GetSpotLightHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function">SpotLightHandler <span class="title">GetSpotLightHandler</span>(<span class="params"><span class="keyword">uint</span> subComponentIndex</span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v6">Description:</h5>
+<p><font color="#666">Gets the instance of <code><a href="../Components/SpotLightHandler.html#spotlighthandler">SpotLightHandler</a></code>.</font></p>
+<h5 id="input-parameters-v3">Input Parameters:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">uint <font color="#000">subComponentIndex</font></font></td><td><font color="#666"><i>The sub-component index of the sub-component handler. It is used when the product supports multiple sub-components of the same kind.</i></font></td></tr></table></html>
+<h5 id="return-v3">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../Components/SpotLightHandler.html#spotlighthandler">SpotLightHandler</a></font></td><td><font color="#666"><i>The handler. It is accessible even the component is not connected.</i></font></td></tr></table></html></div>
+<div class="api-row" id="accessoryhandler_destructor"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#accessoryhandler_destructor_inline">~AccessoryHandler</a></div></div><div class="inline-doc" id="accessoryhandler_destructor_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>~AccessoryHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">~AccessoryHandler()</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v7">Description:</h5>
+<p><font color="#666">The destructor. It should not be called explicitly.</font></p>
+</div>
+<div class="api-row" id="accessoryhandler_connectionchangedpushevent"><div class="api-col left">Event</div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#accessoryhandler_connectionchangedpushevent_inline">ConnectionChanged</a></div></div><div class="inline-doc" id="accessoryhandler_connectionchangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>ConnectionChanged</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ConnectionChanged</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v8">Description:</h5>
+<p><font color="#666">Subscribe the event to receive a component's connection change.</font></p>
+</div>
+<div class="api-row" id="accessoryhandler_issupportedchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#accessoryhandler_issupportedchangedpushevent_inline">IsSupportedChanged</a></div></div><div class="inline-doc" id="accessoryhandler_issupportedchangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>IsSupportedChanged</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler IsSupportedChanged</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v9">Description:</h5>
+<p><font color="#666">Is accssories supported by the aircraft.</font></p>
+</div>
+<div class="api-row" id="accessoryhandler_serialnumberchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#accessoryhandler_serialnumberchangedpushevent_inline">SerialNumberChanged</a></div></div><div class="inline-doc" id="accessoryhandler_serialnumberchangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>SerialNumberChanged</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> StringMsgChangedEventHandler SerialNumberChanged</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v10">Description:</h5>
+<p><font color="#666">Subscribe the event to receive changes of the serial number of the component.</font></p>
+</div>
+<div class="api-row" id="accessoryhandler_getconnectionasync"><div class="api-col left">Methods</div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#accessoryhandler_getconnectionasync_inline">GetConnectionAsync</a></div></div><div class="inline-doc" id="accessoryhandler_getconnectionasync_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>GetConnectionAsync</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetConnectionAsync()</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v11">Description:</h5>
+<p><font color="#666">Determines if a component is connected or not.</font></p>
+<h5 id="return-v4">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;Value_BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
+<div class="api-row" id="accessoryhandler_getissupportedasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#accessoryhandler_getissupportedasync_inline">GetIsSupportedAsync</a></div></div><div class="inline-doc" id="accessoryhandler_getissupportedasync_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>GetIsSupportedAsync</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetIsSupportedAsync()</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v12">Description:</h5>
+<p><font color="#666">Gets is the accssories supported.</font></p>
+<h5 id="return-v5">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;Value_BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
+<div class="api-row" id="accessoryhandler_getserialnumberasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#accessoryhandler_getserialnumberasync_inline">GetSerialNumberAsync</a></div></div><div class="inline-doc" id="accessoryhandler_getserialnumberasync_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>GetSerialNumberAsync</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetSerialNumberAsync()</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v13">Description:</h5>
+<p><font color="#666">Gets the serial number of the component.</font></p>
+<h5 id="return-v6">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;StringMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;Value_StringMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
+
+        </div>
+      </div>
+    </div>
+    <div id="search-modal" class="search-modal modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><a href="javascript:;" @click="closeSearch" class="btn-close">×</a>
+            <h2 class="title"> Search Windows SDK Document
+            </h2>
+            <input type="text" v-model="searchInput" @keydown.enter="search">
+          </div>
+          <div class="modal-body">
+            <p v-show="!!searchCount" class="search-count"><span v-cloak>{{searchCount}}</span>&nbsp;Results
+            </p>
+            <ul v-show="!!searchCount" class="search-result">
+              <li v-for="item in searchResult"><a v-bind:href="item.url | docUrl">
+                  <h3 class="title">{{{(item.highlights && item.highlights.title) || item.title}}}</h3>
+                  <p class="content">{{{(item.highlights && item.highlights.content[0]) || item.title}}}</p></a></li>
+            </ul>
+            <div v-show="showLoadMore" class="text-center"><a href="javascript:;" @click="loadMoreSearch" class="btn-learn-more">Load More</a></div>
+            <div v-show="searchLoading" class="text-center">Loading...
+            </div>
+            <div v-show="!searchCount &amp;&amp; !searchLoading" class="text-center">Not Found
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    window.Config = window.config = {
+      sdk: "windows-sdk",
+      locale: "en",
+      environment: "development",
+      api_host: ""
+    };
+    
+  </script>
+  <!-- build:js /javascripts/doc-vendor.js-->
+  <script src="../javascripts/lib/jquery-2.1.4.min.js" type="text/javascript"></script>
+  <script src="../javascripts/lib/bootstrap.js" type="text/javascript"></script>
+  <script src="../javascripts/lib/vue.min.js" type="text/javascript"></script>
+  <!-- endbuild-->
+  <!-- build:js /javascripts/doc-app.js-->
+  <script src="../javascripts/util/cookie.js" type="text/javascript"></script>
+  <script src="../javascripts/util/url-manager.js" type="text/javascript"></script>
+  <script src="../javascripts/util/ajax-manager.js" type="text/javascript"></script>
+  <script src="../javascripts/base/footer.js" type="text/javascript"></script>
+  <script src="../javascripts/base/header.js" type="text/javascript"></script>
+  <script src="../javascripts/util/searcher.js" type="text/javascript"></script>
+  <script src="../javascripts/search_index.js" type="text/javascript"></script>
+  <script src="../javascripts/searchdoc.js" type="text/javascript"></script>
+  <script src="../javascripts/api.js" type="text/javascript"></script>
+  <!-- endbuild-->
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-43055594-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>

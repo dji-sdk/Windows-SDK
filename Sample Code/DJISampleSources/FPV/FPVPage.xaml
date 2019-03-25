@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="DJIWindowsSDKSample.FPV.FPVPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DJIWindowsSDKSample.FPV"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="RootGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <TextBlock FontSize="36" Style="{StaticResource TitleTextBlockStyle}"> FPV </TextBlock>
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Using DJI Windows SDK, you are able to get the video data from your drone's camera and display the video on your screen. </TextBlock>
+                <TextBlock> Connect your P4P V2.0 with USB and the FPV video would be shown. </TextBlock>
+            </StackPanel>
+
+            <SwapChainPanel x:Name="swapChainPanel" Visibility="Visible" Grid.Row="1" Margin="0, 10, 0, 0" />
+
+
+        </Grid>
+    </Grid>
+</Page>

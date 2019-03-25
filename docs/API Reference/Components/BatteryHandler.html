@@ -1,6 +1,6 @@
 <script>window.pathPrefix="../";</script><!DOCTYPE html>
 <html lang="en" style="padding-bottom:0px" class="local"></html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link href="../images/favicon.png" rel="shortcut icon" type="image/png">
@@ -10,7 +10,7 @@
 <body>
   <nav id="site-header" class="site-header navbar">
     <div class="container">
-      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">WINDOWS SDK API REFERENCE</a></div>
+      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">Windows SDK API REFERENCE</a></div>
     </div>
   </nav>
   <div id="documentation-page" class="documentation-page">
@@ -80,13 +80,25 @@
                             </dd>
                             <dd><a href="WiFiHandler.html">WiFiHandler</a>
                             </dd>
+                            <dd><a href="AccessoryHandler.html">AccessoryHandler</a>
+                            </dd>
+                            <dd><a href="SpeakerHandler.html">SpeakerHandler</a>
+                            </dd>
                             <dd><a href="ProductHandler.html">ProductHandler</a>
+                            </dd>
+                            <dd><a href="BeaconHandler.html">BeaconHandler</a>
+                            </dd>
+                            <dd><a href="SpotLightHandler.html">SpotLightHandler</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="MediaTaskManager.html" class="sub-toggle">MediaTaskManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../MediaTaskManager/MediaTask.html">MediaTask</a>
                             </dd>
                     </ul>
                   </dd>
                   <dd><a href="../UserAccount/UserAccountManager.html">UserAccountManager</a>
-                  </dd>
-                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
                   </dd>
                   <dd><a data-href="../VideoFeeder/VideoFeeder.html" class="sub-toggle">VideoFeeder<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
                     <ul class="sub-menu">
@@ -94,176 +106,220 @@
                             </dd>
                     </ul>
                   </dd>
+                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
+                  </dd>
           </dl>
         </div>
       </div>
       <div class="site-main">
         <div class="article"><div class="article"><h1><font color="#AAA">class </font>BatteryHandler</h1></div>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">BatteryHandler</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">BatteryHandler</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description">Description:</h5>
 <p><font color="#666">This class manages information and real-time status of the connected product's batteries.</font></p>
 <h5 id="class-members">Class Members:</h5>
+<div class="api-row" id="batteryhandler_productindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#batteryhandler_productindex_inline">ProductIndex</a></div></div><div class="inline-doc" id="batteryhandler_productindex_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>ProductIndex</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> ProductIndex &#123; <span class="keyword">get</span>; &#125;</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v2">Description:</h5>
+<p><font color="#666">The index of the product to which this component handler belongs. The default product index is 0.</font></p>
+</div>
+<div class="api-row" id="batteryhandler_componentindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#batteryhandler_componentindex_inline">ComponentIndex</a></div></div><div class="inline-doc" id="batteryhandler_componentindex_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>ComponentIndex</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> ComponentIndex &#123; <span class="keyword">get</span>; &#125;</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v3">Description:</h5>
+<p><font color="#666">The index of the component. It is unique for a type of components inside a product. It is useful when a product has multiple handlers of the same kind. If the product only has one handler of this kind, the index is 0.</font></p>
+</div>
+<div class="api-row" id="batteryhandler_destructor"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#batteryhandler_destructor_inline">~BatteryHandler</a></div></div><div class="inline-doc" id="batteryhandler_destructor_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>~BatteryHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">~BatteryHandler()</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v4">Description:</h5>
+<p><font color="#666">The destructor. It should not be called explicitly.</font></p>
+</div>
+<div class="api-row" id="value_batteryheatingstatemsg"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_batteryheatingstatemsg_inline">BatteryHeatingStateMsg</a></div></div><div class="inline-doc" id="value_batteryheatingstatemsg_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>BatteryHeatingStateMsg</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> BatteryHeatingStateMsg</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v5">Description:</h5>
+<p><font color="#666">A class that contains the brust count of camera.</font></p>
+<h5 id="struct-members">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_batteryheatingstatemsg_value_inline"></a> <font color="#000">BatteryHeatingState value</font></font></td><td><font color="#666">The actual value of the class.</font></td></tr></table></html></div>
+<div class="api-row" id="delegate_batteryheatingstatemsgchangedeventhandler"><div class="api-col left">Delegate</div><div class="api-col middle" style="color:#AAA">delegate</div><div class="api-col right"><a class="trigger" href="#delegate_batteryheatingstatemsgchangedeventhandler_inline">BatteryHeatingStateMsgChangedEventHandler</a></div></div><div class="inline-doc" id="delegate_batteryheatingstatemsgchangedeventhandler_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">delegate </font>BatteryHeatingStateMsgChangedEventHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">BatteryHeatingStateMsgChangedEventHandler</span>(<span class="params"><span class="keyword">object</span> sender, BatteryHeatingStateMsg? <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v6">Description:</h5>
+<p><font color="#666">A delegate type used to subscribe the updated values in type <code><a href="../Components/BatteryHandler.html#value_batteryheatingstatemsg">BatteryHeatingStateMsg</a></code>.</font></p>
+</div>
+<div class="api-row" id="delegate_playingaudiofileinfochangedeventhandler"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">delegate</div><div class="api-col right"><a class="trigger" href="#delegate_playingaudiofileinfochangedeventhandler_inline">PlayingAudioFileInfoChangedEventHandler</a></div></div><div class="inline-doc" id="delegate_playingaudiofileinfochangedeventhandler_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">delegate </font>PlayingAudioFileInfoChangedEventHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">PlayingAudioFileInfoChangedEventHandler</span>(<span class="params"><span class="keyword">object</span> sender, PlayingAudioFileInfo? <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v7">Description:</h5>
+<p><font color="#666">A delegate type used to subscribe the updated values in type <code><a href="../Components/SpeakerHandler.html#value_playingaudiofileinfo">PlayingAudioFileInfo</a></code>.</font></p>
+</div>
 <div class="api-row" id="batteryhandler_fullchargecapacitychangedpushevent"><div class="api-col left">Event</div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_fullchargecapacitychangedpushevent_inline">FullChargeCapacityChanged</a></div></div><div class="inline-doc" id="batteryhandler_fullchargecapacitychangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>FullChargeCapacityChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler FullChargeCapacityChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> IntMsgChangedEventHandler FullChargeCapacityChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v2">Description:</h5>
+<h5 id="description-v8">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the total amount of energy, in mAh (milliamp hours), stored in the battery  when the battery is fully charged. The energy of the battery at full charge changes over time as the battery continues  to get used. Over time, as the battery continues to be recharged, the value of fullChargeCapacity will decrease.</font></p>
 </div>
 <div class="api-row" id="batteryhandler_chargeremainingchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_chargeremainingchangedpushevent_inline">ChargeRemainingChanged</a></div></div><div class="inline-doc" id="batteryhandler_chargeremainingchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>ChargeRemainingChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler ChargeRemainingChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> IntMsgChangedEventHandler ChargeRemainingChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v3">Description:</h5>
+<h5 id="description-v9">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the remaining energy stored in the battery in mAh (milliamp hours).</font></p>
 </div>
 <div class="api-row" id="batteryhandler_chargeremaininginpercentchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_chargeremaininginpercentchangedpushevent_inline">ChargeRemainingInPercentChanged</a></div></div><div class="inline-doc" id="batteryhandler_chargeremaininginpercentchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>ChargeRemainingInPercentChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler ChargeRemainingInPercentChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> IntMsgChangedEventHandler ChargeRemainingInPercentChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v4">Description:</h5>
+<h5 id="description-v10">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the percentage of battery energy left with range [0, 100].</font></p>
 </div>
 <div class="api-row" id="batteryhandler_voltagechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_voltagechangedpushevent_inline">VoltageChanged</a></div></div><div class="inline-doc" id="batteryhandler_voltagechangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>VoltageChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler VoltageChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> IntMsgChangedEventHandler VoltageChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v5">Description:</h5>
+<h5 id="description-v11">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the current battery voltage (mV).</font></p>
 </div>
 <div class="api-row" id="batteryhandler_currentchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_currentchangedpushevent_inline">CurrentChanged</a></div></div><div class="inline-doc" id="batteryhandler_currentchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>CurrentChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler CurrentChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> IntMsgChangedEventHandler CurrentChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v6">Description:</h5>
+<h5 id="description-v12">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the real time current draw of the battery (mA). A negative value means  the battery is being discharged, and a positive value means it is being charged.</font></p>
 </div>
 <div class="api-row" id="batteryhandler_batterytemperaturechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_batterytemperaturechangedpushevent_inline">BatteryTemperatureChanged</a></div></div><div class="inline-doc" id="batteryhandler_batterytemperaturechangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>BatteryTemperatureChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> DoubleMsgChangedEventHandler BatteryTemperatureChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> DoubleMsgChangedEventHandler BatteryTemperatureChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v7">Description:</h5>
+<h5 id="description-v13">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the battery's temperature, in Celsius, with range [-128, 127] degrees.</font></p>
 </div>
 <div class="api-row" id="batteryhandler_connectionchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_connectionchangedpushevent_inline">ConnectionChanged</a></div></div><div class="inline-doc" id="batteryhandler_connectionchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>ConnectionChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ConnectionChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ConnectionChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v8">Description:</h5>
+<h5 id="description-v14">Description:</h5>
 <p><font color="#666">Subscribe the event to receive a component's connection change.</font></p>
 </div>
 <div class="api-row" id="batteryhandler_serialnumberchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_serialnumberchangedpushevent_inline">SerialNumberChanged</a></div></div><div class="inline-doc" id="batteryhandler_serialnumberchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>SerialNumberChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> StringMsgChangedEventHandler SerialNumberChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> StringMsgChangedEventHandler SerialNumberChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v9">Description:</h5>
+<h5 id="description-v15">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the battery's serial number.</font></p>
+</div>
+<div class="api-row" id="batteryhandler_heatingstatechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#batteryhandler_heatingstatechangedpushevent_inline">HeatingStateChanged</a></div></div><div class="inline-doc" id="batteryhandler_heatingstatechangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>HeatingStateChanged</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BatteryHeatingStateMsgChangedEventHandler HeatingStateChanged</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v16">Description:</h5>
+<p><font color="#666">Subscribe the event to receive changes of heating state.</font></p>
 </div>
 <div class="api-row" id="batteryhandler_getfullchargecapacityasync"><div class="api-col left">Methods</div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#batteryhandler_getfullchargecapacityasync_inline">GetFullChargeCapacityAsync</a></div></div><div class="inline-doc" id="batteryhandler_getfullchargecapacityasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetFullChargeCapacityAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetFullChargeCapacityAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetFullChargeCapacityAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v10">Description:</h5>
+<h5 id="description-v17">Description:</h5>
 <p><font color="#666">Gets the event to receive changes of the total amount of energy, in mAh (milliamp hours), stored in the battery  when the battery is fully charged. The energy of the battery at full charge changes over time as the battery continues  to get used. Over time, as the battery continues to be recharged, the value of fullChargeCapacity will decrease.</font></p>
 <h5 id="return">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;IntMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;IntMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="batteryhandler_getchargeremainingasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#batteryhandler_getchargeremainingasync_inline">GetChargeRemainingAsync</a></div></div><div class="inline-doc" id="batteryhandler_getchargeremainingasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetChargeRemainingAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetChargeRemainingAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetChargeRemainingAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v11">Description:</h5>
+<h5 id="description-v18">Description:</h5>
 <p><font color="#666">Gets the remaining energy stored in the battery in mAh (milliamp hours).</font></p>
 <h5 id="return-v2">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;IntMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;IntMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="batteryhandler_getchargeremaininginpercentasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#batteryhandler_getchargeremaininginpercentasync_inline">GetChargeRemainingInPercentAsync</a></div></div><div class="inline-doc" id="batteryhandler_getchargeremaininginpercentasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetChargeRemainingInPercentAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetChargeRemainingInPercentAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetChargeRemainingInPercentAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v12">Description:</h5>
+<h5 id="description-v19">Description:</h5>
 <p><font color="#666">Gets the percentage of battery energy left with range [0, 100].</font></p>
 <h5 id="return-v3">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;IntMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;IntMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="batteryhandler_getvoltageasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#batteryhandler_getvoltageasync_inline">GetVoltageAsync</a></div></div><div class="inline-doc" id="batteryhandler_getvoltageasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetVoltageAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetVoltageAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetVoltageAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v13">Description:</h5>
+<h5 id="description-v20">Description:</h5>
 <p><font color="#666">Gets the current battery voltage (mV).</font></p>
 <h5 id="return-v4">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;IntMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;IntMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="batteryhandler_getcurrentasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#batteryhandler_getcurrentasync_inline">GetCurrentAsync</a></div></div><div class="inline-doc" id="batteryhandler_getcurrentasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetCurrentAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetCurrentAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetCurrentAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v14">Description:</h5>
+<h5 id="description-v21">Description:</h5>
 <p><font color="#666">Gets the real time current draw of the battery (mA). A negative value means the battery is being discharged, and a positive value means it is being charged.</font></p>
 <h5 id="return-v5">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;IntMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;IntMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="batteryhandler_getbatterytemperatureasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#batteryhandler_getbatterytemperatureasync_inline">GetBatteryTemperatureAsync</a></div></div><div class="inline-doc" id="batteryhandler_getbatterytemperatureasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetBatteryTemperatureAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;DoubleMsg?&gt;&gt; GetBatteryTemperatureAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;DoubleMsg?&gt;&gt; GetBatteryTemperatureAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v15">Description:</h5>
+<h5 id="description-v22">Description:</h5>
 <p><font color="#666">Gets the battery's temperature, in Celsius, with range [-128, 127] degrees.</font></p>
 <h5 id="return-v6">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;DoubleMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;DoubleMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="batteryhandler_getconnectionasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#batteryhandler_getconnectionasync_inline">GetConnectionAsync</a></div></div><div class="inline-doc" id="batteryhandler_getconnectionasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetConnectionAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetConnectionAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetConnectionAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v16">Description:</h5>
+<h5 id="description-v23">Description:</h5>
 <p><font color="#666">Determines if a component is connected or not.</font></p>
 <h5 id="return-v7">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="batteryhandler_getserialnumberasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#batteryhandler_getserialnumberasync_inline">GetSerialNumberAsync</a></div></div><div class="inline-doc" id="batteryhandler_getserialnumberasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetSerialNumberAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetSerialNumberAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetSerialNumberAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v17">Description:</h5>
+<h5 id="description-v24">Description:</h5>
 <p><font color="#666">Gets the serial number of the component.</font></p>
 <h5 id="return-v8">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;StringMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;StringMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
-<div class="api-row" id="batteryhandler_productindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#batteryhandler_productindex_inline">ProductIndex</a></div></div><div class="inline-doc" id="batteryhandler_productindex_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">property </font>ProductIndex</h6></div>
+<div class="api-row" id="batteryhandler_getheatingstateasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#batteryhandler_getheatingstateasync_inline">GetHeatingStateAsync</a></div></div><div class="inline-doc" id="batteryhandler_getheatingstateasync_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>GetHeatingStateAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">uint</span> ProductIndex &#123; <span class="keyword">get</span>; &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BatteryHeatingStateMsg?&gt;&gt; GetHeatingStateAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v18">Description:</h5>
-<p><font color="#666">The index of the product to which this component handler belongs. The default product index is 0.</font></p>
-</div>
-<div class="api-row" id="batteryhandler_componentindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#batteryhandler_componentindex_inline">ComponentIndex</a></div></div><div class="inline-doc" id="batteryhandler_componentindex_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">property </font>ComponentIndex</h6></div>
-
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">uint</span> ComponentIndex &#123; <span class="keyword">get</span>; &#125;</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v19">Description:</h5>
-<p><font color="#666">The index of the component. It is unique for a type of components inside a product. It is useful when a product has multiple handlers of the same kind. If the product only has one handler of this kind, the index is 0.</font></p>
-</div>
-<div class="api-row" id="batteryhandler_destructor"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#batteryhandler_destructor_inline">~BatteryHandler</a></div></div><div class="inline-doc" id="batteryhandler_destructor_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">method </font>~BatteryHandler</h6></div>
-
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">~BatteryHandler()</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v20">Description:</h5>
-<p><font color="#666">The destructor. It should not be called explicitly.</font></p>
-</div>
+<h5 id="description-v25">Description:</h5>
+<p><font color="#666">Gets the heating state of battery.</font></p>
+<h5 id="return-v9">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BatteryHeatingStateMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;Value_BatteryHeatingStateMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 
         </div>
       </div>
@@ -277,7 +333,7 @@
             <input type="text" v-model="searchInput" @keydown.enter="search">
           </div>
           <div class="modal-body">
-            <p v-show="!!searchCount" class="search-count"><span v-cloak="">{{searchCount}}</span>&nbsp;Results
+            <p v-show="!!searchCount" class="search-count"><span v-cloak>{{searchCount}}</span>&nbsp;Results
             </p>
             <ul v-show="!!searchCount" class="search-result">
               <li v-for="item in searchResult"><a v-bind:href="item.url | docUrl">

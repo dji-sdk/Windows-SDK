@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="DJIWindowsSDKSample.Flysafe.FlyzonePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DJIWindowsSDKSample.Flysafe"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock FontSize="36" Style="{StaticResource TitleTextBlockStyle}"> Display FlyZone Circles</TextBlock>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Not all the areas are allowed for aircrafts. This page would show you the way to get the flyzones and show them on the map. </TextBlock>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Width="335" Margin="0,10,0,0">
+                <StackPanel>
+                    <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Start Simulator</TextBlock>
+                    <StackPanel Margin="0,6,0,0">
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Start simulator at where there are limited areas. </TextBlock>
+                        <Button Margin="0,6,0,0" Name="simulatButton" Click="simulatButton_Click"> Start Simulator </Button>
+
+                        <TextBlock FontSize="30" Margin="0,10,0,0" Style="{StaticResource TitleTextBlockStyle}"> Get Flyzone Nearby:</TextBlock>
+                        <TextBlock Margin="0,6,0,0" Style="{StaticResource BodyTextBlockStyle}"> Get the flyzone nearby and display on the map.</TextBlock>
+                        <Button Margin="0,6,0,0" Name="showFlyzoneButton" Click="showFlyzoneButton_Click"> Get and Show Flyzone</Button>
+                    </StackPanel>
+
+  
+                </StackPanel>
+
+
+            </Grid>
+            <maps:MapControl Grid.Column="1"
+                ZoomInteractionMode="GestureAndControl"
+                TiltInteractionMode="GestureAndControl"
+                x:Name="FlyZoneMap"
+                ZoomLevel="18"
+                Margin="8,0,0,0">
+            </maps:MapControl>
+        </Grid>
+    </Grid>
+</Page>

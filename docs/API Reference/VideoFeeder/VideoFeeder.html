@@ -1,6 +1,6 @@
 <script>window.pathPrefix="../";</script><!DOCTYPE html>
 <html lang="en" style="padding-bottom:0px" class="local"></html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link href="../images/favicon.png" rel="shortcut icon" type="image/png">
@@ -10,7 +10,7 @@
 <body>
   <nav id="site-header" class="site-header navbar">
     <div class="container">
-      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">WINDOWS SDK API REFERENCE</a></div>
+      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">Windows SDK API REFERENCE</a></div>
     </div>
   </nav>
   <div id="documentation-page" class="documentation-page">
@@ -80,19 +80,33 @@
                             </dd>
                             <dd><a href="../Components/WiFiHandler.html">WiFiHandler</a>
                             </dd>
+                            <dd><a href="../Components/AccessoryHandler.html">AccessoryHandler</a>
+                            </dd>
+                            <dd><a href="../Components/SpeakerHandler.html">SpeakerHandler</a>
+                            </dd>
                             <dd><a href="../Components/ProductHandler.html">ProductHandler</a>
+                            </dd>
+                            <dd><a href="../Components/BeaconHandler.html">BeaconHandler</a>
+                            </dd>
+                            <dd><a href="../Components/SpotLightHandler.html">SpotLightHandler</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="../Components/MediaTaskManager.html" class="sub-toggle">MediaTaskManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../MediaTaskManager/MediaTask.html">MediaTask</a>
                             </dd>
                     </ul>
                   </dd>
                   <dd><a href="../UserAccount/UserAccountManager.html">UserAccountManager</a>
-                  </dd>
-                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
                   </dd>
                   <dd><a data-href="" class="sub-toggle">VideoFeeder<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
                     <ul class="sub-menu">
                             <dd><a href="VideoFeed.html">VideoFeed</a>
                             </dd>
                     </ul>
+                  </dd>
+                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
                   </dd>
           </dl>
         </div>
@@ -147,7 +161,7 @@
             <input type="text" v-model="searchInput" @keydown.enter="search">
           </div>
           <div class="modal-body">
-            <p v-show="!!searchCount" class="search-count"><span v-cloak="">{{searchCount}}</span>&nbsp;Results
+            <p v-show="!!searchCount" class="search-count"><span v-cloak>{{searchCount}}</span>&nbsp;Results
             </p>
             <ul v-show="!!searchCount" class="search-result">
               <li v-for="item in searchResult"><a v-bind:href="item.url | docUrl">

@@ -1,6 +1,6 @@
 <script>window.pathPrefix="../";</script><!DOCTYPE html>
 <html lang="en" style="padding-bottom:0px" class="local"></html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link href="../images/favicon.png" rel="shortcut icon" type="image/png">
@@ -10,7 +10,7 @@
 <body>
   <nav id="site-header" class="site-header navbar">
     <div class="container">
-      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">WINDOWS SDK API REFERENCE</a></div>
+      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">Windows SDK API REFERENCE</a></div>
     </div>
   </nav>
   <div id="documentation-page" class="documentation-page">
@@ -80,13 +80,25 @@
                             </dd>
                             <dd><a href="WiFiHandler.html">WiFiHandler</a>
                             </dd>
+                            <dd><a href="AccessoryHandler.html">AccessoryHandler</a>
+                            </dd>
+                            <dd><a href="SpeakerHandler.html">SpeakerHandler</a>
+                            </dd>
                             <dd><a href="" class="active">ProductHandler</a>
+                            </dd>
+                            <dd><a href="BeaconHandler.html">BeaconHandler</a>
+                            </dd>
+                            <dd><a href="SpotLightHandler.html">SpotLightHandler</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="MediaTaskManager.html" class="sub-toggle">MediaTaskManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../MediaTaskManager/MediaTask.html">MediaTask</a>
                             </dd>
                     </ul>
                   </dd>
                   <dd><a href="../UserAccount/UserAccountManager.html">UserAccountManager</a>
-                  </dd>
-                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
                   </dd>
                   <dd><a data-href="../VideoFeeder/VideoFeeder.html" class="sub-toggle">VideoFeeder<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
                     <ul class="sub-menu">
@@ -94,115 +106,126 @@
                             </dd>
                     </ul>
                   </dd>
+                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
+                  </dd>
           </dl>
         </div>
       </div>
       <div class="site-main">
         <div class="article"><div class="article"><h1><font color="#AAA">class </font>ProductHandler</h1></div>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">ProductHandler</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">ProductHandler</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description">Description:</h5>
 <p><font color="#666">This class includes the overall information of a product.</font></p>
 <h5 id="class-members">Class Members:</h5>
-<div class="api-row" id="value_producttypemsg"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_producttypemsg_inline">ProductTypeMsg</a></div></div><div class="inline-doc" id="value_producttypemsg_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">struct </font>ProductTypeMsg</h6></div>
-
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> ProductTypeMsg</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v2">Description:</h5>
-<p><font color="#666">A class contains a product type of DJI products.</font></p>
-<h5 id="struct-members">Struct Members:</h5>
-<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_producttypemsg_value_inline"></a> <font color="#000">ProductType value</font></font></td><td><font color="#666">The actual value of the class.</font></td></tr></table></html></div>
-<div class="api-row" id="value_producttype"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_producttype_inline">ProductType</a></div></div><div class="inline-doc" id="value_producttype_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">enum </font>ProductType</h6></div>
-
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">enum</span> ProductType</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v3">Description:</h5>
-<p><font color="#666">The enums that describe differnt DJI products.</font></p>
-<h5 id="enum-members">Enum Members:</h5>
-<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_unrecognized_inline"></a>UNRECOGNIZED</font></td><td><font color="#666">None. No DJI product is recognized.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_osmo_inline"></a>OSMO</font></td><td><font color="#666">Osmo.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_p4_inline"></a>P4</font></td><td><font color="#666">Phantom 4.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_mavic_pro_inline"></a>MAVIC_PRO</font></td><td><font color="#666">Mavic Pro.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_osmo_pro_inline"></a>OSMO_PRO</font></td><td><font color="#666">Osmo Pro.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_osmo_raw_inline"></a>OSMO_RAW</font></td><td><font color="#666">Osmo RAW.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_osmo_plus_inline"></a>OSMO_PLUS</font></td><td><font color="#666">Osmo Plus.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_p4p_inline"></a>P4P</font></td><td><font color="#666">Phantom 4 Pro.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_p4a_inline"></a>P4A</font></td><td><font color="#666">Phantom 4 Advanced.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_p4r_inline"></a>P4R</font></td><td><font color="#666">Phantom 4 RTK.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_mavic_air_inline"></a>MAVIC_AIR</font></td><td><font color="#666">Mavic Air.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_mavic_2_inline"></a>MAVIC_2</font></td><td><font color="#666">Mavic 2.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_p4p_v2_inline"></a>P4P_V2</font></td><td><font color="#666">Phantom 4 Pro V2.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">Unknown.</font></td></tr></table></html></div>
 <div class="api-row" id="producthandler_productindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#producthandler_productindex_inline">ProductIndex</a></div></div><div class="inline-doc" id="producthandler_productindex_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">property </font>ProductIndex</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">uint</span> ProductIndex &#123; <span class="keyword">get</span>; &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> ProductIndex &#123; <span class="keyword">get</span>; &#125;</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v4">Description:</h5>
+<h5 id="description-v2">Description:</h5>
 <p><font color="#666">The index of the product to which this product handler refers. The default product index is 0.</font></p>
 </div>
 <div class="api-row" id="producthandler_componentindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#producthandler_componentindex_inline">ComponentIndex</a></div></div><div class="inline-doc" id="producthandler_componentindex_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">property </font>ComponentIndex</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">uint</span> ComponentIndex &#123; <span class="keyword">get</span>; &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> ComponentIndex &#123; <span class="keyword">get</span>; &#125;</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v5">Description:</h5>
+<h5 id="description-v3">Description:</h5>
 <p><font color="#666">The index of the component. It is unique for a type of components inside a product. For ProductHandler, it is always 0.</font></p>
 </div>
 <div class="api-row" id="producthandler_destructor"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#producthandler_destructor_inline">~ProductHandler</a></div></div><div class="inline-doc" id="producthandler_destructor_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>~ProductHandler</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">~ProductHandler()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">~ProductHandler()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v6">Description:</h5>
+<h5 id="description-v4">Description:</h5>
 <p><font color="#666">The destructor. It should not be called explicitly.</font></p>
 </div>
+<div class="api-row" id="value_producttypemsg"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_producttypemsg_inline">ProductTypeMsg</a></div></div><div class="inline-doc" id="value_producttypemsg_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>ProductTypeMsg</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> ProductTypeMsg</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v5">Description:</h5>
+<p><font color="#666">A class contains a product type of DJI products.</font></p>
+<h5 id="struct-members">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_producttypemsg_value_inline"></a> <font color="#000">ProductType value</font></font></td><td><font color="#666">The actual value of the class.</font></td></tr></table></html></div>
+<div class="api-row" id="value_batteryheatingstate"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_batteryheatingstate_inline">BatteryHeatingState</a></div></div><div class="inline-doc" id="value_batteryheatingstate_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">enum </font>BatteryHeatingState</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> BatteryHeatingState</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v6">Description:</h5>
+<p><font color="#666">Provides the self-heating state for the battery. When the temperature of the battery is below a threshold, it will warm up automatically. For Mavic 2 Enterprise, the self-heating is triggered when the temperature is lower than 6 Celsius degrees. When the temperature reaches 8 Celsius degrees, the battery will start to preserve the temperature and maintain it between 6 Celsius degrees and 8 Celsius degrees.</font></p>
+<h5 id="enum-members">Enum Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_batteryheatingstate_idle_inline"></a>IDLE</font></td><td><font color="#666">The auto heating feature is idle.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_batteryheatingstate_heating_inline"></a>HEATING</font></td><td><font color="#666">The battery is warming itself up automatically.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_batteryheatingstate_insulation_inline"></a>INSULATION</font></td><td><font color="#666">The battery is preserving its temperature. For Mavic 2 Enterprise, the temperature will be maintained between 6 Celsius degrees and 8 Celsius degrees.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_batteryheatingstate_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">Unknown.</font></td></tr></table></html></div>
+<div class="api-row" id="value_producttype"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_producttype_inline">ProductType</a></div></div><div class="inline-doc" id="value_producttype_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">enum </font>ProductType</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> ProductType</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v7">Description:</h5>
+<p><font color="#666">The enums that describe differnt DJI products.</font></p>
+<h5 id="enum-members-v2">Enum Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_unrecognized_inline"></a>UNRECOGNIZED</font></td><td><font color="#666">None. No DJI product is recognized.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_osmo_inline"></a>OSMO</font></td><td><font color="#666">Osmo.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_p4_inline"></a>P4</font></td><td><font color="#666">Phantom 4.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_mavic_pro_inline"></a>MAVIC_PRO</font></td><td><font color="#666">Mavic Pro.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_osmo_pro_inline"></a>OSMO_PRO</font></td><td><font color="#666">Osmo Pro.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_osmo_raw_inline"></a>OSMO_RAW</font></td><td><font color="#666">Osmo RAW.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_osmo_plus_inline"></a>OSMO_PLUS</font></td><td><font color="#666">Osmo Plus.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_p4p_inline"></a>P4P</font></td><td><font color="#666">Phantom 4 Pro.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_p4a_inline"></a>P4A</font></td><td><font color="#666">Phantom 4 Advanced.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_p4r_inline"></a>P4R</font></td><td><font color="#666">Phantom 4 RTK.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_mavic_air_inline"></a>MAVIC_AIR</font></td><td><font color="#666">Mavic Air.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_mavic_2_inline"></a>MAVIC_2</font></td><td><font color="#666">Mavic 2.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_mavic_2_enterprise_inline"></a>MAVIC_2_ENTERPRISE</font></td><td><font color="#666">Mavic 2 Enterprise.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_p4p_v2_inline"></a>P4P_V2</font></td><td><font color="#666">Phantom 4 Pro V2.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_producttype_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">Unknown.</font></td></tr></table></html></div>
 <div class="api-row" id="delegate_producttypemsgchangedeventhandler"><div class="api-col left">Delegate</div><div class="api-col middle" style="color:#AAA">delegate</div><div class="api-col right"><a class="trigger" href="#delegate_producttypemsgchangedeventhandler_inline">ProductTypeMsgChangedEventHandler</a></div></div><div class="inline-doc" id="delegate_producttypemsgchangedeventhandler_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">delegate </font>ProductTypeMsgChangedEventHandler</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">ProductTypeMsgChangedEventHandler</span>(<span class="params"><span class="keyword">object</span> sender, ProductTypeMsg? <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">ProductTypeMsgChangedEventHandler</span>(<span class="params"><span class="keyword">object</span> sender, ProductTypeMsg? <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v7">Description:</h5>
+<h5 id="description-v8">Description:</h5>
 <p><font color="#666">A delegate type used to subscribe the updated values in type <code><a href="../Components/ProductHandler.html#value_producttypemsg">ProductTypeMsg</a></code>.</font></p>
 </div>
 <div class="api-row" id="producthandler_getproducttypeasync"><div class="api-col left">Methods</div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#producthandler_getproducttypeasync_inline">GetProductTypeAsync</a></div></div><div class="inline-doc" id="producthandler_getproducttypeasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetProductTypeAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;ProductTypeMsg?&gt;&gt; GetProductTypeAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;ProductTypeMsg?&gt;&gt; GetProductTypeAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v8">Description:</h5>
+<h5 id="description-v9">Description:</h5>
 <p><font color="#666">Gets the detail product type of the connected aircraft. Returns <code><a href="../Components/ProductHandler.html#value_producttype_unknown">UNKNOWN</a></code> if connected aircraft is not recognized by SDK yet.</font></p>
 <h5 id="return">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;ProductTypeMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;ProductTypeMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="producthandler_getconnectionasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#producthandler_getconnectionasync_inline">GetConnectionAsync</a></div></div><div class="inline-doc" id="producthandler_getconnectionasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetConnectionAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetConnectionAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetConnectionAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v9">Description:</h5>
+<h5 id="description-v10">Description:</h5>
 <p><font color="#666">Determines if the product is connected or not.</font></p>
 <h5 id="return-v2">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="producthandler_getserialnumberasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#producthandler_getserialnumberasync_inline">GetSerialNumberAsync</a></div></div><div class="inline-doc" id="producthandler_getserialnumberasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetSerialNumberAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetSerialNumberAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetSerialNumberAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v10">Description:</h5>
+<h5 id="description-v11">Description:</h5>
 <p><font color="#666">This interface is invalid for a product handler.</font></p>
 <h5 id="return-v3">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;StringMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;StringMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="producthandler_producttypechangedpushevent"><div class="api-col left">Event</div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#producthandler_producttypechangedpushevent_inline">ProductTypeChanged</a></div></div><div class="inline-doc" id="producthandler_producttypechangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>ProductTypeChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> ProductTypeMsgChangedEventHandler ProductTypeChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> ProductTypeMsgChangedEventHandler ProductTypeChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v11">Description:</h5>
+<h5 id="description-v12">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the product type. Returns <code><a href="../Components/ProductHandler.html#value_producttype_unknown">UNKNOWN</a></code> if connected aircraft is not recognized by SDK yet.</font></p>
 </div>
 <div class="api-row" id="producthandler_connectionchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#producthandler_connectionchangedpushevent_inline">ConnectionChanged</a></div></div><div class="inline-doc" id="producthandler_connectionchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>ConnectionChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ConnectionChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ConnectionChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v12">Description:</h5>
+<h5 id="description-v13">Description:</h5>
 <p><font color="#666">Subscribe the event to receive the product's connection change.</font></p>
 </div>
 <div class="api-row" id="producthandler_serialnumberchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#producthandler_serialnumberchangedpushevent_inline">SerialNumberChanged</a></div></div><div class="inline-doc" id="producthandler_serialnumberchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>SerialNumberChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> StringMsgChangedEventHandler SerialNumberChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> StringMsgChangedEventHandler SerialNumberChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v13">Description:</h5>
+<h5 id="description-v14">Description:</h5>
 <p><font color="#666">This interface is invalid for a product handler.</font></p>
 </div>
 
@@ -218,7 +241,7 @@
             <input type="text" v-model="searchInput" @keydown.enter="search">
           </div>
           <div class="modal-body">
-            <p v-show="!!searchCount" class="search-count"><span v-cloak="">{{searchCount}}</span>&nbsp;Results
+            <p v-show="!!searchCount" class="search-count"><span v-cloak>{{searchCount}}</span>&nbsp;Results
             </p>
             <ul v-show="!!searchCount" class="search-result">
               <li v-for="item in searchResult"><a v-bind:href="item.url | docUrl">

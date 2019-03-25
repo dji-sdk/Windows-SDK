@@ -1,6 +1,6 @@
 <script>window.pathPrefix="../";</script><!DOCTYPE html>
 <html lang="en" style="padding-bottom:0px" class="local"></html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link href="../images/favicon.png" rel="shortcut icon" type="image/png">
@@ -10,7 +10,7 @@
 <body>
   <nav id="site-header" class="site-header navbar">
     <div class="container">
-      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">WINDOWS SDK API REFERENCE</a></div>
+      <div class="navbar-header"><a href="/" class="logo"><img src="../images/dji-logo@2x.png">Windows SDK API REFERENCE</a></div>
     </div>
   </nav>
   <div id="documentation-page" class="documentation-page">
@@ -80,13 +80,25 @@
                             </dd>
                             <dd><a href="WiFiHandler.html">WiFiHandler</a>
                             </dd>
+                            <dd><a href="AccessoryHandler.html">AccessoryHandler</a>
+                            </dd>
+                            <dd><a href="SpeakerHandler.html">SpeakerHandler</a>
+                            </dd>
                             <dd><a href="ProductHandler.html">ProductHandler</a>
+                            </dd>
+                            <dd><a href="BeaconHandler.html">BeaconHandler</a>
+                            </dd>
+                            <dd><a href="SpotLightHandler.html">SpotLightHandler</a>
+                            </dd>
+                    </ul>
+                  </dd>
+                  <dd><a data-href="MediaTaskManager.html" class="sub-toggle">MediaTaskManager<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                    <ul class="sub-menu">
+                            <dd><a href="../MediaTaskManager/MediaTask.html">MediaTask</a>
                             </dd>
                     </ul>
                   </dd>
                   <dd><a href="../UserAccount/UserAccountManager.html">UserAccountManager</a>
-                  </dd>
-                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
                   </dd>
                   <dd><a data-href="../VideoFeeder/VideoFeeder.html" class="sub-toggle">VideoFeeder<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
                     <ul class="sub-menu">
@@ -94,151 +106,171 @@
                             </dd>
                     </ul>
                   </dd>
+                  <dd><a href="../VirtualRemoteController/VirtualRemoteController.html">VirtualRemoteController</a>
+                  </dd>
           </dl>
         </div>
       </div>
       <div class="site-main">
         <div class="article"><div class="article"><h1><font color="#AAA">class </font>FlightAssistantHandler</h1></div>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">FlightAssistantHandler</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">FlightAssistantHandler</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description">Description:</h5>
 <p><font color="#666">This class contains components of the Intelligent Flight Assistant and provides methods to change its settings.</font></p>
 <h5 id="class-members">Class Members:</h5>
+<div class="api-row" id="flightassistanthandler_productindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_productindex_inline">ProductIndex</a></div></div><div class="inline-doc" id="flightassistanthandler_productindex_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>ProductIndex</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> ProductIndex &#123; <span class="keyword">get</span>; &#125;</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v2">Description:</h5>
+<p><font color="#666">The index of the product to which this component handler belongs. The default product index is 0.</font></p>
+</div>
+<div class="api-row" id="flightassistanthandler_componentindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_componentindex_inline">ComponentIndex</a></div></div><div class="inline-doc" id="flightassistanthandler_componentindex_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>ComponentIndex</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">uint</span> ComponentIndex &#123; <span class="keyword">get</span>; &#125;</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v3">Description:</h5>
+<p><font color="#666">The index of the component. It is unique for a type of components inside a product. It is useful when a product has multiple handlers of the same kind. If the product only has one handler of this kind, the index is 0.</font></p>
+</div>
+<div class="api-row" id="flightassistanthandler_destructor"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_destructor_inline">~FlightAssistantHandler</a></div></div><div class="inline-doc" id="flightassistanthandler_destructor_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>~FlightAssistantHandler</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">~FlightAssistantHandler()</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v4">Description:</h5>
+<p><font color="#666">The destructor. It should not be called explicitly.</font></p>
+</div>
 <div class="api-row" id="value_obstacledetectionsector"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_obstacledetectionsector_inline">ObstacleDetectionSector</a></div></div><div class="inline-doc" id="value_obstacledetectionsector_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">struct </font>ObstacleDetectionSector</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> ObstacleDetectionSector</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> ObstacleDetectionSector</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v2">Description:</h5>
+<h5 id="description-v5">Description:</h5>
 <p><font color="#666">A class containes the infomation of obstacel detection sector.</font></p>
 <h5 id="struct-members">Struct Members:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_obstacledetectionsector_warninglevel_inline"></a> <font color="#000">ObstacleDetectionSectorWarning warningLevel</font></font></td><td><font color="#666">The warning level of obstacle detection.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_obstacledetectionsector_obstacledistanceinmeters_inline"></a> <font color="#000">double obstacleDistanceInMeters</font></font></td><td><font color="#666">The distance of the obstracle in meters.</font></td></tr></table></html></div>
 <div class="api-row" id="value_vissiondetectionstate"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_vissiondetectionstate_inline">VissionDetectionState</a></div></div><div class="inline-doc" id="value_vissiondetectionstate_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">struct </font>VissionDetectionState</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> VissionDetectionState</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> VissionDetectionState</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v3">Description:</h5>
+<h5 id="description-v6">Description:</h5>
 <p><font color="#666">The state of vission detection.</font></p>
 <h5 id="struct-members-v2">Struct Members:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_vissiondetectionstate_issensorbeingused_inline"></a> <font color="#000">bool isSensorBeingUsed</font></font></td><td><font color="#666">If the sensor being used. The sensor would not be working if this value is false.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_vissiondetectionstate_systemwarning_inline"></a> <font color="#000">VisionSystemWarning systemWarning</font></font></td><td><font color="#666">System warning of vision.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_vissiondetectionstate_position_inline"></a> <font color="#000">VisionSensorPosition position</font></font></td><td><font color="#666">Postion of the vision sensor.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_vissiondetectionstate_obstacledistanceinmeters_inline"></a> <font color="#000">double obstacleDistanceInMeters</font></font></td><td><font color="#666">Distance of obstacle in meters.</font></td></tr></table></html></div>
 <div class="api-row" id="value_visionsystemwarningmsg"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_visionsystemwarningmsg_inline">VisionSystemWarningMsg</a></div></div><div class="inline-doc" id="value_visionsystemwarningmsg_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">struct </font>VisionSystemWarningMsg</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> VisionSystemWarningMsg</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> VisionSystemWarningMsg</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v4">Description:</h5>
+<h5 id="description-v7">Description:</h5>
 <p><font color="#666">A class that contains a system warning type of vision systems.</font></p>
 <h5 id="struct-members-v3">Struct Members:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_visionsystemwarningmsg_value_inline"></a> <font color="#000">VisionSystemWarning value</font></font></td><td><font color="#666">The actual value of the class.</font></td></tr></table></html></div>
 <div class="api-row" id="value_landingprotectionstate"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_landingprotectionstate_inline">LandingProtectionState</a></div></div><div class="inline-doc" id="value_landingprotectionstate_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">enum </font>LandingProtectionState</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">enum</span> LandingProtectionState</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> LandingProtectionState</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v5">Description:</h5>
+<h5 id="description-v8">Description:</h5>
 <p><font color="#666">Values of landing protection.</font></p>
 <h5 id="enum-members">Enum Members:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_landingprotectionstate_none_inline"></a>NONE</font></td><td><font color="#666">The aircraft is not executing auto-landing or the downward vision sensor has not started to analyze the ground yet.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_landingprotectionstate_analyzing_inline"></a>ANALYZING</font></td><td><font color="#666">The downward vision sensor is analyzing the ground at the landing zone.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_landingprotectionstate_analysis_failed_inline"></a>ANALYSIS_FAILED</font></td><td><font color="#666">The downward vision sensor's analysis failed. Either the auto-landing can be attempted again, or the user needs to land the aircraft manually.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_landingprotectionstate_safe_to_land_inline"></a>SAFE_TO_LAND</font></td><td><font color="#666">The ground is flat and the aircraft is safe to land automatically.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_landingprotectionstate_not_safe_to_land_inline"></a>NOT_SAFE_TO_LAND</font></td><td><font color="#666">Landing area is not flat enough to be considered safe for landing. The aircraft should be moved to an area that is more flat and an auto-land should be attempted again or the user should land the aircraft manually.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_landingprotectionstate_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">Unknown.</font></td></tr></table></html></div>
 <div class="api-row" id="value_visionsensorposition"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_visionsensorposition_inline">VisionSensorPosition</a></div></div><div class="inline-doc" id="value_visionsensorposition_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">enum </font>VisionSensorPosition</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">enum</span> VisionSensorPosition</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> VisionSensorPosition</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v6">Description:</h5>
+<h5 id="description-v9">Description:</h5>
 <p><font color="#666">Position of the vision sensor.</font></p>
 <h5 id="enum-members-v2">Enum Members:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_visionsensorposition_nose_inline"></a>NOSE</font></td><td><font color="#666">The sensor is on the front or nose of the aircraft.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_visionsensorposition_tail_inline"></a>TAIL</font></td><td><font color="#666">The sensor is on the back or tail of the aircraft.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_visionsensorposition_right_inline"></a>RIGHT</font></td><td><font color="#666">The sensor is on the right or starboard side of the aircraft.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_visionsensorposition_left_inline"></a>LEFT</font></td><td><font color="#666">The sensor is on the left or port side of the aircraft.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_visionsensorposition_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">Unknown.</font></td></tr></table></html></div>
 <div class="api-row" id="value_obstacledetectionsectorwarning"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_obstacledetectionsectorwarning_inline">ObstacleDetectionSectorWarning</a></div></div><div class="inline-doc" id="value_obstacledetectionsectorwarning_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">enum </font>ObstacleDetectionSectorWarning</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">enum</span> ObstacleDetectionSectorWarning</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> ObstacleDetectionSectorWarning</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v7">Description:</h5>
+<h5 id="description-v10">Description:</h5>
 <p><font color="#666">Warning level values of obstalcle detection.</font></p>
 <h5 id="enum-members-v3">Enum Members:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_obstacledetectionsectorwarning_invalid_inline"></a>INVALID</font></td><td><font color="#666">The warning level is invalid. The sector cannot determine depth of the scene in front of it.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_obstacledetectionsectorwarning_level_1_inline"></a>LEVEL_1</font></td><td><font color="#666">Level 1.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_obstacledetectionsectorwarning_level_2_inline"></a>LEVEL_2</font></td><td><font color="#666">Level 2.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_obstacledetectionsectorwarning_level_3_inline"></a>LEVEL_3</font></td><td><font color="#666">Level 3.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_obstacledetectionsectorwarning_level_4_inline"></a>LEVEL_4</font></td><td><font color="#666">Level 4.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_obstacledetectionsectorwarning_level_5_inline"></a>LEVEL_5</font></td><td><font color="#666">Level 5.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_obstacledetectionsectorwarning_level_6_inline"></a>LEVEL_6</font></td><td><font color="#666">Level 6.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_obstacledetectionsectorwarning_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">UNKNOWN.</font></td></tr></table></html></div>
 <div class="api-row" id="value_visionsystemwarning"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_visionsystemwarning_inline">VisionSystemWarning</a></div></div><div class="inline-doc" id="value_visionsystemwarning_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">enum </font>VisionSystemWarning</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">enum</span> VisionSystemWarning</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> VisionSystemWarning</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v8">Description:</h5>
+<h5 id="description-v11">Description:</h5>
 <p><font color="#666">Distance warning returned by the front vision system. Warning Level 4 is the most serious level.</font></p>
 <h5 id="enum-members-v4">Enum Members:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_visionsystemwarning_invalid_inline"></a>INVALID</font></td><td><font color="#666">The warning is invalid. The front vision system cannot determine depth of the scene in front of it.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_visionsystemwarning_safe_inline"></a>SAFE</font></td><td><font color="#666">The distance between the obstacle detected by the vision system and the aircraft is safe (over 2 meters).</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_visionsystemwarning_dangerous_inline"></a>DANGEROUS</font></td><td><font color="#666">The distance between the obstacle detected by the vision system and the aircraft is dangerous (less than 2 meters).</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_visionsystemwarning_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">Unknown.</font></td></tr></table></html></div>
-<div class="api-row" id="flightassistanthandler_productindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_productindex_inline">ProductIndex</a></div></div><div class="inline-doc" id="flightassistanthandler_productindex_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">property </font>ProductIndex</h6></div>
+<div class="api-row" id="value_bottomauxiliarylightmode"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_bottomauxiliarylightmode_inline">BottomAuxiliaryLightMode</a></div></div><div class="inline-doc" id="value_bottomauxiliarylightmode_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">enum </font>BottomAuxiliaryLightMode</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">uint</span> ProductIndex &#123; <span class="keyword">get</span>; &#125;</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v9">Description:</h5>
-<p><font color="#666">The index of the product to which this component handler belongs. The default product index is 0.</font></p>
-</div>
-<div class="api-row" id="flightassistanthandler_componentindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_componentindex_inline">ComponentIndex</a></div></div><div class="inline-doc" id="flightassistanthandler_componentindex_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">property </font>ComponentIndex</h6></div>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">enum</span> BottomAuxiliaryLightMode</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v12">Description:</h5>
+<p><font color="#666">Modes for the auxiliary light at the bottom of the aircraft.</font></p>
+<h5 id="enum-members-v5">Enum Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_bottomauxiliarylightmode_auto_inline"></a>AUTO</font></td><td><font color="#666">The auto mode. In this mode, the auxiliary light will be turned on automatically when the downward vision system is active but the environment is too dark.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_bottomauxiliarylightmode_on_inline"></a>ON</font></td><td><font color="#666">The auxiliary light is on.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_bottomauxiliarylightmode_off_inline"></a>OFF</font></td><td><font color="#666">The auxiliary light is off.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_bottomauxiliarylightmode_beacon_inline"></a>BEACON</font></td><td><font color="#666">Beacon mode. In this mode, the auxiliary light will have different behaviors in different conditions:  - When the aircraft just takes off, the auxiliary light will have the same behavior as ''DJIBottomAuxiliaryLightMode_Auto''.  - When the aircraft ascends above 5.5 meters, the auxiliary light starts to blink in 1Hz.  - When the aircraft descends below 4.5 meters, the auxiliary light will have the same behavior as ''DJIBottomAuxiliaryLightMode_Auto''. This mode is only supported by Mavic 2 Enterprise.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_bottomauxiliarylightmode_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">Unknown.</font></td></tr></table></html></div>
+<div class="api-row" id="value_bottomauxiliarylightmodemsg"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_bottomauxiliarylightmodemsg_inline">BottomAuxiliaryLightModeMsg</a></div></div><div class="inline-doc" id="value_bottomauxiliarylightmodemsg_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>BottomAuxiliaryLightModeMsg</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">uint</span> ComponentIndex &#123; <span class="keyword">get</span>; &#125;</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v10">Description:</h5>
-<p><font color="#666">The index of the component. It is unique for a type of components inside a product. It is useful when a product has multiple handlers of the same kind. If the product only has one handler of this kind, the index is 0.</font></p>
-</div>
-<div class="api-row" id="flightassistanthandler_destructor"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_destructor_inline">~FlightAssistantHandler</a></div></div><div class="inline-doc" id="flightassistanthandler_destructor_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">method </font>~FlightAssistantHandler</h6></div>
-
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">~FlightAssistantHandler()</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v11">Description:</h5>
-<p><font color="#666">The destructor. It should not be called explicitly.</font></p>
-</div>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">struct</span> BottomAuxiliaryLightModeMsg</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
+<h5 id="description-v13">Description:</h5>
+<p><font color="#666">A class that contains the mode for the auxiliary light at the bottom of the aircraft.</font></p>
+<h5 id="struct-members-v4">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_bottomauxiliarylightmodemsg_value_inline"></a> <font color="#000">BottomAuxiliaryLightMode value</font></font></td><td><font color="#666">The actual value of the class.</font></td></tr></table></html></div>
 <div class="api-row" id="delegate_landingprotectionstatemsgchangedeventhandler"><div class="api-col left">Delegate</div><div class="api-col middle" style="color:#AAA">delegate</div><div class="api-col right"><a class="trigger" href="#delegate_landingprotectionstatemsgchangedeventhandler_inline">LandingProtectionStateMsgChangedEventHandler</a></div></div><div class="inline-doc" id="delegate_landingprotectionstatemsgchangedeventhandler_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">delegate </font>LandingProtectionStateMsgChangedEventHandler</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">LandingProtectionStateMsgChangedEventHandler</span>(<span class="params"><span class="keyword">object</span> sender, LandingProtectionStateMsg? <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">LandingProtectionStateMsgChangedEventHandler</span>(<span class="params"><span class="keyword">object</span> sender, LandingProtectionStateMsg? <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v12">Description:</h5>
+<h5 id="description-v14">Description:</h5>
 <p><font color="#666">A delegate type used to subscribe the updated values in type <code><a href="../Components/FlightControllerHandler.html#value_landingprotectionstatemsg">LandingProtectionStateMsg</a></code>.</font></p>
 </div>
 <div class="api-row" id="delegate_gohomeassessmentvaluechangedeventhandler"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">delegate</div><div class="api-col right"><a class="trigger" href="#delegate_gohomeassessmentvaluechangedeventhandler_inline">GoHomeAssessmentValueChangedEventHandler</a></div></div><div class="inline-doc" id="delegate_gohomeassessmentvaluechangedeventhandler_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">delegate </font>GoHomeAssessmentValueChangedEventHandler</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">GoHomeAssessmentValueChangedEventHandler</span>(<span class="params"><span class="keyword">object</span> sender, GoHomeAssessmentValue? <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">GoHomeAssessmentValueChangedEventHandler</span>(<span class="params"><span class="keyword">object</span> sender, GoHomeAssessmentValue? <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v13">Description:</h5>
+<h5 id="description-v15">Description:</h5>
 <p><font color="#666">A delegate type used to subscribe the updated values in type <code><a href="../Components/FlightControllerHandler.html#value_gohomeassessmentvalue">GoHomeAssessmentValue</a></code>.</font></p>
 </div>
 <div class="api-row" id="delegate_vissiondetectionstatechangedeventhandler"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">delegate</div><div class="api-col right"><a class="trigger" href="#delegate_vissiondetectionstatechangedeventhandler_inline">VissionDetectionStateChangedEventHandler</a></div></div><div class="inline-doc" id="delegate_vissiondetectionstatechangedeventhandler_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">delegate </font>VissionDetectionStateChangedEventHandler</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">VissionDetectionStateChangedEventHandler</span>(<span class="params"><span class="keyword">object</span> sender, VissionDetectionState? <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">VissionDetectionStateChangedEventHandler</span>(<span class="params"><span class="keyword">object</span> sender, VissionDetectionState? <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
-<h5 id="description-v14">Description:</h5>
+<h5 id="description-v16">Description:</h5>
 <p><font color="#666">A delegate type used to subscribe the updated values in type <code><a href="../Components/FlightAssistantHandler.html#value_vissiondetectionstate">VissionDetectionState</a></code>.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_getisbrakingasync"><div class="api-col left">Methods</div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getisbrakingasync_inline">GetIsBrakingAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getisbrakingasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetIsBrakingAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetIsBrakingAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetIsBrakingAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v15">Description:</h5>
+<h5 id="description-v17">Description:</h5>
 <p><font color="#666">Determines if the aircraft is braking automatically to avoid collision</font></p>
 <h5 id="return">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_getrthobstacleavoidanceenabledasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getrthobstacleavoidanceenabledasync_inline">GetRTHObstacleAvoidanceEnabledAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getrthobstacleavoidanceenabledasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetRTHObstacleAvoidanceEnabledAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRTHObstacleAvoidanceEnabledAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetRTHObstacleAvoidanceEnabledAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v16">Description:</h5>
+<h5 id="description-v18">Description:</h5>
 <p><font color="#666">Determines if Obstacle Avoidance is enabled during RTH. This is only active when the environment is  bright enough. It is not active when the aircraft is landing. <br> CAUTION: If RTH Obstacle Avoidance is disabled, aircraft will not check obstacles during RTH or  ascend to avoid obstacles, which may cause great risks.</font></p>
 <h5 id="return-v2">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_setrthobstacleavoidanceenabledasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_setrthobstacleavoidanceenabledasync_inline">SetRTHObstacleAvoidanceEnabledAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_setrthobstacleavoidanceenabledasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>SetRTHObstacleAvoidanceEnabledAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetRTHObstacleAvoidanceEnabledAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetRTHObstacleAvoidanceEnabledAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v17">Description:</h5>
+<h5 id="description-v19">Description:</h5>
 <p><font color="#666">Enables Obstacle Avoidance during RTH. This is only active when the environment is bright enough. It is not active when the aircraft is landing. <br> CAUTION: If RTH Obstacle Avoidance is disabled, aircraft will not check obstacles during RTH or ascend to avoid obstacles, which may cause great risks.</font></p>
 <h5 id="input-parameters">Input Parameters:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../SDKManager/DJISDKManager.html#value_boolmsg">BoolMsg</a> <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type BoolMsg.</i></font></td></tr></table></html>
@@ -247,9 +279,9 @@
 <div class="api-row" id="flightassistanthandler_setobstacleavoidanceenabledasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_setobstacleavoidanceenabledasync_inline">SetObstacleAvoidanceEnabledAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_setobstacleavoidanceenabledasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>SetObstacleAvoidanceEnabledAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetObstacleAvoidanceEnabledAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetObstacleAvoidanceEnabledAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v18">Description:</h5>
+<h5 id="description-v20">Description:</h5>
 <p><font color="#666">Enables obstacle avoidance. When enabled, the aircraft will stop and try to go around detected obstacles.</font></p>
 <h5 id="input-parameters-v2">Input Parameters:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../SDKManager/DJISDKManager.html#value_boolmsg">BoolMsg</a> <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type BoolMsg.</i></font></td></tr></table></html>
@@ -258,18 +290,18 @@
 <div class="api-row" id="flightassistanthandler_getobstacleavoidanceenabledasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getobstacleavoidanceenabledasync_inline">GetObstacleAvoidanceEnabledAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getobstacleavoidanceenabledasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetObstacleAvoidanceEnabledAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetObstacleAvoidanceEnabledAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetObstacleAvoidanceEnabledAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v19">Description:</h5>
+<h5 id="description-v21">Description:</h5>
 <p><font color="#666">Determines if the obstacle avoidance is enabled.</font></p>
 <h5 id="return-v5">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_setvisionassistedpositioningenabledasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_setvisionassistedpositioningenabledasync_inline">SetVisionAssistedPositioningEnabledAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_setvisionassistedpositioningenabledasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>SetVisionAssistedPositioningEnabledAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetVisionAssistedPositioningEnabledAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetVisionAssistedPositioningEnabledAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v20">Description:</h5>
+<h5 id="description-v22">Description:</h5>
 <p><font color="#666">Enable vision positioning. Vision positioning is used to augment GPS to improve location accuracy when hovering and improve velocity calculation when flying.</font></p>
 <h5 id="input-parameters-v3">Input Parameters:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../SDKManager/DJISDKManager.html#value_boolmsg">BoolMsg</a> <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type BoolMsg.</i></font></td></tr></table></html>
@@ -278,54 +310,54 @@
 <div class="api-row" id="flightassistanthandler_getvisionassistedpositioningenabledasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getvisionassistedpositioningenabledasync_inline">GetVisionAssistedPositioningEnabledAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getvisionassistedpositioningenabledasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetVisionAssistedPositioningEnabledAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetVisionAssistedPositioningEnabledAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetVisionAssistedPositioningEnabledAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v21">Description:</h5>
+<h5 id="description-v23">Description:</h5>
 <p><font color="#666">Determines if vision positioning is enabled. Vision positioning is used to augment GPS to improve location accuracy when  hovering and improve velocity calculation when flying.</font></p>
 <h5 id="return-v7">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_getprecisionlandingenabledasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getprecisionlandingenabledasync_inline">GetPrecisionLandingEnabledAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getprecisionlandingenabledasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetPrecisionLandingEnabledAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetPrecisionLandingEnabledAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetPrecisionLandingEnabledAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v22">Description:</h5>
+<h5 id="description-v24">Description:</h5>
 <p><font color="#666">Determines if precision landing is enabled. When enabled, the aircraft will record its take-off location  visually (as well as with GPS). On a Return-To-Home action the aircraft will attempt to perform a  precision landing using the additional visual information. This method only works on a Return-To-Home  action when the home location is successfully recorded during take-off, and not changed during flight.</font></p>
 <h5 id="return-v8">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_getisperformingprecisionlandingasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getisperformingprecisionlandingasync_inline">GetIsPerformingPrecisionLandingAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getisperformingprecisionlandingasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetIsPerformingPrecisionLandingAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetIsPerformingPrecisionLandingAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetIsPerformingPrecisionLandingAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v23">Description:</h5>
+<h5 id="description-v25">Description:</h5>
 <p><font color="#666">Determines if the aircraft is performing precision landing.</font></p>
 <h5 id="return-v9">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_getisascentlimitedbyobstacleasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getisascentlimitedbyobstacleasync_inline">GetIsAscentLimitedByObstacleAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getisascentlimitedbyobstacleasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetIsAscentLimitedByObstacleAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetIsAscentLimitedByObstacleAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetIsAscentLimitedByObstacleAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v24">Description:</h5>
+<h5 id="description-v26">Description:</h5>
 <p><font color="#666">Determines if the aircraft's ascent is limited by obstacle.  True if the aircraft will not ascend further because of an obstacle detected within 1m above it.</font></p>
 <h5 id="return-v10">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_getadvancedpilotassistancesystemenableasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getadvancedpilotassistancesystemenableasync_inline">GetAdvancedPilotAssistanceSystemEnableAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getadvancedpilotassistancesystemenableasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetAdvancedPilotAssistanceSystemEnableAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetAdvancedPilotAssistanceSystemEnableAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetAdvancedPilotAssistanceSystemEnableAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v25">Description:</h5>
+<h5 id="description-v27">Description:</h5>
 <p><font color="#666">Determines whether the Advanced Pilot Assistance System (APAS) is enabled or not. When APAS is enabled, the aircraft continues to respond to user commands and plans its path according to both control stick inputs and the flight environment. APAS makes it easier to avoid obstacles and obtain smoother footage, and gives a better fly experiences. It is only supported by Mavic Air.</font></p>
 <h5 id="return-v11">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_setadvancedpilotassistancesystemenableasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_setadvancedpilotassistancesystemenableasync_inline">SetAdvancedPilotAssistanceSystemEnableAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_setadvancedpilotassistancesystemenableasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>SetAdvancedPilotAssistanceSystemEnableAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetAdvancedPilotAssistanceSystemEnableAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetAdvancedPilotAssistanceSystemEnableAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v26">Description:</h5>
+<h5 id="description-v28">Description:</h5>
 <p><font color="#666">Enables the Advanced Pilot Assistance System (APAS). When APAS is enabled, the aircraft continues to respond to user commands and plans its path according to both control stick inputs and the flight environment. APAS makes it easier to avoid obstacles and obtain smoother footage, and gives a better fly experiences. It is only valid when the aircraft is in P-mode. It is supported by Mavic Air and Mavic 2 Series.</font></p>
 <h5 id="input-parameters-v4">Input Parameters:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../SDKManager/DJISDKManager.html#value_boolmsg">BoolMsg</a> <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type BoolMsg.</i></font></td></tr></table></html>
@@ -334,288 +366,288 @@
 <div class="api-row" id="flightassistanthandler_getisadvancedpilotassistancesystemactiveasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getisadvancedpilotassistancesystemactiveasync_inline">GetIsAdvancedPilotAssistanceSystemActiveAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getisadvancedpilotassistancesystemactiveasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetIsAdvancedPilotAssistanceSystemActiveAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetIsAdvancedPilotAssistanceSystemActiveAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetIsAdvancedPilotAssistanceSystemActiveAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v27">Description:</h5>
+<h5 id="description-v29">Description:</h5>
 <p><font color="#666">Determines if Advanced Pilot Assistance System (APAS) is active. When it is active, the aircraft will change flight path automatically to avoid obstacles.</font></p>
 <h5 id="return-v13">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_getlandingprotectionstateasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getlandingprotectionstateasync_inline">GetLandingProtectionStateAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getlandingprotectionstateasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetLandingProtectionStateAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;LandingProtectionStateMsg?&gt;&gt; GetLandingProtectionStateAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;LandingProtectionStateMsg?&gt;&gt; GetLandingProtectionStateAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v28">Description:</h5>
+<h5 id="description-v30">Description:</h5>
 <p><font color="#666">Get the state of landing protection. This status is valid when landing protection is enabled.</font></p>
 <h5 id="return-v14">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;LandingProtectionStateMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;LandingProtectionStateMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_getvissiondetectionstateasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getvissiondetectionstateasync_inline">GetVissionDetectionStateAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getvissiondetectionstateasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetVissionDetectionStateAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;VissionDetectionState?&gt;&gt; GetVissionDetectionStateAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;VissionDetectionState?&gt;&gt; GetVissionDetectionStateAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v29">Description:</h5>
+<h5 id="description-v31">Description:</h5>
 <p><font color="#666">Get the state of vision detection.</font></p>
 <h5 id="return-v15">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;VissionDetectionState?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;LandingProtectionStateMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_getupwardsavoidanceenableasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getupwardsavoidanceenableasync_inline">GetUpwardsAvoidanceEnableAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getupwardsavoidanceenableasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetUpwardsAvoidanceEnableAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetUpwardsAvoidanceEnableAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetUpwardsAvoidanceEnableAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v30">Description:</h5>
+<h5 id="description-v32">Description:</h5>
 <p><font color="#666">Determines if upward avoidance is enabled. When the aircraft's upwards-facing infrared sensor detects an obstacle, the aircraft will slow its ascent and maintain a minimum distance of 1 meter from the obstacle. The sensor has a 10-degree horizontal field of view (FOV) and 10-degree vertical FOV. The maximum detection distance is 5m.</font></p>
 <h5 id="return-v16">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_setupwardsavoidanceenableasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_setupwardsavoidanceenableasync_inline">SetUpwardsAvoidanceEnableAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_setupwardsavoidanceenableasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>SetUpwardsAvoidanceEnableAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetUpwardsAvoidanceEnableAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetUpwardsAvoidanceEnableAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v31">Description:</h5>
+<h5 id="description-v33">Description:</h5>
 <p><font color="#666">Enables/disables upward avoidance. When the aircraft's upwards-facing infrared sensor detects an obstacle, the aircraft will slow its ascent and maintain a minimum distance of 1 meter from the obstacle. The sensor has a 10-degree horizontal field of view (FOV) and 10-degree vertical FOV. The maximum detection distance is 5m.</font></p>
 <h5 id="input-parameters-v5">Input Parameters:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../SDKManager/DJISDKManager.html#value_boolmsg">BoolMsg</a> <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type BoolMsg.</i></font></td></tr></table></html>
 <h5 id="return-v17">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;<a href="../SDKManager/DJISDKManager.html#value_sdkerror">SDKError</a>&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;SDKErrorCode&gt;</code> object.</i></font></td></tr></table></html></div>
-<div class="api-row" id="flightcontrollerhandler_getimustatefetchenableasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightcontrollerhandler_getimustatefetchenableasync_inline">GetIMUStateFetchEnableAsync</a></div></div><div class="inline-doc" id="flightcontrollerhandler_getimustatefetchenableasync_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">method </font>GetIMUStateFetchEnableAsync</h6></div>
-
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetIMUStateFetchEnableAsync()</span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v32">Description:</h5>
-<p><font color="#666">Determines if DJI Windows SDK would keep fetching IMU state from the aircraft using timer.</font></p>
-<h5 id="return-v18">Return:</h5>
-<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
-<div class="api-row" id="flightcontrollerhandler_setimustatefetchenableasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightcontrollerhandler_setimustatefetchenableasync_inline">SetIMUStateFetchEnableAsync</a></div></div><div class="inline-doc" id="flightcontrollerhandler_setimustatefetchenableasync_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">method </font>SetIMUStateFetchEnableAsync</h6></div>
-
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetIMUStateFetchEnableAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
-<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v33">Description:</h5>
-<p><font color="#666">Enables/disables DJI Windows SDK to keep fetching IMU state from the aircraft using timer.</font></p>
-<h5 id="input-parameters-v6">Input Parameters:</h5>
-<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../SDKManager/DJISDKManager.html#value_boolmsg">BoolMsg</a> <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type BoolMsg.</i></font></td></tr></table></html>
-<h5 id="return-v19">Return:</h5>
-<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;<a href="../SDKManager/DJISDKManager.html#value_sdkerror">SDKError</a>&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;SDKErrorCode&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightcontrollerhandler_getimustateasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightcontrollerhandler_getimustateasync_inline">GetIMUStateAsync</a></div></div><div class="inline-doc" id="flightcontrollerhandler_getimustateasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetIMUStateAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IMUState?&gt;&gt; GetIMUStateAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IMUStates?&gt;&gt; GetIMUStateAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v34">Description:</h5>
 <p><font color="#666">Get the state of IMU.</font></p>
-<h5 id="return-v20">Return:</h5>
-<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;IMUState?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;IMUState?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
+<h5 id="return-v18">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;IMUStates?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;IMUStates?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightcontrollerhandler_getimucountasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightcontrollerhandler_getimucountasync_inline">GetIMUCountAsync</a></div></div><div class="inline-doc" id="flightcontrollerhandler_getimucountasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetIMUCountAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetIMUCountAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;IntMsg?&gt;&gt; GetIMUCountAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v35">Description:</h5>
 <p><font color="#666">Get the count of IMUs.</font></p>
-<h5 id="return-v21">Return:</h5>
+<h5 id="return-v19">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;IntMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;IntMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightcontrollerhandler_getgohomeassessmentasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightcontrollerhandler_getgohomeassessmentasync_inline">GetGoHomeAssessmentAsync</a></div></div><div class="inline-doc" id="flightcontrollerhandler_getgohomeassessmentasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetGoHomeAssessmentAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;GoHomeAssessmentValue?&gt;&gt; GetGoHomeAssessmentAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;GoHomeAssessmentValue?&gt;&gt; GetGoHomeAssessmentAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v36">Description:</h5>
 <p><font color="#666">Get the aircraft's smart go home data if smart go home is enabled.</font></p>
-<h5 id="return-v22">Return:</h5>
+<h5 id="return-v20">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;GoHomeAssessmentValue?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;GoHomeAssessmentValue?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_setprecisionlandingenabledasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_setprecisionlandingenabledasync_inline">SetPrecisionLandingEnabledAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_setprecisionlandingenabledasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>SetPrecisionLandingEnabledAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetPrecisionLandingEnabledAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetPrecisionLandingEnabledAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v37">Description:</h5>
 <p><font color="#666">Enables/disables precision landing. When enabled, the aircraft will record its take-off location  visually (as well as with GPS). On a Return-To-Home action the aircraft will attempt to perform a  precision landing using the additional visual information. This method only works on a Return-To-Home  action when the home location is successfully recorded during take-off, and not changed during flight.</font></p>
-<h5 id="input-parameters-v7">Input Parameters:</h5>
+<h5 id="input-parameters-v6">Input Parameters:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../SDKManager/DJISDKManager.html#value_boolmsg">BoolMsg</a> <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type BoolMsg.</i></font></td></tr></table></html>
-<h5 id="return-v23">Return:</h5>
+<h5 id="return-v21">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;<a href="../SDKManager/DJISDKManager.html#value_sdkerror">SDKError</a>&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;SDKErrorCode&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_getlandingprotectionenabledasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getlandingprotectionenabledasync_inline">GetLandingProtectionEnabledAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getlandingprotectionenabledasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetLandingProtectionEnabledAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetLandingProtectionEnabledAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetLandingProtectionEnabledAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v38">Description:</h5>
 <p><font color="#666">Determines if landing protection is enabled. During auto-landing, the downwards facing vision sensor  will check if the ground surface is flat enough for a safe landing. If it is not and landing protection  is enabled, then landing will abort and need to be manually performed by the user.</font></p>
-<h5 id="return-v24">Return:</h5>
+<h5 id="return-v22">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_setlandingprotectionenabledasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_setlandingprotectionenabledasync_inline">SetLandingProtectionEnabledAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_setlandingprotectionenabledasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>SetLandingProtectionEnabledAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetLandingProtectionEnabledAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetLandingProtectionEnabledAsync</span>(<span class="params">BoolMsg <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v39">Description:</h5>
 <p><font color="#666">Enables/disables landing protection. During auto-landing, the downwards facing vision sensor will check if  the ground surface is flat enough for a safe landing. If it is not and landing protection is enabled, then  landing will abort and need to be manually performed by the user.</font></p>
-<h5 id="input-parameters-v8">Input Parameters:</h5>
+<h5 id="input-parameters-v7">Input Parameters:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../SDKManager/DJISDKManager.html#value_boolmsg">BoolMsg</a> <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type BoolMsg.</i></font></td></tr></table></html>
-<h5 id="return-v25">Return:</h5>
+<h5 id="return-v23">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;<a href="../SDKManager/DJISDKManager.html#value_sdkerror">SDKError</a>&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;SDKErrorCode&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_getconnectionasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getconnectionasync_inline">GetConnectionAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getconnectionasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetConnectionAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetConnectionAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BoolMsg?&gt;&gt; GetConnectionAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v40">Description:</h5>
 <p><font color="#666">Determines if a component is connected or not.</font></p>
-<h5 id="return-v26">Return:</h5>
+<h5 id="return-v24">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;BoolMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_getserialnumberasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getserialnumberasync_inline">GetSerialNumberAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getserialnumberasync_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">method </font>GetSerialNumberAsync</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetSerialNumberAsync()</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;StringMsg?&gt;&gt; GetSerialNumberAsync()</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v41">Description:</h5>
 <p><font color="#666">Gets the serial number of the component.</font></p>
-<h5 id="return-v27">Return:</h5>
+<h5 id="return-v25">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;StringMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;StringMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
+<div class="api-row" id="flightassistanthandler_getbottomauxiliarylightmodeasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_getbottomauxiliarylightmodeasync_inline">GetBottomAuxiliaryLightModeAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_getbottomauxiliarylightmodeasync_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>GetBottomAuxiliaryLightModeAsync</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">async</span> Task&lt;ResultValue&lt;BottomAuxiliaryLightModeMsg?&gt;&gt; GetBottomAuxiliaryLightModeAsync()</div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v42">Description:</h5>
+<p><font color="#666">Gets the mode for the auxiliary light at the bottom of the aircraft. It is only supported by Mavic 2 series.</font></p>
+<h5 id="return-v26">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;BottomAuxiliaryLightModeMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;Value_BottomAuxiliaryLightModeMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
+<div class="api-row" id="flightassistanthandler_setbottomauxiliarylightmodeasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_setbottomauxiliarylightmodeasync_inline">SetBottomAuxiliaryLightModeAsync</a></div></div><div class="inline-doc" id="flightassistanthandler_setbottomauxiliarylightmodeasync_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">method </font>SetBottomAuxiliaryLightModeAsync</h6></div>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">async</span> Task&lt;SDKError&gt; <span class="title">SetBottomAuxiliaryLightModeAsync</span>(<span class="params">BottomAuxiliaryLightModeMsg <span class="keyword">value</span></span>)</span></div></pre></td></tr></table></figure>
+<html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
+<h5 id="description-v43">Description:</h5>
+<p><font color="#666">Sets the mode for the auxiliary light at the bottom of the aircraft. It is only supported by Mavic 2 series.</font></p>
+<h5 id="input-parameters-v8">Input Parameters:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../Components/FlightAssistantHandler.html#value_bottomauxiliarylightmodemsg">BottomAuxiliaryLightModeMsg</a> <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type <code><a href="../Components/FlightAssistantHandler.html#value_bottomauxiliarylightmodemsg">BottomAuxiliaryLightModeMsg</a></code>.</i></font></td></tr></table></html>
+<h5 id="return-v27">Return:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;<a href="../SDKManager/DJISDKManager.html#value_sdkerror">SDKError</a>&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;SDKErrorCode&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="flightassistanthandler_isbrakingchangedpushevent"><div class="api-col left">Event</div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_isbrakingchangedpushevent_inline">IsBrakingChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_isbrakingchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>IsBrakingChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler IsBrakingChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler IsBrakingChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v42">Description:</h5>
+<h5 id="description-v44">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes about whether the aircraft is braking automatically to avoid collision.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_rthobstacleavoidanceenabledchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_rthobstacleavoidanceenabledchangedpushevent_inline">RTHObstacleAvoidanceEnabledChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_rthobstacleavoidanceenabledchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>RTHObstacleAvoidanceEnabledChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RTHObstacleAvoidanceEnabledChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler RTHObstacleAvoidanceEnabledChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v43">Description:</h5>
+<h5 id="description-v45">Description:</h5>
 <p><font color="#666">Subscribe the event to receive the change about whether Obstacle Avoidance is enabled during RTH.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_obstacleavoidanceenabledchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_obstacleavoidanceenabledchangedpushevent_inline">ObstacleAvoidanceEnabledChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_obstacleavoidanceenabledchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>ObstacleAvoidanceEnabledChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ObstacleAvoidanceEnabledChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ObstacleAvoidanceEnabledChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v44">Description:</h5>
+<h5 id="description-v46">Description:</h5>
 <p><font color="#666">Subscribe the event to receive the change about whether the obstacle avoidance is enabled.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_visionassistedpositioningenabledchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_visionassistedpositioningenabledchangedpushevent_inline">VisionAssistedPositioningEnabledChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_visionassistedpositioningenabledchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>VisionAssistedPositioningEnabledChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler VisionAssistedPositioningEnabledChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler VisionAssistedPositioningEnabledChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v45">Description:</h5>
+<h5 id="description-v47">Description:</h5>
 <p><font color="#666">Subscribe the event to receive the change about whether vision positioning is enabled. Vision positioning is used to augment GPS to improve location accuracy when  hovering and improve velocity calculation when flying.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_precisionlandingenabledchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_precisionlandingenabledchangedpushevent_inline">PrecisionLandingEnabledChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_precisionlandingenabledchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>PrecisionLandingEnabledChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler PrecisionLandingEnabledChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler PrecisionLandingEnabledChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v46">Description:</h5>
+<h5 id="description-v48">Description:</h5>
 <p><font color="#666">Subscribe the event to receive the change about whether precision landing is enabled.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_isperformingprecisionlandingchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_isperformingprecisionlandingchangedpushevent_inline">IsPerformingPrecisionLandingChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_isperformingprecisionlandingchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>IsPerformingPrecisionLandingChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler IsPerformingPrecisionLandingChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler IsPerformingPrecisionLandingChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v47">Description:</h5>
+<h5 id="description-v49">Description:</h5>
 <p><font color="#666">Subscribe the event to receive the change about if the aircraft is perfoming precision landing.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_isascentlimitedbyobstaclechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_isascentlimitedbyobstaclechangedpushevent_inline">IsAscentLimitedByObstacleChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_isascentlimitedbyobstaclechangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>IsAscentLimitedByObstacleChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler IsAscentLimitedByObstacleChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler IsAscentLimitedByObstacleChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v48">Description:</h5>
+<h5 id="description-v50">Description:</h5>
 <p><font color="#666">Subscribe the event to receive the change about is the aircraft's ascent limited by obstacle. True if the aircraft will not ascend further because of an obstacle detected within 1m above it.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_advancedpilotassistancesystemenablechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_advancedpilotassistancesystemenablechangedpushevent_inline">AdvancedPilotAssistanceSystemEnableChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_advancedpilotassistancesystemenablechangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>AdvancedPilotAssistanceSystemEnableChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler AdvancedPilotAssistanceSystemEnableChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler AdvancedPilotAssistanceSystemEnableChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v49">Description:</h5>
+<h5 id="description-v51">Description:</h5>
 <p><font color="#666">Subscribe event to receive the change about whether the Advanced Pilot Assistance System (APAS) is enabled or not. When APAS is enabled, the aircraft continues to respond to user commands and plans its path according to both control stick inputs and the flight environment. APAS makes it easier to avoid obstacles and obtain smoother footage, and gives a better fly experiences. It is only valid when the aircraft is in P-mode. It is supported by Mavic Air and Mavic 2 Series.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_isadvancedpilotassistancesystemactivechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_isadvancedpilotassistancesystemactivechangedpushevent_inline">IsAdvancedPilotAssistanceSystemActiveChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_isadvancedpilotassistancesystemactivechangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>IsAdvancedPilotAssistanceSystemActiveChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler IsAdvancedPilotAssistanceSystemActiveChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler IsAdvancedPilotAssistanceSystemActiveChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v50">Description:</h5>
+<h5 id="description-v52">Description:</h5>
 <p><font color="#666">Subscribe event to receive the change about whether the Advanced Pilot Assistance System (APAS) is active. When it is active, the aircraft will change flight path automatically to avoid obstacles.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_landingprotectionstatechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_landingprotectionstatechangedpushevent_inline">LandingProtectionStateChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_landingprotectionstatechangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>LandingProtectionStateChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> LandingProtectionStateMsgChangedEventHandler LandingProtectionStateChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> LandingProtectionStateMsgChangedEventHandler LandingProtectionStateChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v51">Description:</h5>
+<h5 id="description-v53">Description:</h5>
 <p><font color="#666">Subscribe event to receive the change about the state of landing protection. This status is valid when landing protection is enabled.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_vissiondetectionstatechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_vissiondetectionstatechangedpushevent_inline">VissionDetectionStateChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_vissiondetectionstatechangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>VissionDetectionStateChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> VissionDetectionStateChangedEventHandler VissionDetectionStateChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> VissionDetectionStateChangedEventHandler VissionDetectionStateChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v52">Description:</h5>
+<h5 id="description-v54">Description:</h5>
 <p><font color="#666">Subscribe event to receive the change about the state of vision detection.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_upwardsavoidanceenablechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_upwardsavoidanceenablechangedpushevent_inline">UpwardsAvoidanceEnableChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_upwardsavoidanceenablechangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>UpwardsAvoidanceEnableChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler UpwardsAvoidanceEnableChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler UpwardsAvoidanceEnableChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v53">Description:</h5>
+<h5 id="description-v55">Description:</h5>
 <p><font color="#666">Subscribe event to receive the change about whether upward avoidance is enable. When the aircraft's upwards-facing infrared sensor detects an obstacle, the aircraft will slow its ascent and maintain a minimum distance of 1 meter from the obstacle. The sensor has a 10-degree horizontal field of view (FOV) and 10-degree vertical FOV. The maximum detection distance is 5m.</font></p>
 </div>
 <div class="api-row" id="flightcontrollerhandler_imustatechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightcontrollerhandler_imustatechangedpushevent_inline">IMUStateChanged</a></div></div><div class="inline-doc" id="flightcontrollerhandler_imustatechangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>IMUStateChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IMUStateChangedEventHandler IMUStateChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> IMUStatesChangedEventHandler IMUStateChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v54">Description:</h5>
+<h5 id="description-v56">Description:</h5>
 <p><font color="#666">Subscribe event to receive the change about the IMU state.</font></p>
 </div>
 <div class="api-row" id="flightcontrollerhandler_imucountchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightcontrollerhandler_imucountchangedpushevent_inline">IMUCountChanged</a></div></div><div class="inline-doc" id="flightcontrollerhandler_imucountchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>IMUCountChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> IntMsgChangedEventHandler IMUCountChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> IntMsgChangedEventHandler IMUCountChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v55">Description:</h5>
+<h5 id="description-v57">Description:</h5>
 <p><font color="#666">Subscribe event to receive the change about the count of IMUs.</font></p>
 </div>
 <div class="api-row" id="flightcontrollerhandler_gohomeassessmentchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightcontrollerhandler_gohomeassessmentchangedpushevent_inline">GoHomeAssessmentChanged</a></div></div><div class="inline-doc" id="flightcontrollerhandler_gohomeassessmentchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>GoHomeAssessmentChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> GoHomeAssessmentValueChangedEventHandler GoHomeAssessmentChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> GoHomeAssessmentValueChangedEventHandler GoHomeAssessmentChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v56">Description:</h5>
+<h5 id="description-v58">Description:</h5>
 <p><font color="#666">Subscribe event to receive the change about the aircraft's smart go home data if smart go home is enabled.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_landingprotectionenabledchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_landingprotectionenabledchangedpushevent_inline">LandingProtectionEnabledChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_landingprotectionenabledchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>LandingProtectionEnabledChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler LandingProtectionEnabledChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler LandingProtectionEnabledChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v57">Description:</h5>
+<h5 id="description-v59">Description:</h5>
 <p><font color="#666">Subscribe the event to receive the change about whether landing protection is enabled. During auto-landing, the downwards facing vision sensor  will check if the ground surface is flat enough for a safe landing. If it is not and landing protection  is enabled, then landing will abort and need to be manually performed by the user.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_connectionchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_connectionchangedpushevent_inline">ConnectionChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_connectionchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>ConnectionChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ConnectionChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ConnectionChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v58">Description:</h5>
+<h5 id="description-v60">Description:</h5>
 <p><font color="#666">Subscribe the event to receive a component's connection change.</font></p>
 </div>
 <div class="api-row" id="flightassistanthandler_serialnumberchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#flightassistanthandler_serialnumberchangedpushevent_inline">SerialNumberChanged</a></div></div><div class="inline-doc" id="flightassistanthandler_serialnumberchangedpushevent_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">event </font>SerialNumberChanged</h6></div>
 
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> StringMsgChangedEventHandler SerialNumberChanged</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">event</span> StringMsgChangedEventHandler SerialNumberChanged</div></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
-<h5 id="description-v59">Description:</h5>
+<h5 id="description-v61">Description:</h5>
 <p><font color="#666">Subscribe the event to receive the change of the component's serial number.</font></p>
 </div>
 
@@ -631,7 +663,7 @@
             <input type="text" v-model="searchInput" @keydown.enter="search">
           </div>
           <div class="modal-body">
-            <p v-show="!!searchCount" class="search-count"><span v-cloak="">{{searchCount}}</span>&nbsp;Results
+            <p v-show="!!searchCount" class="search-count"><span v-cloak>{{searchCount}}</span>&nbsp;Results
             </p>
             <ul v-show="!!searchCount" class="search-result">
               <li v-for="item in searchResult"><a v-bind:href="item.url | docUrl">
