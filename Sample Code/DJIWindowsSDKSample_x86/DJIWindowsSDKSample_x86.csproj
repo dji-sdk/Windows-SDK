@@ -238,7 +238,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="DJIWindowsSDK">
-      <HintPath>..\..\WSDK Release\SDK dll x86\DJIWindowsSDK.dll</HintPath>
+      <HintPath>..\..\WSDK Libraries\SDK dll x86\DJIWindowsSDK.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
