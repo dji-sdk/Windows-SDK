@@ -24,6 +24,13 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+
+    <DeviceCapability Name="usb">
+        <Device Id="vidpid:2ca3 001f">
+            <Function Type="name:vendorSpecific" />
+        </Device>
+    </DeviceCapability>
+
     <DeviceCapability Name="serialcommunication">
       <Device Id="vidpid:2ca3 001f">
         <Function Type="name:serialPort" />
