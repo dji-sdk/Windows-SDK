@@ -125,7 +125,9 @@ namespace DJIWindowsSDKSample.Flysafe
                         var element = MapElementBySubCircleFlyZone(subFlyZone);
                         elements.Add(element);
                     }
-                    else if (subFlyZone.Shape == SubFlyZoneShape.Polygon)
+                    else if (subFlyZone.Shape == SubFlyZoneShape.Polygon 
+                        //|| subFlyZone.Shape == SubFlyZoneShape.Unknown
+                        )
                     {
                         var element = MapElementBySubPolygonFlyZone(subFlyZone);
                         elements.Add(element);

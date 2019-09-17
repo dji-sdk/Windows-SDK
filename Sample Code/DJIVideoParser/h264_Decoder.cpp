@@ -23,7 +23,7 @@ using namespace dji::videoparser;
 static bool s_stop_flag = false;
 static bool s_is_init_ffmpeg = false;
 
-#define PIX_FMT_FORMAT PIX_FMT_RGBA
+#define PIX_FMT_FORMAT AVPixelFormat::AV_PIX_FMT_RGBA
 
 #define  HEAD_SIZE 12
 
@@ -96,12 +96,12 @@ bool h264_Decoder::InitFFMPEG()
 		return false;
 	}
 
-	m_codec_context->flags2 |= CODEC_FLAG2_FAST;
+	m_codec_context->flags2 |= AV_CODEC_FLAG2_FAST;
 	m_codec_context->thread_count = 2;
 	m_codec_context->thread_type = FF_THREAD_FRAME;
 
-	if (m_av_codec->capabilities&CODEC_FLAG_LOW_DELAY) {
-		m_codec_context->flags |= CODEC_FLAG_LOW_DELAY;
+	if (m_av_codec->capabilities&AV_CODEC_FLAG_LOW_DELAY) {
+		m_codec_context->flags |= AV_CODEC_FLAG_LOW_DELAY;
 	}
 
 	//if (m_av_codec->capabilities & CODEC_CAP_TRUNCATED)
@@ -116,7 +116,7 @@ bool h264_Decoder::InitFFMPEG()
 		return false;
 	}
 
-	m_av_frame = avcodec_alloc_frame();
+	m_av_frame = av_frame_alloc();
 
 	if (m_av_frame == nullptr)
 	{
@@ -124,7 +124,7 @@ bool h264_Decoder::InitFFMPEG()
 		return false;
 	}
 
-	m_dst_frame = avcodec_alloc_frame();
+	m_dst_frame = av_frame_alloc();
 
 	if (m_dst_frame == nullptr)
 	{
@@ -215,16 +215,16 @@ void h264_Decoder::DecoderThread()
 						assist_info = std::move(res_data);
 					}
 
-					if (!is_sps_pps_found)
-					{
-						is_sps_pps_found = m_codec_paser->frame_has_sps ? true : false;
-					}
+					//if (!is_sps_pps_found)
+					//{
+					//	is_sps_pps_found = m_codec_paser->frame_has_sps ? true : false;
+					//}
 
-					if (!is_sps_pps_found)
-					{
-						av_free_packet(&packet);
-						continue;
-					}
+					//if (!is_sps_pps_found)
+					//{
+					//	av_free_packet(&packet);
+					//	continue;
+					//}
 
 					got_picture = 0;
 					auto len = avcodec_decode_video2(m_codec_context, m_av_frame, &got_picture, &packet);
@@ -286,7 +286,7 @@ int h264_Decoder::videoFrameParse(const uint8_t* buff, int video_size, FrameType
 
 	// Need padding for FFMpeg. Otherwise Address Sanitizer will complain heap overflow.
 	auto buf_vec = std::vector<uint8_t>();
-	buf_vec.resize(video_size + FF_INPUT_BUFFER_PADDING_SIZE);
+	buf_vec.resize(video_size + AV_INPUT_BUFFER_PADDING_SIZE);
 	buf_vec.assign(buff, buff + video_size);
 	m_vectorSafeQueue.push(std::move(buf_vec));
 

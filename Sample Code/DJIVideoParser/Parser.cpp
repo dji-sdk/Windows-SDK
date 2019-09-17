@@ -53,13 +53,12 @@ void DJIVideoParser::Parser::Initialize(VideoAssistantInfoParserHandle^ handle)
 	std::string path = WString2String(wstring);
 	g_pModuleMediator->Initialize(path, [handle](uint8_t* data, int length)
 	{
+		DJIDecodingAssistInfo res = { 0 };
 		if (handle)
 		{
 			Platform::Array<unsigned char>^ out = nullptr;
 			//DecodingAssistInfo^ info = nullptr;
 			auto info = handle(ref new Platform::Array<unsigned char>(data, length));
-			
-			DJIDecodingAssistInfo res = { 0 };
 			if (info->Length >= 7)
 			{
 				res.has_lut_idx = info[0];
@@ -70,8 +69,8 @@ void DJIVideoParser::Parser::Initialize(VideoAssistantInfoParserHandle^ handle)
 				res.fov_state = info[5];
 				res.timestamp = info[6];
 			}
-			return res;
 		}
+		return res;
 	});
 }
 
