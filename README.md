@@ -6,7 +6,7 @@ The DJI Windows SDK enables you to automate your DJI Product on a PC. You can co
 
 ## The Latest Version
 
-The latest SDK version is Public Beta 0.3.1. 
+The latest SDK version is Public Beta 0.3.2. 
 
 ## Get Started Immediately
 
