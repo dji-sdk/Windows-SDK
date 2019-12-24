@@ -173,6 +173,37 @@ namespace DJIWindowsSDKSample.ViewModels
             }
         }
 
+        public ICommand _startLanding;
+        public ICommand StartLanding
+        {
+            get
+            {
+                if (_startLanding == null)
+                {
+                    _startLanding = new RelayCommand(async delegate ()
+                    {
+                        var shouldLand = false;
+                        var shouldLandMessageDialog = new MessageDialog("Are you sure you wish to land?");
 
+                        shouldLandMessageDialog.Commands.Add(new UICommand(
+                            "Yes",
+                            new UICommandInvokedHandler((IUICommand _) => shouldLand = true)));
+                        shouldLandMessageDialog.Commands.Add(new UICommand(
+                            "No",
+                            new UICommandInvokedHandler((IUICommand _) => shouldLand = false)));
+                        await shouldLandMessageDialog.ShowAsync();
+
+                        if (shouldLand)
+                        {
+                            var res = await DJISDKManager.Instance.ComponentManager.GetFlightControllerHandler(0, 0).StartAutoLandingAsync();
+                            var actualLandingResultMessageDialog = new MessageDialog(String.Format("Start send landing command: {0}", res.ToString()));
+                            await actualLandingResultMessageDialog.ShowAsync();
+                        }
+                    }, delegate () { return true; });
+                }
+                return _startLanding;
+
+            }
+        }
     }
 }
