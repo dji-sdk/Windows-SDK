@@ -87,13 +87,13 @@ namespace DJIWindowsSDKSample.ViewModels
             {
                 if (_setAircraftName == null)
                 {
-                    _setAircraftName = new RelayCommand(async delegate()
+                    _setAircraftName = new RelayCommand(async delegate ()
                     {
                         String message = "";
                         do
                         {
                             var toSet = AircraftSetName;
-                            if (toSet==null || toSet.Length == 0)
+                            if (toSet == null || toSet.Length == 0)
                             {
                                 message = "Input your name first!";
                                 break;
@@ -149,12 +149,60 @@ namespace DJIWindowsSDKSample.ViewModels
                 {
                     _startTakeoff = new RelayCommand(async delegate ()
                     {
-                        var res = await DJISDKManager.Instance.ComponentManager.GetFlightControllerHandler(0, 0).StartTakeoffAsync();
-                        var messageDialog = new MessageDialog(String.Format("Start send takeoff command: {0}", res.ToString()));
-                        await messageDialog.ShowAsync();
+                        var shouldTakeOff = false;
+                        var shouldTakeOffMessageDialog = new MessageDialog("Are you sure you wish to take off?");
+
+                        shouldTakeOffMessageDialog.Commands.Add(new UICommand(
+                            "Yes",
+                            new UICommandInvokedHandler((IUICommand _) => shouldTakeOff = true)));
+                        shouldTakeOffMessageDialog.Commands.Add(new UICommand(
+                            "No",
+                            new UICommandInvokedHandler((IUICommand _) => shouldTakeOff = false)));
+                        await shouldTakeOffMessageDialog.ShowAsync();
+
+                        if (shouldTakeOff)
+                        {
+                            var res = await DJISDKManager.Instance.ComponentManager.GetFlightControllerHandler(0, 0).StartTakeoffAsync();
+                            var actualTakeoffResultMessageDialog = new MessageDialog(String.Format("Start send takeoff command: {0}", res.ToString()));
+                            await actualTakeoffResultMessageDialog.ShowAsync();
+                        }
                     }, delegate () { return true; });
                 }
                 return _startTakeoff;
+
+            }
+        }
+
+        public ICommand _startLanding;
+        public ICommand StartLanding
+        {
+            get
+            {
+                if (_startLanding == null)
+                {
+                    _startLanding = new RelayCommand(async delegate ()
+                    {
+                        var shouldLand = false;
+                        var shouldLandMessageDialog = new MessageDialog("Are you sure you wish to land?");
+
+                        shouldLandMessageDialog.Commands.Add(new UICommand(
+                            "Yes",
+                            new UICommandInvokedHandler((IUICommand _) => shouldLand = true)));
+                        shouldLandMessageDialog.Commands.Add(new UICommand(
+                            "No",
+                            new UICommandInvokedHandler((IUICommand _) => shouldLand = false)));
+                        await shouldLandMessageDialog.ShowAsync();
+
+                        if (shouldLand)
+                        {
+                            var res = await DJISDKManager.Instance.ComponentManager.GetFlightControllerHandler(0, 0).StartAutoLandingAsync();
+                            var actualLandingResultMessageDialog = new MessageDialog(String.Format("Start send landing command: {0}", res.ToString()));
+                            await actualLandingResultMessageDialog.ShowAsync();
+                        }
+                    }, delegate () { return true; });
+                }
+                return _startLanding;
+
             }
         }
     }
